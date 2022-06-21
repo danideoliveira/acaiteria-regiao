@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
+
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$titlePink: #FFAAAA;
+$backgroundPink: #FFEEEE;
+$contentGrey: #636363;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    /*outline: 1px solid red;*/
+    font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: $backgroundPink;
+}
+
+.navbar {
+    margin: 0 auto;
+    width: 70%;
+    height: 8vh;
+    background-color: $backgroundPink;
+
+    .menu {
+        @include flexCenter();
+        justify-content: space-evenly;
+        height: 100%;
+
+        a {
+            @include flexCenter();
+            cursor: pointer;
+            height: 100%;
+            width: 20%;
+            color: $contentGrey;
+            font-size: 18px;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $titlePink;
+                color: $backgroundPink;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+.home-container {
+    @include flexCenter();
+    height: 92vh;
+    background-color: $backgroundPink;
+    width: 90%;
+    margin: 0 auto;
+
+    .home-primary-div {
+        @include flexCenter();
+        width: 40%;
+        flex-direction: column;
+        height: 100%;
+
+        div {
+            @include flexCenter();
+            flex-direction: column;
+            width: 70%;
+            gap: 15px;
+
+            h1 {
+                width: 100%;
+                font-size: 65px;
+                color: $titlePink;
+            }
+    
+            p {
+                font-size: 25px;
+                font-weight: 600;
+                color: $contentGrey;
+                width: 100%;
+            }
+        }     
+    }
+
+    .home-secondary-div {
+        @include flexCenter();
+        width: 60%;
+        height: 100%;
+
+        .home-image-div {
+            @include flexCenter();
+            justify-content: flex-end;
+            background-color: $titlePink;
+            border-radius: 260px 10px 10px 10px;
+            width: 80%;
+            height: 80%;
+            content-visibility: auto;
+
+            .home-ice-cream {
+                height: 110%;
+                transition: 0.5s;
+
+                &:hover {
+                    transition: 0.5s;
+                    height: 120%;
+                }
+            }
+        }    
+    }
+
+}
+
+.container-specialties {
+    @include flexCenter();
+    flex-direction: column;
+    height: 100vh;
+    background-color: #FFFFFF;
+
+    .specialties-title-div {
+        @include flexCenter();
+        height: 20%;
+
+        h2 {
+            font-size: 40px;
+            color: $titlePink;
+        }
+    }  
+
+    .specialties-div {
+        @include flexCenter();
+        width: 100%;
+        height: 80%;
+        justify-content: space-evenly;
+
+        .specialties-section {
+            @include flexCenter();
+            flex-direction: column;
+            width: 20%;
+            height: 80%;
+            background-color: #cacaca;
+            border-radius: 10px;
+            content-visibility: auto;
+            box-shadow: 1px 2px 8px black;
+
+            img {
+                width: 100%;
+                height: 90%;
+                transition: 0.5s
+            }
+
+            p {
+                @include flexCenter();
+                width: 100%;
+                height: 10%;
+                text-align: center;
+                font-weight: 600;
+                color: $contentGrey;
+                transition: 0.5s;
+            }
+
+            &:hover {
+                img {
+                    transition: 0.5s;
+                    transform: scale(1.5);
+                }
+
+                p {
+                    transition: 0.5s;
+                    position: relative;
+                    height: 50%;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    
+}
