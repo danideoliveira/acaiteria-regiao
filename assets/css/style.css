@@ -8,6 +8,7 @@
   /*outline: 1px solid red;*/
   font-family: 'League Spartan', Arial, Helvetica, sans-serif;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -287,7 +288,6 @@ body {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   position: relative;
-  height: 50%;
   color: #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */

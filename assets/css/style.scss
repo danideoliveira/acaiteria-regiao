@@ -18,6 +18,7 @@ $contentGrey: #636363;
     /*outline: 1px solid red;*/
     font-family: 'League Spartan', Arial, Helvetica, sans-serif;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -172,7 +173,6 @@ body {
                 p {
                     transition: 0.5s;
                     position: relative;
-                    height: 50%;
                     color: #FFFFFF;
                 }
             }
