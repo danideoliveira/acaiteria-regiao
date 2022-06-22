@@ -5,7 +5,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   list-style: none;
-  /*outline: 1px solid red;*/
+  outline: 1px solid red;
   font-family: 'League Spartan', Arial, Helvetica, sans-serif;
   text-decoration: none;
   scroll-behavior: smooth;
@@ -222,7 +222,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 80%;
+  height: 90%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -244,11 +244,11 @@ body {
           flex-direction: column;
   width: 20%;
   height: 80%;
-  background-color: #cacaca;
+  background-color: #e7e7e7;
   border-radius: 10px;
   content-visibility: auto;
-  -webkit-box-shadow: 1px 2px 8px black;
-          box-shadow: 1px 2px 8px black;
+  -webkit-box-shadow: 0px 2px 4px 0px #707070;
+          box-shadow: 0px 2px 4px 0px #707070;
 }
 
 .container-specialties .specialties-div .specialties-section img {
@@ -289,5 +289,89 @@ body {
   transition: 0.5s;
   position: relative;
   color: #FFFFFF;
+}
+
+.container-specialties-secondary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  content-visibility: auto;
+}
+
+.container-specialties-secondary .specialties-secondary-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+.container-specialties-secondary .specialties-secondary-div img {
+  width: 100%;
+  height: 100%;
+}
+
+.container-specialties-secondary .specialties-secondary-div-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+.container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 15px;
+  width: 50%;
+}
+
+.container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title h2 {
+  font-size: 64px;
+  color: #FFAAAA;
+  width: 80%;
+}
+
+.container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title p {
+  width: 100%;
+  font-size: 25px;
+  color: #636363;
 }
 /*# sourceMappingURL=style.css.map */
