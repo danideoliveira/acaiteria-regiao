@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
 
-@mixin flexCenter() {
+@mixin setFlexBox($justifyContent, $alignItems, $flexDirection) {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-direction: $flexDirection;
 }
 
 $titlePink: #FFAAAA;
@@ -15,10 +16,23 @@ $contentGrey: #636363;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     font-family: 'League Spartan', Arial, Helvetica, sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $backgroundPink;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $titlePink;
+    border-radius: 10px;
 }
 
 body {
@@ -32,12 +46,11 @@ body {
     background-color: $backgroundPink;
 
     .menu {
-        @include flexCenter();
-        justify-content: space-evenly;
+        @include setFlexBox(space-evenly, center, row);
         height: 100%;
 
         a {
-            @include flexCenter();
+            @include setFlexBox(center, center, row);
             cursor: pointer;
             height: 100%;
             width: 20%;
@@ -55,21 +68,19 @@ body {
 }
 
 .home-container {
-    @include flexCenter();
+    @include setFlexBox(center, center, row);
     height: 92vh;
     background-color: $backgroundPink;
     width: 90%;
     margin: 0 auto;
 
     .home-primary-div {
-        @include flexCenter();
+        @include setFlexBox(center, center, column);
         width: 40%;
-        flex-direction: column;
         height: 100%;
 
         div {
-            @include flexCenter();
-            flex-direction: column;
+            @include setFlexBox(center, center, column);
             width: 70%;
             gap: 15px;
 
@@ -89,13 +100,12 @@ body {
     }
 
     .home-secondary-div {
-        @include flexCenter();
+        @include setFlexBox(center, center, row);
         width: 60%;
         height: 100%;
 
         .home-image-div {
-            @include flexCenter();
-            justify-content: flex-end;
+            @include setFlexBox(flex-end, center, row);
             background-color: $titlePink;
             border-radius: 260px 10px 10px 10px;
             width: 80%;
@@ -117,29 +127,23 @@ body {
 }
 
 .container-specialties {
-    @include flexCenter();
-    flex-direction: column;
+    @include setFlexBox(center, center, column);
     height: 100vh;
-    background-color: #FFFFFF;
+    background-color: #fff9f9;
 
-    .specialties-title-div {
-        @include flexCenter();
+    h2 {
+        @include setFlexBox(center, flex-end, row);
+        font-size: 40px;
+        color: $titlePink;
         height: 20%;
-
-        h2 {
-            font-size: 40px;
-            color: $titlePink;
-        }
-    }  
-
+    }
+    
     .specialties-div {
-        @include flexCenter();
+        @include setFlexBox(space-evenly, center, row);
         width: 100%;
-        height: 90%;
-        justify-content: space-evenly;
+        height: 100%;
 
         .specialties-section {
-            @include flexCenter();
             flex-direction: column;
             width: 20%;
             height: 80%;
@@ -155,10 +159,9 @@ body {
             }
 
             p {
-                @include flexCenter();
+                @include setFlexBox(center, center, row);
                 width: 100%;
                 height: 10%;
-                text-align: center;
                 font-weight: 600;
                 color: $contentGrey;
                 transition: 0.5s;
@@ -181,31 +184,30 @@ body {
 }
 
 .container-specialties-secondary {
-    @include flexCenter();
+    @include setFlexBox(center, center, row);
     height: 100vh;
     width: 100%;
     content-visibility: auto;
 
     .specialties-secondary-div {
-        @include flexCenter();
+        @include setFlexBox(center, center, row);
         width: 50%;
 
         img {
-            width: 100%;
-            height: 100%
+            width: 75%;
+            box-shadow: 10px 7px 0px 0px $titlePink;
+            border-radius: 5px;
         }
     }
 
     .specialties-secondary-div-title {
-        @include flexCenter();
+        @include setFlexBox(center, center, column);
         flex-direction: column;
         width: 50%;
         height: 100%;
 
         .specialties-secondary-title {
-            @include flexCenter();
-            flex-direction: column;
-            align-items: flex-start;
+            @include setFlexBox(center, flex-start, column);
             gap: 15px;
             width: 50%;
 
