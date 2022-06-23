@@ -95,6 +95,7 @@ body {
                 font-weight: 600;
                 color: $contentGrey;
                 width: 100%;
+                text-align: justify;
             }
         }     
     }
@@ -111,6 +112,7 @@ body {
             width: 80%;
             height: 80%;
             content-visibility: auto;
+            box-shadow: 15px 10px 5px 0px rgb(194, 194, 194);
 
             .home-ice-cream {
                 height: 110%;
@@ -150,7 +152,7 @@ body {
             background-color: #e7e7e7;
             border-radius: 10px;
             content-visibility: auto;
-            box-shadow: 0px 2px 4px 0px rgb(112, 112, 112);
+            box-shadow: 0px 0px 5px 0px rgb(194, 194, 194);
 
             img {
                 width: 100%;
@@ -221,6 +223,7 @@ body {
                 width: 100%;
                 font-size: 25px;
                 color: $contentGrey;
+                text-align: justify;
             }
         }
     }
@@ -237,17 +240,35 @@ body {
         width: 50%;
         height: 100%;
 
-        h2 {
-            width: 70%;
-            font-size: 48px;
-            color: $titlePink;
+        .location-title {
+            @include setFlexBox(center, flex-start, column);
+            width: 60%;
+            gap: 30px;
+
+            h2 {
+                font-size: 64px;
+                color: $titlePink;
+            }
+
+            p {
+                text-align: justify;
+                font-size: 25px;
+                color: $contentGrey;
+            }
         }
+        
     }
 
     .location-div-map {
         @include setFlexBox(center, center, row);
         width: 50%;
         height: 100%;
+
+        img {
+            width: 70%;
+            border-radius: 30px;
+            box-shadow: 10px 10px 5px 0px rgb(194, 194, 194);
+        }
     }
 }
 
@@ -275,6 +296,7 @@ body {
                 font-size: 25px;
                 color: $contentGrey;
                 font-weight: 600;
+                text-align: justify;
             }
         }    
     }

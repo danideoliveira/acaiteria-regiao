@@ -149,6 +149,7 @@ body {
   font-weight: 600;
   color: #636363;
   width: 100%;
+  text-align: justify;
 }
 
 .home-container .home-secondary-div {
@@ -188,6 +189,8 @@ body {
   width: 80%;
   height: 80%;
   content-visibility: auto;
+  -webkit-box-shadow: 15px 10px 5px 0px #c2c2c2;
+          box-shadow: 15px 10px 5px 0px #c2c2c2;
 }
 
 .home-container .home-secondary-div .home-image-div .home-ice-cream {
@@ -267,8 +270,8 @@ body {
   background-color: #e7e7e7;
   border-radius: 10px;
   content-visibility: auto;
-  -webkit-box-shadow: 0px 2px 4px 0px #707070;
-          box-shadow: 0px 2px 4px 0px #707070;
+  -webkit-box-shadow: 0px 0px 5px 0px #c2c2c2;
+          box-shadow: 0px 0px 5px 0px #c2c2c2;
 }
 
 .container-specialties .specialties-div .specialties-section img {
@@ -404,6 +407,7 @@ body {
   width: 100%;
   font-size: 25px;
   color: #636363;
+  text-align: justify;
 }
 
 .container-location {
@@ -443,10 +447,33 @@ body {
   height: 100%;
 }
 
-.container-location .location-div-title h2 {
-  width: 70%;
-  font-size: 48px;
+.container-location .location-div-title .location-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  gap: 30px;
+}
+
+.container-location .location-div-title .location-title h2 {
+  font-size: 64px;
   color: #FFAAAA;
+}
+
+.container-location .location-div-title .location-title p {
+  text-align: justify;
+  font-size: 25px;
+  color: #636363;
 }
 
 .container-location .location-div-map {
@@ -465,6 +492,13 @@ body {
           flex-direction: row;
   width: 50%;
   height: 100%;
+}
+
+.container-location .location-div-map img {
+  width: 70%;
+  border-radius: 30px;
+  -webkit-box-shadow: 10px 10px 5px 0px #c2c2c2;
+          box-shadow: 10px 10px 5px 0px #c2c2c2;
 }
 
 .container-about {
@@ -530,6 +564,7 @@ body {
   font-size: 25px;
   color: #636363;
   font-weight: 600;
+  text-align: justify;
 }
 
 .container-about .contacts-div {
