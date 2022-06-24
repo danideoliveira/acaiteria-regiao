@@ -48,26 +48,32 @@ body {
     .menu {
         @include setFlexBox(space-evenly, center, row);
         height: 100%;
+        width: 80%;
+        margin: 0 auto;
 
-        a {
-            @include setFlexBox(center, center, row);
-            cursor: pointer;
+        li {
+            width: 100%;
             height: 100%;
-            width: 20%;
-            color: $contentGrey;
-            font-size: 18px;
-            transition: 0.3s;
-
-            &:hover {
-                background-color: $titlePink;
-                color: $backgroundPink;
+            a {
+                @include setFlexBox(center, center, row);
+                cursor: pointer;
+                height: 100%;
+                width: 100%;
+                color: $contentGrey;
+                font-size: 18px;
                 transition: 0.3s;
+    
+                &:hover {
+                    background-color: $titlePink;
+                    color: $backgroundPink;
+                    transition: 0.3s;
+                }
             }
-        }
+        }        
     }
 }
 
-.home-container {
+.container-home {
     @include setFlexBox(center, center, row);
     height: 92vh;
     background-color: $backgroundPink;
@@ -144,11 +150,12 @@ body {
         @include setFlexBox(space-evenly, center, row);
         width: 100%;
         height: 100%;
+        padding: 20px;
 
         .specialties-section {
             flex-direction: column;
-            width: 20%;
-            height: 80%;
+            width: 300px;
+            height: auto;
             background-color: #e7e7e7;
             border-radius: 10px;
             content-visibility: auto;
@@ -164,6 +171,7 @@ body {
                 @include setFlexBox(center, center, row);
                 width: 100%;
                 height: 10%;
+                padding: 10px;
                 font-weight: 600;
                 color: $contentGrey;
                 transition: 0.5s;
@@ -261,13 +269,24 @@ body {
 
     .location-div-map {
         @include setFlexBox(center, center, row);
-        width: 50%;
+        width: 70%;
         height: 100%;
 
-        img {
-            width: 70%;
-            border-radius: 30px;
-            box-shadow: 10px 10px 5px 0px rgb(194, 194, 194);
+        .mapouter{
+            text-align: center;
+            width: 80%;
+            height: 70%;
+
+            .gmap_canvas {
+                overflow: hidden;
+                background: none!important;
+                height: 100%;
+                
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
         }
     }
 }
@@ -355,3 +374,342 @@ footer {
        }
     }
 }
+
+@media (min-width: 769px) and (max-width: 1279px) {
+    .container-home {
+        width: 100%;
+
+        .home-primary-div {
+            div {
+                h1 {
+                    font-size: 48px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }      
+        }
+
+        .home-secondary-div {         
+            .home-image-div {
+                width: 70%;
+            }
+        }
+    }
+
+    .container-specialties {
+        h2 {
+            font-size: 36px;
+        }
+        .specialties-div {          
+            .specialties-section {
+                width: 20%;
+                height: 70%;
+            }
+        }
+    }
+
+    .container-specialties-secondary {      
+        .specialties-secondary-div-title {
+            .specialties-secondary-title {
+                h2 {
+                    font-size: 48px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .container-location {
+        padding: 20px;
+        .location-div-title {
+            .location-title {
+                h2 {
+                    font-size: 48px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .mapouter{
+            text-align: center;
+            width: 100%;
+            height: 70%;
+
+            .gmap_canvas {
+                overflow: hidden;
+                background: none!important;
+                height: 100%;
+                
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .container-about {
+        .about-div {
+            .about-title {
+                h2 {
+                    font-size: 48px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .contacts-div {
+            .contacts {
+                a {
+                    img {
+                        width: 40px;
+                    }
+                }
+                
+                .contact-info {
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }          
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .container-home {
+        flex-direction: column;
+        padding: 20px;
+
+        .home-primary-div {
+            width: 100%;
+            height: 50%;
+            div {
+                @include setFlexBox(center, center, column);
+                width: 100%;
+
+                h1 {
+                    font-size: 64px;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }      
+        }
+
+        .home-secondary-div { 
+            width: 100%;
+            height: 50%;
+
+            .home-image-div {
+                width: 90%;
+                height: 100%;
+            }
+        }
+    }
+
+    .container-specialties {
+        height: auto;
+        padding: 30px;
+
+        h2 {
+            font-size: 36px;
+            padding: 20px
+        }
+
+        .specialties-div {
+            @include setFlexBox(center, center, row);
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .specialties-section {
+                width: 300px;
+                height: auto;
+            }
+        }
+    }
+
+    .container-specialties-secondary {
+        flex-direction: column-reverse;
+        padding: 30px;
+
+        .specialties-secondary-div {
+            width: 90%;
+            height: 60%;
+            content-visibility: auto;
+            box-shadow: 10px 7px 0px 0px $titlePink;
+            border-radius: 10px;
+
+
+            img {
+                width: 100%;
+            }
+
+        }
+
+        .specialties-secondary-div-title {
+            width: 100%;
+            height: 30%;
+
+            .specialties-secondary-title {
+                width: 100%;
+                @include setFlexBox(center, center, column);
+
+                h2 {
+                    width: 100%;
+                    font-size: 48px;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .container-location {
+        @include setFlexBox(center, center, column);
+        width: 100%;
+
+        .location-div-title {
+            width: 100%;
+            height: 40%;
+
+            .location-title {
+                width: 80%;
+                h2 {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 48px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .location-div-map {
+            width: 80%;
+            
+            .mapouter{
+                text-align: center;
+                width: 100%;
+                height: 70%;
+
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none!important;
+                    height: 100%;
+                    
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .container-about {
+        @include setFlexBox(center, center, column);
+
+        .about-div {
+            height: 40%;
+            
+            .about-title {
+                h2 {
+                    width: 100%;
+                    font-size: 48px;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .contacts-div {
+            .contacts {
+                width: 60%;
+
+                a {
+                    width: 10%;
+                    
+                    img {
+                        width: 40px;
+                    }
+                }
+                
+                .contact-info {
+                    width: 90%;
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }          
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .container-specialties {
+        h2 {
+            font-size: 32px;
+        }
+    }
+
+    .container-specialties-secondary {
+        .specialties-secondary-div {
+            box-shadow: none;
+        }
+
+        .specialties-secondary-div-title {
+            .specialties-secondary-title {
+                h2 {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+
+    .container-location {
+        .location-div-title {
+            .location-title {
+                h2 {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+
+    .container-about {
+        .about-div {        
+            .about-title {
+                h2 {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+

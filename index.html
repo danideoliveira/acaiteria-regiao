@@ -11,20 +11,20 @@
     <header>
         <nav class="navbar">
             <ul class="menu">
-                <a href="#">Início</a>
-                <a href="#specialties">Especialidades</a>
-                <a href="#location">Localização</a>
-                <a href="#about">Sobre</a>
+                <li><a href="#">Início</a></li>
+                <li><a href="#specialties">Especialidades</a></li>
+                <li><a href="#location">Localização</a></li>
+                <li><a href="#about">Sobre</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="home-container">
+        <section class="container-home">
             <div class="home-primary-div">
                 <div>
-                    <h1>ICESPOT</h1>
-                    <p>O melhor point de sobremesas é aqui!</p>
+                    <h1 class="title">ICESPOT</h1>
+                    <p class="text-content">O melhor point de sobremesas é aqui!</p>
                 </div>            
             </div>
     
@@ -36,20 +36,20 @@
         </section>      
 
         <article id="specialties" class="container-specialties">
-            <h2>Nossas especialidades!</h2>
+            <h2 class="title">Nossas especialidades!</h2>
 
             <div class="specialties-div">
                 <section class="specialties-section">
                     <img src="./assets/img/cold-cup-specialties.jpg" alt="Cold cup">
-                    <p>Cold Cup</p>
+                    <p class="text-content">Cold Cup</p>
                 </section>
                 <section class="specialties-section">
                     <img src="./assets/img/casquinha-specialties.jpg" alt="Casquinha">
-                    <p>Casquinha</p>
+                    <p class="text-content">Casquinha</p>
                 </section>
                 <section class="specialties-section">
                     <img src="./assets/img/cream-cake-specialties.jpg" alt="Cream Cake">
-                    <p>Cream Cake</p>
+                    <p class="text-content">Cream Cake</p>
                 </section>
             </div>
         </article>
@@ -61,8 +61,8 @@
 
             <div class="specialties-secondary-div-title">
                 <div class="specialties-secondary-title">
-                    <h2>FIQUE A VONTADE!</h2>
-                    <p>Também contamos com rodízio de sabores!</p>
+                    <h2 class="title">FIQUE A VONTADE!</h2>
+                    <p class="text-content">Também contamos com rodízio de sabores!</p>
                 </div>     
             </div>
         </section>
@@ -70,21 +70,25 @@
         <section id="location" class="container-location">
             <div class="location-div-title">
                 <div class="location-title">
-                    <h2>ONDE ESTAMOS?</h2>
-                    <p>Nossos pontos são estratégicos, de maneira que nossos clientes tenham fácil acesso de qualquer local.</p>
+                    <h2 class="title">ONDE ESTAMOS?</h2>
+                    <p class="text-content">Nossos pontos são estratégicos, de maneira que nossos clientes tenham fácil acesso de qualquer local.</p>
                 </div>  
             </div>
 
             <div class="location-div-map">
-                <img src="./assets/img/location-map.svg" alt="Localização IceSpot">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=barra%20da%20tijuca&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
             </div>
         </section>
 
         <article id="about" class="container-about">
             <div class="about-div">
                 <div class="about-title">
-                    <h2>SOBRE NÓS!</h2>
-                    <p>Atuamos a mais de 20 anos no mercado, com 14 lojas espalhadas pelo Brasil. Levando sabor a cada canto do país!</p>
+                    <h2 class="title">SOBRE NÓS!</h2>
+                    <p class="text-content">Atuamos a mais de 20 anos no mercado, com 14 lojas espalhadas pelo Brasil. Levando sabor a cada canto do país!</p>
                 </div>            
             </div>
 
@@ -94,7 +98,7 @@
                         <img src="./assets/img/whatsapp-logo.png" alt="Logo do Whatsapp">
                     </a>
                     <div class="contact-info">
-                        <p>(21) 99999-9999</p>
+                        <p class="text-content">(21) 99999-9999</p>
                     </div>    
                 </section>
                 <section class="contacts">
@@ -102,7 +106,7 @@
                         <img src="./assets/img/instagram-logo.png" alt="Logo do Instagram">
                     </a>
                     <div class="contact-info">
-                        <p>@icespot</p>
+                        <p class="text-content">@icespot</p>
                     </div>  
                 </section>
                 <section class="contacts">
@@ -110,7 +114,7 @@
                         <img src="./assets/img/facebook-logo.png" alt="Logo do Facebook">
                     </a>
                     <div class="contact-info">
-                        <p>/icespot</p>
+                        <p class="text-content">/icespot</p>
                     </div>  
                 </section>
                 <section class="contacts">
@@ -118,7 +122,7 @@
                         <img src="./assets/img/twitter-logo.png" alt="Logo do Twitter">
                     </a>
                     <div class="contact-info">
-                        <p>@icespot</p>
+                        <p class="text-content">@icespot</p>
                     </div>  
                 </section>
             </div>
