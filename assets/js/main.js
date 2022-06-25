@@ -1,3 +1,20 @@
+function openMobileMenu() {
+    const hamburguer = document.querySelector('.mobile-menu');
+    const navMenu = document.querySelector('.menu');
+
+    hamburguer.addEventListener('click', () => {
+        hamburguer.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    })
+
+    document.querySelectorAll('.menu li a').forEach(n => n.addEventListener('click', () => {
+        hamburguer.classList.remove('active');
+        navMenu.classList.remove('active');
+    }))
+}
+
+openMobileMenu();
+
 function iceCreamHomeAnimation() {
     const imgHomeIceCream = document.querySelector('.home-ice-cream');
     const homeImgDiv = document.querySelector('.home-image-div');

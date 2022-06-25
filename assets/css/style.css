@@ -5,7 +5,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   list-style: none;
-  /*outline: 1px solid red;*/
   font-family: 'League Spartan', Arial, Helvetica, sans-serif;
   text-decoration: none;
   scroll-behavior: smooth;
@@ -26,11 +25,25 @@
 
 body {
   background-color: #FFEEEE;
+  overflow-x: hidden;
 }
 
 .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
   height: 8vh;
   background-color: #FFEEEE;
 }
@@ -87,6 +100,23 @@ body {
   color: #FFEEEE;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.navbar .mobile-menu {
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+
+.navbar .mobile-menu div {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #FFAAAA;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border-radius: 10px;
 }
 
 .container-home {
@@ -196,8 +226,8 @@ body {
   width: 80%;
   height: 80%;
   content-visibility: auto;
-  -webkit-box-shadow: 15px 10px 5px 0px #c2c2c2;
-          box-shadow: 15px 10px 5px 0px #c2c2c2;
+  -webkit-box-shadow: 15px 10px 5px 0px rgba(0, 0, 0, 0.253);
+          box-shadow: 15px 10px 5px 0px rgba(0, 0, 0, 0.253);
 }
 
 .container-home .home-secondary-div .home-image-div .home-ice-cream {
@@ -743,16 +773,76 @@ footer a:hover {
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
+  .navbar {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 90%;
+    height: 8vh;
+  }
+  .navbar .menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    gap: 0;
+    padding-top: 15vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    background-color: #FFAAAA;
+    z-index: 1;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-shadow: 10px 0px 15px 1px rgba(0, 0, 0, 0.377);
+            box-shadow: 10px 0px 15px 1px rgba(0, 0, 0, 0.377);
+  }
+  .navbar .menu li {
+    height: 15%;
+  }
+  .navbar .menu li a {
+    height: 100%;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .mobile-menu {
+    display: block;
+    position: fixed;
+  }
+  .navbar .mobile-menu.active div:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar .mobile-menu.active div:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+    background-color: #FFEEEE;
+  }
+  .navbar .mobile-menu.active div:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+    background-color: #FFEEEE;
+  }
   .container-home {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 20px;
+    gap: 50px;
   }
   .container-home .home-primary-div {
     width: 100%;
-    height: 50%;
+    height: 20%;
   }
   .container-home .home-primary-div div {
     display: -webkit-box;
@@ -780,7 +870,7 @@ footer a:hover {
   }
   .container-home .home-secondary-div {
     width: 100%;
-    height: 50%;
+    height: 60%;
   }
   .container-home .home-secondary-div .home-image-div {
     width: 90%;
@@ -822,9 +912,11 @@ footer a:hover {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     padding: 30px;
+    height: 100%;
+    gap: 30px;
   }
   .container-specialties-secondary .specialties-secondary-div {
-    width: 90%;
+    width: 70%;
     height: 60%;
     content-visibility: auto;
     -webkit-box-shadow: 10px 7px 0px 0px #FFAAAA;
@@ -956,7 +1048,7 @@ footer a:hover {
 
 @media (min-width: 320px) and (max-width: 480px) {
   .container-specialties h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
   .container-specialties-secondary .specialties-secondary-div {
     -webkit-box-shadow: none;
