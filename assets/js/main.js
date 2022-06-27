@@ -34,4 +34,4 @@ function iceCreamHomeAnimation() {
     })
 }
 
-iceCreamHomeAnimation();
+//iceCreamHomeAnimation();

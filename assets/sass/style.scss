@@ -21,6 +21,10 @@ $contentGrey: #636363;
     scroll-behavior: smooth;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 ::-webkit-scrollbar {
     width: 15px;
 }
@@ -43,13 +47,14 @@ body {
     @include setFlexBox(center, center, row);
     margin: 0 auto;
     width: 90%;
+    max-width: 980px;
     height: 8vh;
     background-color: $backgroundPink;
 
     .menu {
         @include setFlexBox(space-evenly, center, row);
         height: 100%;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
 
         li {
@@ -62,7 +67,7 @@ body {
                 height: 100%;
                 width: 100%;
                 color: $contentGrey;
-                font-size: 18px;
+                font-size: 1.7rem;
                 transition: 0.3s;
     
                 &:hover {
@@ -96,6 +101,7 @@ body {
     height: 92vh;
     background-color: $backgroundPink;
     width: 90%;
+    max-width: 980px;
     margin: 0 auto;
 
     .home-primary-div {
@@ -110,12 +116,13 @@ body {
 
             h1 {
                 width: 100%;
-                font-size: 65px;
+                font-size: 6.4rem;
                 color: $titlePink;
             }
     
             p {
-                font-size: 25px;
+                font-size: 2.5rem;
+                line-height: 2.5rem;
                 font-weight: 600;
                 color: $contentGrey;
                 width: 100%;
@@ -139,12 +146,12 @@ body {
             box-shadow: 15px 10px 5px 0px rgba(0, 0, 0, 0.253);
 
             .home-ice-cream {
-                height: 110%;
-                transition: 0.5s;
+                height: 105%;
+                transition: 0.2s;
 
                 &:hover {
                     transition: 0.5s;
-                    height: 120%;
+                    height: 115%;
                 }
             }
         }    
@@ -154,25 +161,28 @@ body {
 
 .container-specialties {
     @include setFlexBox(center, center, column);
-    height: 100vh;
     background-color: #fff9f9;
+    
 
     h2 {
-        @include setFlexBox(center, flex-end, row);
-        font-size: 40px;
+        @include setFlexBox(center, center, row);
+        width: 90%;
+        max-width: 980px;
+        font-size: 4rem;
         color: $titlePink;
-        height: 20%;
+        padding: 20px;
     }
     
     .specialties-div {
-        @include setFlexBox(space-evenly, center, row);
-        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        width: 90%;
+        max-width: 980px;
         height: 100%;
         padding: 20px;
 
         .specialties-section {
-            flex-direction: column;
-            width: 300px;
             height: auto;
             background-color: #e7e7e7;
             border-radius: 10px;
@@ -187,6 +197,7 @@ body {
 
             p {
                 @include setFlexBox(center, center, row);
+                font-size: 1.5rem;
                 width: 100%;
                 height: 10%;
                 padding: 10px;
@@ -213,16 +224,19 @@ body {
 
 .container-specialties-secondary {
     @include setFlexBox(center, center, row);
-    height: 100vh;
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 980px;
     content-visibility: auto;
 
     .specialties-secondary-div {
         @include setFlexBox(center, center, row);
         width: 50%;
+        height: 100%;
+        padding: 20px;
 
         img {
-            width: 75%;
+            width: 100%;
             box-shadow: 10px 7px 0px 0px $titlePink;
             border-radius: 5px;
         }
@@ -240,14 +254,15 @@ body {
             width: 50%;
 
             h2 {
-                font-size: 64px;
+                font-size: 5.6rem;
                 color: $titlePink;
-                width: 80%;
+                width: 100%;
             }
 
             p {
                 width: 100%;
-                font-size: 25px;
+                font-size: 2.5rem;
+                line-height: 2.5rem;
                 color: $contentGrey;
                 text-align: justify;
             }
@@ -261,57 +276,67 @@ body {
     height: 100vh;
     background-color: #FFFFFF;
 
-    .location-div-title {
+    .container-location-secondary {
         @include setFlexBox(center, center, row);
-        width: 50%;
+        width: 90%;
+        max-width: 980px;
         height: 100%;
 
-        .location-title {
-            @include setFlexBox(center, flex-start, column);
-            width: 60%;
-            gap: 30px;
-
-            h2 {
-                font-size: 64px;
-                color: $titlePink;
+        .location-div-title {
+            @include setFlexBox(center, center, row);
+            width: 50%;
+            height: 100%;
+    
+            .location-title {
+                @include setFlexBox(center, flex-start, column);
+                width: 80%;
+                gap: 30px;
+    
+                h2 {
+                    font-size: 5.6rem;
+                    color: $titlePink;
+                }
+    
+                p {
+                    text-align: justify;
+                    font-size: 2.5rem;
+                    line-height: 2.5rem;
+                    color: $contentGrey;
+                }
             }
-
-            p {
-                text-align: justify;
-                font-size: 25px;
-                color: $contentGrey;
-            }
+            
         }
-        
-    }
-
-    .location-div-map {
-        @include setFlexBox(center, center, row);
-        width: 70%;
-        height: 100%;
-
-        .mapouter{
-            text-align: center;
-            width: 80%;
-            height: 70%;
-
-            .gmap_canvas {
-                overflow: hidden;
-                background: none!important;
-                height: 100%;
-                
-                iframe {
-                    width: 100%;
+    
+        .location-div-map {
+            @include setFlexBox(center, center, row);
+            width: 70%;
+            height: 100%;
+    
+            .mapouter{
+                text-align: center;
+                width: 80%;
+                height: 70%;
+    
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none!important;
                     height: 100%;
+                    
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
             }
         }
-    }
+    }   
 }
 
 .container-about {
     @include setFlexBox(center, center, row);
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 980px;
     height: 100vh;
 
     .about-div {
@@ -325,12 +350,13 @@ body {
             gap: 30px;
 
             h2 {
-                font-size: 64px;
+                font-size: 5.6rem;
                 color: $titlePink;
             }
 
             p {
-                font-size: 25px;
+                font-size: 2.5rem;
+                line-height: 2.5rem;
                 color: $contentGrey;
                 font-weight: 600;
                 text-align: justify;
@@ -345,7 +371,7 @@ body {
 
         .contacts {
             @include setFlexBox(space-between, center, row);
-            width: 50%;
+            width: 60%;
             height: 50%;
             gap: 25px;
 
@@ -369,7 +395,7 @@ body {
                 height: 100%;
 
                 p {
-                    font-size: 25px;
+                    font-size: 2rem;
                 }
             }
 
@@ -382,7 +408,11 @@ body {
 
 footer {
     text-align: center;
+    margin: 0 auto;
     padding: 10px;
+    width: 90%;
+    max-width: 980px;
+    font-size: 1.5rem;
 
     a {
        color: #000000;
@@ -395,118 +425,17 @@ footer {
 
 @media (min-width: 769px) and (max-width: 1279px) {
 
-    .container-home {
-        width: 100%;
-
-        .home-primary-div {
-            div {
-                h1 {
-                    font-size: 48px;
-                }
-
-                p {
-                    font-size: 20px;
-                }
-            }      
-        }
-
-        .home-secondary-div {         
-            .home-image-div {
-                width: 70%;
-            }
-        }
+    html {
+        font-size: 50%;
     }
 
-    .container-specialties {
-        h2 {
-            font-size: 36px;
-        }
-        .specialties-div {          
-            .specialties-section {
-                width: 20%;
-                height: 70%;
-            }
-        }
-    }
-
-    .container-specialties-secondary {      
-        .specialties-secondary-div-title {
-            .specialties-secondary-title {
-                h2 {
-                    font-size: 48px;
-                }
-
-                p {
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-
-    .container-location {
-        padding: 20px;
-        .location-div-title {
-            .location-title {
-                h2 {
-                    font-size: 48px;
-                }
-
-                p {
-                    font-size: 20px;
-                }
-            }
-        }
-
-        .mapouter{
-            text-align: center;
-            width: 100%;
-            height: 70%;
-
-            .gmap_canvas {
-                overflow: hidden;
-                background: none!important;
-                height: 100%;
-                
-                iframe {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-    }
-
-    .container-about {
-        .about-div {
-            .about-title {
-                h2 {
-                    font-size: 48px;
-                }
-
-                p {
-                    font-size: 20px;
-                }
-            }
-        }
-
-        .contacts-div {
-            .contacts {
-                a {
-                    img {
-                        width: 40px;
-                    }
-                }
-                
-                .contact-info {
-                    p {
-                        font-size: 20px;
-                    }
-                }
-            }          
-        }
-    }
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
+
+    html {
+        font-size: 50%;
+    }
 
     .navbar {
         justify-content: flex-start;
@@ -576,12 +505,10 @@ footer {
                 width: 100%;
 
                 h1 {
-                    font-size: 64px;
                     text-align: center;
                 }
 
                 p {
-                    font-size: 20px;
                     text-align: center;
                 }
             }      
@@ -600,10 +527,8 @@ footer {
 
     .container-specialties {
         height: auto;
-        padding: 30px;
 
         h2 {
-            font-size: 36px;
             padding: 20px
         }
 
@@ -613,7 +538,7 @@ footer {
             gap: 20px;
 
             .specialties-section {
-                width: 300px;
+                width: 200px;
                 height: auto;
             }
         }
@@ -626,15 +551,14 @@ footer {
         gap: 30px;
 
         .specialties-secondary-div {
-            width: 70%;
+            width: 100%;
             height: 60%;
             content-visibility: auto;
-            box-shadow: 10px 7px 0px 0px $titlePink;
             border-radius: 10px;
 
 
             img {
-                width: 100%;
+                width: 80%;
             }
 
         }
@@ -649,12 +573,10 @@ footer {
 
                 h2 {
                     width: 100%;
-                    font-size: 48px;
                     text-align: center;
                 }
 
                 p {
-                    font-size: 20px;
                     text-align: center;
                 }
             }
@@ -665,44 +587,44 @@ footer {
         @include setFlexBox(center, center, column);
         width: 100%;
 
-        .location-div-title {
-            width: 100%;
-            height: 40%;
+        .container-location-secondary {
+            flex-direction: column;
 
-            .location-title {
-                width: 80%;
-                h2 {
-                    width: 100%;
-                    text-align: center;
-                    font-size: 48px;
-                }
-
-                p {
-                    font-size: 20px;
-                }
-            }
-        }
-
-        .location-div-map {
-            width: 80%;
-            
-            .mapouter{
-                text-align: center;
+            .location-div-title {
                 width: 100%;
-                height: 70%;
+                height: 40%;
+    
+                .location-title {
+                    width: 80%;
 
-                .gmap_canvas {
-                    overflow: hidden;
-                    background: none!important;
-                    height: 100%;
-                    
-                    iframe {
+                    h2 {
                         width: 100%;
-                        height: 100%;
+                        text-align: center;
                     }
                 }
             }
-        }
+    
+            .location-div-map {
+                width: 80%;
+                
+                .mapouter{
+                    text-align: center;
+                    width: 100%;
+                    height: 70%;
+    
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none!important;
+                        height: 100%;
+                        
+                        iframe {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }     
     }
 
     .container-about {
@@ -714,12 +636,7 @@ footer {
             .about-title {
                 h2 {
                     width: 100%;
-                    font-size: 48px;
                     text-align: center;
-                }
-
-                p {
-                    font-size: 20px;
                 }
             }
         }
@@ -732,16 +649,12 @@ footer {
                     width: 10%;
                     
                     img {
-                        width: 40px;
+                        width: 25px;
                     }
                 }
                 
                 .contact-info {
                     width: 90%;
-
-                    p {
-                        font-size: 20px;
-                    }
                 }
             }          
         }
@@ -750,43 +663,13 @@ footer {
 
 @media (min-width: 320px) and (max-width: 480px) {
 
-    .container-specialties {
-        h2 {
-            font-size: 28px;
-        }
+    html {
+        font-size: 35%;
     }
 
     .container-specialties-secondary {
         .specialties-secondary-div {
             box-shadow: none;
-        }
-
-        .specialties-secondary-div-title {
-            .specialties-secondary-title {
-                h2 {
-                    font-size: 36px;
-                }
-            }
-        }
-    }
-
-    .container-location {
-        .location-div-title {
-            .location-title {
-                h2 {
-                    font-size: 36px;
-                }
-            }
-        }
-    }
-
-    .container-about {
-        .about-div {        
-            .about-title {
-                h2 {
-                    font-size: 36px;
-                }
-            }
         }
     }
 }

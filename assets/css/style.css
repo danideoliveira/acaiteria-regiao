@@ -9,6 +9,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -34,6 +38,7 @@ body {
   flex-direction: row;
   margin: 0 auto;
   width: 90%;
+  max-width: 980px;
   height: 8vh;
   background-color: #FFEEEE;
 }
@@ -43,7 +48,7 @@ body {
   align-items: center;
   flex-direction: row;
   height: 100%;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 .navbar .menu li {
@@ -59,7 +64,7 @@ body {
   height: 100%;
   width: 100%;
   color: #636363;
-  font-size: 18px;
+  font-size: 1.7rem;
   transition: 0.3s;
 }
 .navbar .menu li a:hover {
@@ -90,6 +95,7 @@ body {
   height: 92vh;
   background-color: #FFEEEE;
   width: 90%;
+  max-width: 980px;
   margin: 0 auto;
 }
 .container-home .home-primary-div {
@@ -110,11 +116,12 @@ body {
 }
 .container-home .home-primary-div div h1 {
   width: 100%;
-  font-size: 65px;
+  font-size: 6.4rem;
   color: #FFAAAA;
 }
 .container-home .home-primary-div div p {
-  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
   font-weight: 600;
   color: #636363;
   width: 100%;
@@ -141,12 +148,12 @@ body {
   box-shadow: 15px 10px 5px 0px rgba(0, 0, 0, 0.253);
 }
 .container-home .home-secondary-div .home-image-div .home-ice-cream {
-  height: 110%;
-  transition: 0.5s;
+  height: 105%;
+  transition: 0.2s;
 }
 .container-home .home-secondary-div .home-image-div .home-ice-cream:hover {
   transition: 0.5s;
-  height: 120%;
+  height: 115%;
 }
 
 .container-specialties {
@@ -154,30 +161,29 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
   background-color: #fff9f9;
 }
 .container-specialties h2 {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  flex-direction: row;
-  font-size: 40px;
-  color: #FFAAAA;
-  height: 20%;
-}
-.container-specialties .specialties-div {
-  display: flex;
-  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
-  width: 100%;
+  width: 90%;
+  max-width: 980px;
+  font-size: 4rem;
+  color: #FFAAAA;
+  padding: 20px;
+}
+.container-specialties .specialties-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 980px;
   height: 100%;
   padding: 20px;
 }
 .container-specialties .specialties-div .specialties-section {
-  flex-direction: column;
-  width: 300px;
   height: auto;
   background-color: #e7e7e7;
   border-radius: 10px;
@@ -194,6 +200,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  font-size: 1.5rem;
   width: 100%;
   height: 10%;
   padding: 10px;
@@ -216,8 +223,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 100vh;
-  width: 100%;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 980px;
   content-visibility: auto;
 }
 .container-specialties-secondary .specialties-secondary-div {
@@ -226,9 +234,11 @@ body {
   align-items: center;
   flex-direction: row;
   width: 50%;
+  height: 100%;
+  padding: 20px;
 }
 .container-specialties-secondary .specialties-secondary-div img {
-  width: 75%;
+  width: 100%;
   box-shadow: 10px 7px 0px 0px #FFAAAA;
   border-radius: 5px;
 }
@@ -250,13 +260,14 @@ body {
   width: 50%;
 }
 .container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title h2 {
-  font-size: 64px;
+  font-size: 5.6rem;
   color: #FFAAAA;
-  width: 80%;
+  width: 100%;
 }
 .container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title p {
   width: 100%;
-  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
   color: #636363;
   text-align: justify;
 }
@@ -270,7 +281,16 @@ body {
   height: 100vh;
   background-color: #FFFFFF;
 }
-.container-location .location-div-title {
+.container-location .container-location-secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 90%;
+  max-width: 980px;
+  height: 100%;
+}
+.container-location .container-location-secondary .location-div-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -278,24 +298,25 @@ body {
   width: 50%;
   height: 100%;
 }
-.container-location .location-div-title .location-title {
+.container-location .container-location-secondary .location-div-title .location-title {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
   gap: 30px;
 }
-.container-location .location-div-title .location-title h2 {
-  font-size: 64px;
+.container-location .container-location-secondary .location-div-title .location-title h2 {
+  font-size: 5.6rem;
   color: #FFAAAA;
 }
-.container-location .location-div-title .location-title p {
+.container-location .container-location-secondary .location-div-title .location-title p {
   text-align: justify;
-  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
   color: #636363;
 }
-.container-location .location-div-map {
+.container-location .container-location-secondary .location-div-map {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,17 +324,17 @@ body {
   width: 70%;
   height: 100%;
 }
-.container-location .location-div-map .mapouter {
+.container-location .container-location-secondary .location-div-map .mapouter {
   text-align: center;
   width: 80%;
   height: 70%;
 }
-.container-location .location-div-map .mapouter .gmap_canvas {
+.container-location .container-location-secondary .location-div-map .mapouter .gmap_canvas {
   overflow: hidden;
   background: none !important;
   height: 100%;
 }
-.container-location .location-div-map .mapouter .gmap_canvas iframe {
+.container-location .container-location-secondary .location-div-map .mapouter .gmap_canvas iframe {
   width: 100%;
   height: 100%;
 }
@@ -323,7 +344,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 100%;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 980px;
   height: 100vh;
 }
 .container-about .about-div {
@@ -343,11 +366,12 @@ body {
   gap: 30px;
 }
 .container-about .about-div .about-title h2 {
-  font-size: 64px;
+  font-size: 5.6rem;
   color: #FFAAAA;
 }
 .container-about .about-div .about-title p {
-  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
   color: #636363;
   font-weight: 600;
   text-align: justify;
@@ -365,7 +389,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  width: 50%;
+  width: 60%;
   height: 50%;
   gap: 25px;
 }
@@ -388,7 +412,7 @@ body {
   height: 100%;
 }
 .container-about .contacts-div .contacts .contact-info p {
-  font-size: 25px;
+  font-size: 2rem;
 }
 .container-about .contacts-div .contacts img:hover {
   filter: brightness(100%);
@@ -396,7 +420,11 @@ body {
 
 footer {
   text-align: center;
+  margin: 0 auto;
   padding: 10px;
+  width: 90%;
+  max-width: 980px;
+  font-size: 1.5rem;
 }
 footer a {
   color: #000000;
@@ -406,68 +434,15 @@ footer a:hover {
 }
 
 @media (min-width: 769px) and (max-width: 1279px) {
-  .container-home {
-    width: 100%;
-  }
-  .container-home .home-primary-div div h1 {
-    font-size: 48px;
-  }
-  .container-home .home-primary-div div p {
-    font-size: 20px;
-  }
-  .container-home .home-secondary-div .home-image-div {
-    width: 70%;
-  }
-  .container-specialties h2 {
-    font-size: 36px;
-  }
-  .container-specialties .specialties-div .specialties-section {
-    width: 20%;
-    height: 70%;
-  }
-  .container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title h2 {
-    font-size: 48px;
-  }
-  .container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title p {
-    font-size: 20px;
-  }
-  .container-location {
-    padding: 20px;
-  }
-  .container-location .location-div-title .location-title h2 {
-    font-size: 48px;
-  }
-  .container-location .location-div-title .location-title p {
-    font-size: 20px;
-  }
-  .container-location .mapouter {
-    text-align: center;
-    width: 100%;
-    height: 70%;
-  }
-  .container-location .mapouter .gmap_canvas {
-    overflow: hidden;
-    background: none !important;
-    height: 100%;
-  }
-  .container-location .mapouter .gmap_canvas iframe {
-    width: 100%;
-    height: 100%;
-  }
-  .container-about .about-div .about-title h2 {
-    font-size: 48px;
-  }
-  .container-about .about-div .about-title p {
-    font-size: 20px;
-  }
-  .container-about .contacts-div .contacts a img {
-    width: 40px;
-  }
-  .container-about .contacts-div .contacts .contact-info p {
-    font-size: 20px;
+  html {
+    font-size: 50%;
   }
 }
 @media (min-width: 320px) and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
   .navbar {
     justify-content: flex-start;
     align-items: flex-end;
@@ -514,6 +489,7 @@ footer a:hover {
     transform: translateY(-8px) rotate(-45deg);
     background-color: #FFEEEE;
   }
+
   .container-home {
     flex-direction: column;
     padding: 20px;
@@ -531,11 +507,9 @@ footer a:hover {
     width: 100%;
   }
   .container-home .home-primary-div div h1 {
-    font-size: 64px;
     text-align: center;
   }
   .container-home .home-primary-div div p {
-    font-size: 20px;
     text-align: center;
   }
   .container-home .home-secondary-div {
@@ -546,12 +520,11 @@ footer a:hover {
     width: 90%;
     height: 100%;
   }
+
   .container-specialties {
     height: auto;
-    padding: 30px;
   }
   .container-specialties h2 {
-    font-size: 36px;
     padding: 20px;
   }
   .container-specialties .specialties-div {
@@ -563,9 +536,10 @@ footer a:hover {
     gap: 20px;
   }
   .container-specialties .specialties-div .specialties-section {
-    width: 300px;
+    width: 200px;
     height: auto;
   }
+
   .container-specialties-secondary {
     flex-direction: column-reverse;
     padding: 30px;
@@ -573,14 +547,13 @@ footer a:hover {
     gap: 30px;
   }
   .container-specialties-secondary .specialties-secondary-div {
-    width: 70%;
+    width: 100%;
     height: 60%;
     content-visibility: auto;
-    box-shadow: 10px 7px 0px 0px #FFAAAA;
     border-radius: 10px;
   }
   .container-specialties-secondary .specialties-secondary-div img {
-    width: 100%;
+    width: 80%;
   }
   .container-specialties-secondary .specialties-secondary-div-title {
     width: 100%;
@@ -595,13 +568,12 @@ footer a:hover {
   }
   .container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title h2 {
     width: 100%;
-    font-size: 48px;
     text-align: center;
   }
   .container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title p {
-    font-size: 20px;
     text-align: center;
   }
+
   .container-location {
     display: flex;
     justify-content: center;
@@ -609,38 +581,38 @@ footer a:hover {
     flex-direction: column;
     width: 100%;
   }
-  .container-location .location-div-title {
+  .container-location .container-location-secondary {
+    flex-direction: column;
+  }
+  .container-location .container-location-secondary .location-div-title {
     width: 100%;
     height: 40%;
   }
-  .container-location .location-div-title .location-title {
+  .container-location .container-location-secondary .location-div-title .location-title {
     width: 80%;
   }
-  .container-location .location-div-title .location-title h2 {
+  .container-location .container-location-secondary .location-div-title .location-title h2 {
     width: 100%;
     text-align: center;
-    font-size: 48px;
   }
-  .container-location .location-div-title .location-title p {
-    font-size: 20px;
-  }
-  .container-location .location-div-map {
+  .container-location .container-location-secondary .location-div-map {
     width: 80%;
   }
-  .container-location .location-div-map .mapouter {
+  .container-location .container-location-secondary .location-div-map .mapouter {
     text-align: center;
     width: 100%;
     height: 70%;
   }
-  .container-location .location-div-map .mapouter .gmap_canvas {
+  .container-location .container-location-secondary .location-div-map .mapouter .gmap_canvas {
     overflow: hidden;
     background: none !important;
     height: 100%;
   }
-  .container-location .location-div-map .mapouter .gmap_canvas iframe {
+  .container-location .container-location-secondary .location-div-map .mapouter .gmap_canvas iframe {
     width: 100%;
     height: 100%;
   }
+
   .container-about {
     display: flex;
     justify-content: center;
@@ -652,11 +624,7 @@ footer a:hover {
   }
   .container-about .about-div .about-title h2 {
     width: 100%;
-    font-size: 48px;
     text-align: center;
-  }
-  .container-about .about-div .about-title p {
-    font-size: 20px;
   }
   .container-about .contacts-div .contacts {
     width: 60%;
@@ -665,31 +633,18 @@ footer a:hover {
     width: 10%;
   }
   .container-about .contacts-div .contacts a img {
-    width: 40px;
+    width: 25px;
   }
   .container-about .contacts-div .contacts .contact-info {
     width: 90%;
   }
-  .container-about .contacts-div .contacts .contact-info p {
-    font-size: 20px;
-  }
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  .container-specialties h2 {
-    font-size: 28px;
+  html {
+    font-size: 35%;
   }
+
   .container-specialties-secondary .specialties-secondary-div {
     box-shadow: none;
   }
-  .container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title h2 {
-    font-size: 36px;
-  }
-  .container-location .location-div-title .location-title h2 {
-    font-size: 36px;
-  }
-  .container-about .about-div .about-title h2 {
-    font-size: 36px;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
