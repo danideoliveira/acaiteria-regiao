@@ -146,14 +146,19 @@ body {
   height: 80%;
   content-visibility: auto;
   box-shadow: 15px 10px 5px 0px rgba(0, 0, 0, 0.253);
+  transition: 0.5s;
 }
 .container-home .home-secondary-div .home-image-div .home-ice-cream {
   height: 105%;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 .container-home .home-secondary-div .home-image-div .home-ice-cream:hover {
   transition: 0.5s;
   height: 115%;
+}
+.container-home .home-secondary-div .home-image-div.active {
+  border-radius: 10px 10px 10px 10px;
+  transition: 0.5s;
 }
 
 .container-specialties {
@@ -162,6 +167,7 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: #fff9f9;
+  padding: 30px;
 }
 .container-specialties h2 {
   display: flex;
@@ -442,7 +448,6 @@ footer a:hover {
   html {
     font-size: 50%;
   }
-
   .navbar {
     justify-content: flex-start;
     align-items: flex-end;
@@ -489,7 +494,6 @@ footer a:hover {
     transform: translateY(-8px) rotate(-45deg);
     background-color: #FFEEEE;
   }
-
   .container-home {
     flex-direction: column;
     padding: 20px;
@@ -520,7 +524,6 @@ footer a:hover {
     width: 90%;
     height: 100%;
   }
-
   .container-specialties {
     height: auto;
   }
@@ -539,7 +542,6 @@ footer a:hover {
     width: 200px;
     height: auto;
   }
-
   .container-specialties-secondary {
     flex-direction: column-reverse;
     padding: 30px;
@@ -573,7 +575,6 @@ footer a:hover {
   .container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title p {
     text-align: center;
   }
-
   .container-location {
     display: flex;
     justify-content: center;
@@ -612,7 +613,6 @@ footer a:hover {
     width: 100%;
     height: 100%;
   }
-
   .container-about {
     display: flex;
     justify-content: center;
@@ -643,7 +643,6 @@ footer a:hover {
   html {
     font-size: 35%;
   }
-
   .container-specialties-secondary .specialties-secondary-div {
     box-shadow: none;
   }

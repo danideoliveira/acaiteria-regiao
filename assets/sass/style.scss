@@ -144,17 +144,23 @@ body {
             height: 80%;
             content-visibility: auto;
             box-shadow: 15px 10px 5px 0px rgba(0, 0, 0, 0.253);
+            transition: 0.5s;
 
             .home-ice-cream {
                 height: 105%;
-                transition: 0.2s;
+                transition: 0.5s;
 
                 &:hover {
                     transition: 0.5s;
                     height: 115%;
                 }
             }
-        }    
+        }
+
+        .home-image-div.active {
+            border-radius: 10px 10px 10px 10px;
+            transition: 0.5s;
+        }   
     }
 
 }
@@ -162,7 +168,7 @@ body {
 .container-specialties {
     @include setFlexBox(center, center, column);
     background-color: #fff9f9;
-    
+    padding: 30px;
 
     h2 {
         @include setFlexBox(center, center, row);

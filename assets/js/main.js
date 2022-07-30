@@ -1,37 +1,42 @@
-function openMobileMenu() {
-    const hamburguer = document.querySelector('.mobile-menu');
-    const navMenu = document.querySelector('.menu');
+class PageInteraction {
+    constructor() {
+        this.openMobileMenu();
+        this.iceCreamHomeAnimation();
+    }
 
-    hamburguer.addEventListener('click', () => {
-        hamburguer.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    })
+    openMobileMenu() {
+        // Elementos HTML selecionados
+        const hamburguer = document.querySelector('.mobile-menu');
+        const navMenu = document.querySelector('.menu');
+        
+        // Evento definido para abrir ou fechar o menu quando for clicado
+        hamburguer.addEventListener('click', () => {
+            hamburguer.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        })
+    
+        // Evento para fechar o menu quando uma opção é selecionada
+        document.querySelectorAll('.menu li a').forEach(n => n.addEventListener('click', () => {
+            hamburguer.classList.remove('active');
+            navMenu.classList.remove('active');
+        }))
+    }
 
-    document.querySelectorAll('.menu li a').forEach(n => n.addEventListener('click', () => {
-        hamburguer.classList.remove('active');
-        navMenu.classList.remove('active');
-    }))
+    iceCreamHomeAnimation() {
+        // Elementos HTML selecionados
+        const imgHomeIceCream = document.querySelector('.home-ice-cream');
+        const homeImgDiv = document.querySelector('.home-image-div');
+    
+        // Evento que ativa a animação quando o mouse está por cima do elemento
+        imgHomeIceCream.addEventListener('mouseenter', () => {
+            homeImgDiv.classList.add('active');
+        });
+    
+        // Evento que ativa a animação quando o mouse sai de cima do elemento
+        imgHomeIceCream.addEventListener('mouseout', () => {
+            homeImgDiv.classList.remove('active');
+        });
+    }
 }
 
-openMobileMenu();
-
-function iceCreamHomeAnimation() {
-    const imgHomeIceCream = document.querySelector('.home-ice-cream');
-    const homeImgDiv = document.querySelector('.home-image-div');
-
-    const BORDER_RADIUS_MOUSE_OUT = `${260}px ${10}px ${10}px ${10}px`;
-    const BORDER_RADIUS_MOUSE_ENTER = `${10}px ${10}px ${10}px ${10}px`;
-    const TRANSITION_VALUE = `${0.5}s`;
-
-    imgHomeIceCream.addEventListener('mouseenter', (e) => {
-        homeImgDiv.style.borderRadius = BORDER_RADIUS_MOUSE_ENTER;
-        homeImgDiv.style.transition = TRANSITION_VALUE;
-    })
-
-    imgHomeIceCream.addEventListener('mouseout', (e) => {
-        homeImgDiv.style.borderRadius = BORDER_RADIUS_MOUSE_OUT;
-        homeImgDiv.style.transition = TRANSITION_VALUE;
-    })
-}
-
-//iceCreamHomeAnimation();
+const startInteraction = new PageInteraction();
