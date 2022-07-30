@@ -19,7 +19,7 @@ Tecnologias utilizadas:
 </br>
 </br>
 ▫️ Mobile </br>
-<img src="assets/printTela02.png">
+<img src="./assets/img/print/print6.png">
 </p>
 
 ## 🔸 Confira o projeto:
