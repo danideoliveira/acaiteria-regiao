@@ -7,9 +7,10 @@
     flex-direction: $flexDirection;
 }
 
-$titlePink: #FFAAAA;
+$titleBrown: #855d3a;
 $backgroundPink: #FFEEEE;
-$contentGrey: #636363;
+$backgroundGray: #fff9f9;
+$contentGray: #636363;
 
 * {
     margin: 0;
@@ -34,7 +35,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: $titlePink;
+    background-color: $titleBrown;
     border-radius: 10px;
 }
 
@@ -66,12 +67,12 @@ body {
                 cursor: pointer;
                 height: 100%;
                 width: 100%;
-                color: $contentGrey;
+                color: $contentGray;
                 font-size: 1.7rem;
                 transition: 0.3s;
     
                 &:hover {
-                    background-color: $titlePink;
+                    background-color: $titleBrown;
                     color: $backgroundPink;
                     transition: 0.3s;
                 }
@@ -89,7 +90,7 @@ body {
             width: 25px;
             height: 3px;
             margin: 5px auto;
-            background-color: $titlePink;
+            background-color: $titleBrown;
             transition: 0.3s ease;
             border-radius: 10px
         }
@@ -117,14 +118,13 @@ body {
             h1 {
                 width: 100%;
                 font-size: 6.4rem;
-                color: $titlePink;
+                color: $titleBrown;
             }
     
             p {
                 font-size: 2.5rem;
                 line-height: 2.5rem;
-                font-weight: 600;
-                color: $contentGrey;
+                color: $contentGray;
                 width: 100%;
                 text-align: justify;
             }
@@ -137,22 +137,18 @@ body {
         height: 100%;
 
         .home-image-div {
-            @include setFlexBox(flex-end, center, row);
-            background-color: $titlePink;
-            border-radius: 260px 10px 10px 10px;
+            @include setFlexBox(center, center, row);
             width: 80%;
             height: 80%;
-            content-visibility: auto;
-            box-shadow: 15px 10px 5px 0px rgba(0, 0, 0, 0.253);
             transition: 0.5s;
 
             .home-ice-cream {
-                height: 105%;
-                transition: 0.5s;
+                height: 100%;
+                transition: 0.3s;
 
                 &:hover {
-                    transition: 0.5s;
-                    height: 115%;
+                    transition: 0.3s;
+                    height: 102%;
                 }
             }
         }
@@ -167,15 +163,16 @@ body {
 
 .container-specialties {
     @include setFlexBox(center, center, column);
-    background-color: #fff9f9;
+    background-color: $backgroundGray;
     padding: 30px;
+    height: 100vh;
 
     h2 {
         @include setFlexBox(center, center, row);
         width: 90%;
         max-width: 980px;
         font-size: 4rem;
-        color: $titlePink;
+        color: $titleBrown;
         padding: 20px;
     }
     
@@ -185,7 +182,7 @@ body {
         gap: 20px;
         width: 90%;
         max-width: 980px;
-        height: 100%;
+        height: auto;
         padding: 20px;
 
         .specialties-section {
@@ -208,7 +205,7 @@ body {
                 height: 10%;
                 padding: 10px;
                 font-weight: 600;
-                color: $contentGrey;
+                color: $contentGray;
                 transition: 0.5s;
             }
 
@@ -232,18 +229,19 @@ body {
     @include setFlexBox(center, center, row);
     margin: 0 auto;
     width: 90%;
+    height: 100vh;
     max-width: 980px;
     content-visibility: auto;
 
     .specialties-secondary-div {
         @include setFlexBox(center, center, row);
-        width: 50%;
+        width: 75%;
         height: 100%;
         padding: 20px;
 
         img {
             width: 100%;
-            box-shadow: 10px 7px 0px 0px $titlePink;
+            box-shadow: 10px 7px $titleBrown;
             border-radius: 5px;
         }
     }
@@ -261,7 +259,7 @@ body {
 
             h2 {
                 font-size: 5.6rem;
-                color: $titlePink;
+                color: $titleBrown;
                 width: 100%;
             }
 
@@ -269,7 +267,7 @@ body {
                 width: 100%;
                 font-size: 2.5rem;
                 line-height: 2.5rem;
-                color: $contentGrey;
+                color: $contentGray;
                 text-align: justify;
             }
         }
@@ -280,7 +278,7 @@ body {
     @include setFlexBox(center, center, row);
     width: 100%;
     height: 100vh;
-    background-color: #FFFFFF;
+    background-color: $backgroundGray;
 
     .container-location-secondary {
         @include setFlexBox(center, center, row);
@@ -300,14 +298,14 @@ body {
     
                 h2 {
                     font-size: 5.6rem;
-                    color: $titlePink;
+                    color: $titleBrown;
                 }
     
                 p {
                     text-align: justify;
                     font-size: 2.5rem;
                     line-height: 2.5rem;
-                    color: $contentGrey;
+                    color: $contentGray;
                 }
             }
             
@@ -357,14 +355,13 @@ body {
 
             h2 {
                 font-size: 5.6rem;
-                color: $titlePink;
+                color: $titleBrown;
             }
 
             p {
                 font-size: 2.5rem;
                 line-height: 2.5rem;
-                color: $contentGrey;
-                font-weight: 600;
+                color: $contentGray;
                 text-align: justify;
             }
         }    
@@ -424,7 +421,7 @@ footer {
        color: #000000;
 
        &:hover {
-        color: $contentGrey;
+        color: $contentGray;
        }
     }
 }
@@ -460,7 +457,7 @@ footer {
             height: 100%;
             text-align: center;
             transition: 0.3s;
-            background-color: $titlePink;
+            background-color: $titleBrown;
             z-index: 1;
             justify-content: flex-start;
             box-shadow: 10px 0px 15px 1px rgba(0, 0, 0, 0.377);

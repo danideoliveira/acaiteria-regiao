@@ -22,7 +22,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #FFAAAA;
+  background-color: #855d3a;
   border-radius: 10px;
 }
 
@@ -68,7 +68,7 @@ body {
   transition: 0.3s;
 }
 .navbar .menu li a:hover {
-  background-color: #FFAAAA;
+  background-color: #855d3a;
   color: #FFEEEE;
   transition: 0.3s;
 }
@@ -82,7 +82,7 @@ body {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  background-color: #FFAAAA;
+  background-color: #855d3a;
   transition: 0.3s ease;
   border-radius: 10px;
 }
@@ -117,12 +117,11 @@ body {
 .container-home .home-primary-div div h1 {
   width: 100%;
   font-size: 6.4rem;
-  color: #FFAAAA;
+  color: #855d3a;
 }
 .container-home .home-primary-div div p {
   font-size: 2.5rem;
   line-height: 2.5rem;
-  font-weight: 600;
   color: #636363;
   width: 100%;
   text-align: justify;
@@ -137,24 +136,20 @@ body {
 }
 .container-home .home-secondary-div .home-image-div {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #FFAAAA;
-  border-radius: 260px 10px 10px 10px;
   width: 80%;
   height: 80%;
-  content-visibility: auto;
-  box-shadow: 15px 10px 5px 0px rgba(0, 0, 0, 0.253);
   transition: 0.5s;
 }
 .container-home .home-secondary-div .home-image-div .home-ice-cream {
-  height: 105%;
-  transition: 0.5s;
+  height: 100%;
+  transition: 0.3s;
 }
 .container-home .home-secondary-div .home-image-div .home-ice-cream:hover {
-  transition: 0.5s;
-  height: 115%;
+  transition: 0.3s;
+  height: 102%;
 }
 .container-home .home-secondary-div .home-image-div.active {
   border-radius: 10px 10px 10px 10px;
@@ -168,6 +163,7 @@ body {
   flex-direction: column;
   background-color: #fff9f9;
   padding: 30px;
+  height: 100vh;
 }
 .container-specialties h2 {
   display: flex;
@@ -177,7 +173,7 @@ body {
   width: 90%;
   max-width: 980px;
   font-size: 4rem;
-  color: #FFAAAA;
+  color: #855d3a;
   padding: 20px;
 }
 .container-specialties .specialties-div {
@@ -186,7 +182,7 @@ body {
   gap: 20px;
   width: 90%;
   max-width: 980px;
-  height: 100%;
+  height: auto;
   padding: 20px;
 }
 .container-specialties .specialties-div .specialties-section {
@@ -231,6 +227,7 @@ body {
   flex-direction: row;
   margin: 0 auto;
   width: 90%;
+  height: 100vh;
   max-width: 980px;
   content-visibility: auto;
 }
@@ -239,13 +236,13 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 50%;
+  width: 75%;
   height: 100%;
   padding: 20px;
 }
 .container-specialties-secondary .specialties-secondary-div img {
   width: 100%;
-  box-shadow: 10px 7px 0px 0px #FFAAAA;
+  box-shadow: 10px 7px #855d3a;
   border-radius: 5px;
 }
 .container-specialties-secondary .specialties-secondary-div-title {
@@ -267,7 +264,7 @@ body {
 }
 .container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title h2 {
   font-size: 5.6rem;
-  color: #FFAAAA;
+  color: #855d3a;
   width: 100%;
 }
 .container-specialties-secondary .specialties-secondary-div-title .specialties-secondary-title p {
@@ -285,7 +282,7 @@ body {
   flex-direction: row;
   width: 100%;
   height: 100vh;
-  background-color: #FFFFFF;
+  background-color: #fff9f9;
 }
 .container-location .container-location-secondary {
   display: flex;
@@ -314,7 +311,7 @@ body {
 }
 .container-location .container-location-secondary .location-div-title .location-title h2 {
   font-size: 5.6rem;
-  color: #FFAAAA;
+  color: #855d3a;
 }
 .container-location .container-location-secondary .location-div-title .location-title p {
   text-align: justify;
@@ -373,13 +370,12 @@ body {
 }
 .container-about .about-div .about-title h2 {
   font-size: 5.6rem;
-  color: #FFAAAA;
+  color: #855d3a;
 }
 .container-about .about-div .about-title p {
   font-size: 2.5rem;
   line-height: 2.5rem;
   color: #636363;
-  font-weight: 600;
   text-align: justify;
 }
 .container-about .contacts-div {
@@ -465,7 +461,7 @@ footer a:hover {
     height: 100%;
     text-align: center;
     transition: 0.3s;
-    background-color: #FFAAAA;
+    background-color: #855d3a;
     z-index: 1;
     justify-content: flex-start;
     box-shadow: 10px 0px 15px 1px rgba(0, 0, 0, 0.377);
