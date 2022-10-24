@@ -1,0 +1,68 @@
+.container-specialties {
+    @include setFlexBox(space-evenly, center, column);
+    //background-color: $backgroundGray;
+    padding: 5rem 0 5rem 0;
+    height: auto;
+    min-height: 100vh;
+
+    /*h2 {
+        @include setFlexBox(center, center, row);
+        width: 90%;
+        max-width: 980px;
+        font-size: 4rem;
+        color: $titleBrown;
+        padding: 20px;
+    }*/
+}
+
+.specialties-title {
+    padding: 5rem 0 5rem 0;
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+    //width: 90%;
+    max-width: 1000px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.specialties-div {
+    @include setFlexBox(flex-start, flex-start, row);
+    height: 530px;
+    height: 250px;
+    //background-color: #e7e7e7;
+    //border-radius: 10px;
+    overflow: hidden;
+    //box-shadow: 0px 0px 5px 0px rgb(194, 194, 194);
+    //gap: 5rem;
+}
+
+.specialties-info {
+    @include setFlexBox(flex-start, flex-start, column);
+    padding: 2rem 0 0 1.5rem;
+    //gap: 15px;
+
+    p:nth-child(2) {
+        margin-bottom: 2rem;
+    }
+}
+
+
+/* Shapes */
+.specialties-shapes {
+    @include setFlexBox(flex-end, flex-end, row);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+.specialties-bottom-shape {
+    //position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+}

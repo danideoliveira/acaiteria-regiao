@@ -1,0 +1,93 @@
+.container-row {
+    @include setFlexBox(center, center, row);
+    height: 100vh;
+    //background-color: $backgroundPink;
+    min-height: 100vh;
+    width: 100%;
+    //max-width: 980px;
+    margin: 0 auto;
+}
+
+.container-auto {
+    @include setFlexBox(center, center, row);
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    //max-width: 980px;
+    margin: 0 auto;
+}
+
+.container-col {
+    @include setFlexBox(center, center, column);
+    height: 100vh;
+    //background-color: $backgroundPink;
+    min-height: 100vh;
+    width: 100%;
+    //max-width: 980px;
+    margin: 0 auto;
+}
+
+.home-primary-div {
+    @include setFlexBox(center, flex-start, column);
+    width: 50%;
+    gap: 15px;
+}
+
+.home-title-div {
+    z-index: 1;
+    margin-left: 15%;
+    width: 50%;
+}
+
+
+.home-secondary-div {
+    @include setFlexBox(center, center, row);
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.home-image-div {
+    @include setFlexBox(center, center, row);
+    width: 80%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.home-ice-cream {
+    height: 100%;
+    transition: 0.3s;
+}
+
+
+.home-image-div.active {
+    border-radius: 10px 10px 10px 10px;
+    transition: 0.5s;
+}
+
+
+/* Shapes */
+.home-left-divider {
+    height: 100vh;
+    max-width: 620px;
+    //position: absolute;
+    z-index: 0;
+    left: 0;
+}
+
+.home-bubble {
+    //position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    height: 450px;
+    max-height: 500px;
+}
+
+.home-shapes {
+    @include setFlexBox(space-between, flex-end, row);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
