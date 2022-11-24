@@ -1,0 +1,108 @@
+@import './mixins';
+@import './variables';
+
+// Background colors
+.bg-orange {
+    background-color: $orange;
+}
+
+.bg-pink {
+    background-color: $pink;
+}
+
+.bg-dark-purple {
+    background-color: $dark-purple;
+}
+
+.bg-cream {
+    background-color: $cream;
+}
+
+
+// Text colors
+.txt-white {
+    color: $white;
+}
+
+.txt-pink {
+    color: $pink;
+}
+
+.txt-cream {
+    color: $cream;
+}
+
+.txt-light-cream {
+    color: $light-cream;
+}
+
+.txt-orange {
+    color: $orange;
+}
+
+.txt-purple {
+    color: $purple;
+}
+
+.txt-dark-purple {
+    color: $dark-purple;
+}
+
+
+// Font sizes
+.fs-small2 {
+    font-size: 1.6rem;
+}
+
+.fs-small {
+   font-size: 2rem; 
+}
+
+.fs-normal {
+    font-size: 2.5rem;
+}
+
+.fs-medium {
+    font-size: 4rem;
+}
+
+.fs-medium2 {
+    font-size: 5.6rem;
+}
+
+.fs-big {
+    font-size: 6.4rem;
+}
+
+
+// Font weight
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+// Padrões de texto
+.title {
+    font-family: "Beach Sound", Arial, Helvetica, sans-serif;
+    width: 100%;
+    //margin-bottom: 15px;
+}
+
+.title-center {
+    @include setFlexbox(center, center, row);
+    font-family: "Beach Sound", Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.text {
+    line-height: 2.5rem;
+    width: 100%;
+    text-align: justify;
+}

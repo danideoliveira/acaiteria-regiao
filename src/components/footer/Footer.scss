@@ -1,0 +1,41 @@
+@import '../../helpers/mixins';
+@import '../../helpers/variables';
+
+footer {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 1.5rem;
+    position: absolute;
+
+    p {
+        padding: 1rem;
+
+        a:hover {
+            color: $white;
+        }
+    }
+}
+
+
+/* Shapes */
+.footer-shapes {
+    @include setFlexbox(flex-end, flex-end, row);
+    height: 100%;
+    width: 100%;
+}
+
+.footer-bottom-shape {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    width: 20rem;
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .footer-bottom-shape {
+        width: 10rem;
+    }
+}

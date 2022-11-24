@@ -1,0 +1,54 @@
+@import '../../helpers/mixins';
+@import '../../helpers/variables';
+
+.container-about {
+    @include setFlexbox(center, center, row);
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+}
+
+.about-primary-div {
+    @include setFlexbox(center, center, column);
+    width: 100%;
+    height: 100%;
+}
+
+.about-title-div {
+    @include setFlexbox(center, flex-start, column);
+    width: 50%;
+}
+
+
+.contacts-div {
+    @include setFlexbox(center, center, column);
+    width: 100%;
+    height: 50%;
+}
+
+
+@media (min-width: 320px) and (max-width: 900px) {
+    .container-about {
+        @include setFlexbox(center, center, column);
+    }
+
+    .about-primary-div {
+        height: 20%;
+    }
+
+    .about-title-div {
+        width: 65%;
+    }
+
+    .about-title {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .about-primary-div {
+        height: 50%;
+    }
+}

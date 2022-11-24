@@ -1,0 +1,29 @@
+// @import '../../helpers/mixins';
+// @import '../../helpers/variables';
+
+// .specialties-div {
+//     @include setFlexbox(flex-start, flex-start, row);
+//     height: 250px;
+//     overflow: hidden;
+// }
+
+// .specialties-info {
+//     @include setFlexbox(flex-start, flex-start, column);
+//     padding: 2rem 0 0 1.5rem;
+
+//     p:nth-child(2) {
+//         margin-bottom: 2rem;
+//     }
+// }
+
+// @media (min-width: 320px) and (max-width: 480px) {
+//     .specialties-div {
+//         flex-direction: column;
+//         width: 250px;
+//         height: auto;
+//     }
+
+//     .specialties-info {
+//         padding-left: 0;
+//     }
+// }

@@ -1,0 +1,130 @@
+@import '../../helpers/mixins';
+@import '../../helpers/variables';
+
+.container-location {
+    @include setFlexbox(center, center, row);
+    width: 100%;
+    height: 100vh;
+}
+
+.container-location-secondary {
+    @include setFlexbox(center, center, row);
+    width: 100%;
+    height: 100%;
+}
+
+.location-primary-div {
+    @include setFlexbox(flex-start, center, row);
+    width: 55%;
+    height: 100%;
+    z-index: 1;
+    background: url('../../assets/img/location-left-divider.svg') no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.location-title-div {
+    @include setFlexbox(center, flex-start, column);
+    margin-left: 15%;
+    width: 50%;
+}
+
+.location-div-map {
+    @include setFlexbox(center, center, row);
+    width: 70%;
+    height: 100%;
+}
+
+.mapouter {
+    text-align: center;
+    width: 80%;
+    height: 70%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 45%;
+    height: 100%;
+    position: absolute;
+
+    iframe {
+        width: 500px;
+        height: 480px;
+        border-radius: 20px;
+        box-shadow: 1rem 1rem 0 0 $cream;
+    }
+}
+
+
+/* Shapes */
+.location-divider {
+    height: 100%;
+    max-width: 620px;
+    z-index: 0;
+    left: 0;
+}
+
+.location-shapes {
+    @include setFlexbox(space-between, flex-end, row);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 900px) {
+    .container-location {
+        @include setFlexbox(center, center, column);
+        width: 100%;
+    }
+
+    .container-location-secondary {
+        flex-direction: column;
+    }
+
+    .location-primary-div {
+        width: 100%;
+        height: 20%;
+        background: none;
+    }
+
+    .location-title-div {
+        margin: 0 auto;
+        width: 65%;
+
+        p {
+            color: $white;
+        }
+    }
+    
+    .location-title {
+        color: $cream;
+        text-align: center;
+    }
+
+    .location-div-map {
+        width: 65%;
+        height: 50%;
+    }
+
+    .mapouter {
+        text-align: center;
+        width: 100%;
+        height: 70%;
+    }
+
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        width: 65%;
+        height: 50%;
+        padding: 1rem;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

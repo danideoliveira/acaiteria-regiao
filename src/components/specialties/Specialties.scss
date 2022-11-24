@@ -1,0 +1,81 @@
+// @import '../../helpers/mixins';
+// @import '../../helpers/variables';
+
+// // .container-specialties {
+// //     @include setFlexbox(space-evenly, center, column);
+// //     padding: 5rem 0 5rem 0;
+// //     height: auto;
+// //     min-height: 100vh;
+// //     position: relative;
+// //     z-index: 999;
+// // }
+
+// // .specialties-title {
+// //     padding: 5rem 0 5rem 0;
+// // }
+
+// // .specialties-grid {
+// //     display: grid;
+// //     grid-template-columns: repeat(2, 1fr);
+// //     gap: 8rem;
+// //     max-width: 1000px;
+// //     height: auto;
+// //     margin-top: 20px;
+// //     z-index: 999;
+// // }
+
+
+// /* Shapes */
+// .specialties-shapes {
+//     @include setFlexbox(flex-end, flex-end, row);
+//     position: absolute;
+//     height: 100%;
+//     width: 100%;
+//     z-index: 0;
+// }
+
+// .specialties-bottom-shape {
+//     z-index: 0;
+//     right: 0;
+//     bottom: 0;
+//     width: 100px;
+// }
+
+
+// @media (min-width: 320px) and (max-width: 900px) {
+
+//     .container-specialties {
+//         height: auto;
+//     }
+
+//     .specialties-title {
+//         padding: 20px;
+//     }
+
+//     .specialties-title {
+//         padding: 3rem 0 10rem 0;
+//     }
+
+//     .specialties-grid {
+//         grid-template-columns: repeat(1, 1fr);
+//         width: 80%;
+//         row-gap: 5rem;
+//     }
+
+//     .specialties-section {
+//         width: 200px;
+//         height: auto;
+//     }
+// }
+
+// @media (min-width: 320px) and (max-width: 480px) {
+
+//     .specialties-title {
+//         width: 65%;
+//         text-align: center;
+//     }
+
+//     .specialties-grid {
+//         width: auto;
+//     }
+// }
