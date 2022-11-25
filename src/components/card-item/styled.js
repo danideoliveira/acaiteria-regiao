@@ -21,6 +21,10 @@ export const DivImage = styled.div`
     border-radius: 20px;
 
     @media (min-width: 320px) and (max-width: 900px) {
+        width: 50%;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
         width: 100%;
     }
 
