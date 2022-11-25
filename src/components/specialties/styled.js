@@ -7,7 +7,7 @@ export const Container = styled.div`
     height: auto;
     min-height: 100vh;
     position: relative;
-    z-index: 999;
+    z-index: 998;
     background-color: #F5E3E0;
 
     @media (min-width: 320px) and (max-width: 900px) {
