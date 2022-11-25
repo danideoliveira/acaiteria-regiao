@@ -1,24 +1,25 @@
 import "./Location.scss";
+import { Container, ContainerSecondary, DivLeft, Title, Description, DivMap } from "./styled";
 
 export default function Location() {
   return (
-    <section id="location" className="container-location bg-dark-purple">
-      <div className="container-location-secondary">
-        <div className="location-primary-div">
-          <div className="location-title-div">
-            <h2 className="location-title title fs-medium2 txt-dark-purple">
+    <Container id="location">
+      <ContainerSecondary>
+        <DivLeft>
+          <div>
+            <Title>
               ONDE ESTAMOS?
-            </h2>
-            <p className="text fs-small txt-dark-purple">
+            </Title>
+            <Description>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla leo
               ex, accumsan eu dui vel, viverra aliquam metus.
-            </p>
+            </Description>
           </div>
-        </div>
+        </DivLeft>
 
-        <div className="location-div-map">
-          <div className="mapouter">
-            <div className="gmap_canvas">
+        <DivMap>
+          <div>
+            <div>
               <iframe
                 id="gmap_canvas"
                 loading="'lazy"
@@ -30,8 +31,8 @@ export default function Location() {
               ></iframe>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </DivMap>
+      </ContainerSecondary>
+    </Container>
   );
 }
