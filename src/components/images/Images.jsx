@@ -1,6 +1,7 @@
 import acai from '../../assets/img/acai.png';
 import homeBubble from '../../assets/img/home-bubble.svg';
 import homeLeftDivider from '../../assets/img/home-left-divider.svg';
+import locationLeftDivider from '../../assets/img/location-left-divider.svg';
 import copos from '../../assets/img/copos.png';
 import barca from '../../assets/img/barca.png';
 import picole from '../../assets/img/picole.png';
@@ -16,6 +17,7 @@ const images = {
     acai,
     homeBubble,
     homeLeftDivider,
+    locationLeftDivider,
     copos,
     barca,
     picole,
