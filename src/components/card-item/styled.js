@@ -6,7 +6,6 @@ export const Container = styled.div`
     ${setFlexbox('flex-start', 'flex-start', 'row')}
     height: 250px;
     overflow: hidden;
-
     
     @media (min-width: 320px) and (max-width: 480px) {
         flex-direction: column;
@@ -20,6 +19,10 @@ export const DivImage = styled.div`
     height: 100%;
     overflow: hidden;
     border-radius: 20px;
+
+    @media (min-width: 320px) and (max-width: 900px) {
+        width: 100%;
+    }
 
     img {
         height: 250px;

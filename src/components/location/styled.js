@@ -16,7 +16,7 @@ export const Container = styled.div`
 
 export const ContainerSecondary = styled.div`
     ${setFlexbox('center', 'center', 'row')}
-    width: 80%;  
+    width: 100%;  
     height: 100%;
 
     @media (min-width: 320px) and (max-width: 900px) {
@@ -25,8 +25,8 @@ export const ContainerSecondary = styled.div`
 `;
 
 export const DivLeft = styled.div`
-    ${setFlexbox('center', 'flex-start', 'row')}
-    width: 55%;
+    ${setFlexbox('center', 'center', 'row')}
+    width: 50%;
     height: 100%;
     z-index: 1;
     /* background: ${setImageBackground(images.locationLeftDivider)}; */
@@ -41,7 +41,7 @@ export const DivLeft = styled.div`
 
     div {
        ${setFlexbox('flex-start', 'center', 'column')}
-        margin-left: 15%;
+        /* margin-left: 15%; */
         width: 50%;
 
         @media (min-width: 320px) and (max-width: 900px) {
@@ -72,7 +72,7 @@ export const Description = styled.p`
 
 export const DivMap = styled.div`
     ${setFlexbox('center', 'center', 'row')}
-    width: 70%;
+    width: 50%;
     height: 100%;
 
     @media (min-width: 320px) and (max-width: 900px) {
@@ -82,7 +82,7 @@ export const DivMap = styled.div`
 
     div {
         text-align: center;
-        width: 80%;
+        width: 100%;
         height: 70%;
 
         @media (min-width: 320px) and (max-width: 900px) {
