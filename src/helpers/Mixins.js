@@ -6,3 +6,7 @@ export const setFlexbox = (alignItems, justifyContent, flexDirection) => css`
     justify-content: ${justifyContent};
     flex-direction: ${flexDirection};
 `;
+
+export const setImageBackground = (url) => {
+    return `url(${url}) no-repeat`;
+};
