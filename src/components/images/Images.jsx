@@ -1,5 +1,6 @@
-import icecream from '../../assets/img/icecream.png';
+import acai from '../../assets/img/acai.png';
 import homeBubble from '../../assets/img/home-bubble.svg';
+import homeLeftDivider from '../../assets/img/home-left-divider.svg';
 import copos from '../../assets/img/copos.png';
 import barca from '../../assets/img/barca.png';
 import picole from '../../assets/img/picole.png';
@@ -12,8 +13,9 @@ import logoTwitter from '../../assets/img/logo-twitter.png';
 import aboutBubble from '../../assets/img/about-bubble.svg';
 
 const images = {
-    icecream,
+    acai,
     homeBubble,
+    homeLeftDivider,
     copos,
     barca,
     picole,

@@ -1,21 +1,38 @@
 import './Navbar.scss';
+import { Nav, Menu, MobileMenu } from './styled';
 
 function Navbar() {
-    return(
-        <nav className="navbar">
-            <ul className="menu">
-                <li><a href="#">Início</a></li>
-                <li><a href="#specialties">Especialidades</a></li>
-                <li><a href="#location">Localização</a></li>
-                <li><a href="#about">Sobre</a></li>
-            </ul>
 
-            <div className="mobile-menu">
+    function openMobileMenu() {
+        const hamburguer = document.querySelector('.hamburguer');
+        const menu = document.querySelector('.menu');
+        hamburguer.classList.toggle('active');
+        menu.classList.toggle('active');
+    }
+
+    const menuItems = [
+        { href: '#', text: 'Início' },
+        { href: '#specialties', text: 'Especialidades' },
+        { href: '#location', text: 'Localização' },
+        { href: '#about', text: 'Sobre' },
+    ];
+
+    return(
+        <Nav>
+            <Menu className='menu'>
+                {
+                    menuItems.map(item => (
+                        <li onClick={() => openMobileMenu()}><a href={item.href}>{item.text}</a></li>
+                    ))
+                }
+            </Menu>
+
+            <MobileMenu className='hamburguer' onClick={() => openMobileMenu()}>
                 <div className="line1"></div>
                 <div className="line2"></div>
                 <div className="line3"></div>
-            </div>
-        </nav>
+            </MobileMenu>
+        </Nav>
     )
 }
 

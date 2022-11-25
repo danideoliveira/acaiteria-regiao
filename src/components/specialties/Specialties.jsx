@@ -2,6 +2,7 @@ import './Specialties.scss';
 import images from '../images/Images';
 import CardItem from '../card-item/CardItem';
 import { Container, Title, Grid, DivShape } from './styled';
+import {motion} from 'framer-motion';
 
 const specialtiesList = [
     { image: images.copos, alt: 'Copos', title: "Copos", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", value: "À partir de R$6,00", setButton: true },
