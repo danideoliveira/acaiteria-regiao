@@ -1,11 +1,7 @@
-import styled, { keyframes } from "styled-components";
-import { setFlexbox } from "../../helpers/Mixins";
+import styled from "styled-components";
+import { setFlexbox, setImageBackground } from "../../helpers/Mixins";
 import images from "../images/Images";
 import { floating, fadeInFromTop } from "../../helpers/CustomAnimations";
-
-const setImageBackground = (url) => {
-    return `url(${url}) no-repeat`;
-};
 
 export const Container = styled.div`
     ${setFlexbox('center', 'center', 'row')}
