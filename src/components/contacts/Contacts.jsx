@@ -1,14 +1,16 @@
 import "./Contacts.scss";
+import { Container } from "./styled";
+import { Description } from "../location/styled";
 
 export default function Contacts({image, alt, text, link}) {
     return (
-        <section className="contacts">
+        <Container>
             <a href={link}>
                 <img src={image} alt={alt}/>
             </a>
-            <div className="contact-info">
-                <p className="text fs-small txt-light-cream">{text}</p>
+            <div>
+                <Description>{text}</Description>
             </div>
-        </section>
+        </Container>
     );
 }
