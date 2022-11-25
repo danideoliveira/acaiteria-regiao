@@ -1,53 +1,53 @@
 @import '../../helpers/mixins';
 @import '../../helpers/variables';
 
-.contacts {
-    @include setFlexbox(space-between, center, row);
-    width: 60%;
-    height: 50%;
-    gap: 25px;
+// .contacts {
+//     @include setFlexbox(space-between, center, row);
+//     width: 60%;
+//     height: 50%;
+//     gap: 25px;
 
-    a img {
-        width: 50px;
-        transition: 0.3s;
-        cursor: pointer;
-    }
-}
-
-
-.contact-info {
-    @include setFlexbox(flex-start, center, row);
-    width: 80%;
-    height: 100%;
-
-    p {
-        font-size: 2rem;
-    }
-}
+//     a img {
+//         width: 50px;
+//         transition: 0.3s;
+//         cursor: pointer;
+//     }
+// }
 
 
+// .contact-info {
+//     @include setFlexbox(flex-start, center, row);
+//     width: 80%;
+//     height: 100%;
 
-@media (min-width: 320px) and (max-width: 900px) {
+//     p {
+//         font-size: 2rem;
+//     }
+// }
 
-    .contacts {
-        width: 30%;
-        justify-content: flex-start;
-    }
 
-    .contact-info {
-        width: 90%;
-        margin-left: 10%;
-    }
-}
 
-@media (min-width: 320px) and (max-width: 480px) {
+// @media (min-width: 320px) and (max-width: 900px) {
 
-    .contacts {
-        width: 65%;
-        margin-bottom: 3rem;
-    }
+//     .contacts {
+//         width: 30%;
+//         justify-content: flex-start;
+//     }
 
-    .contacts a img {
-        width: 5rem;
-    }
-}
+//     .contact-info {
+//         width: 90%;
+//         margin-left: 10%;
+//     }
+// }
+
+// @media (min-width: 320px) and (max-width: 480px) {
+
+//     .contacts {
+//         width: 65%;
+//         margin-bottom: 3rem;
+//     }
+
+//     .contacts a img {
+//         width: 5rem;
+//     }
+// }
