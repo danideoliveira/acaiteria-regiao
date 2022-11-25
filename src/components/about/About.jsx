@@ -1,6 +1,8 @@
 import './About.scss';
 import Contacts from '../contacts/Contacts';
 import images from '../images/Images';
+import { Container, DivLeft, DivRight } from './styled';
+import { Title, Description } from '../location/styled';
 
 const contactsList = [
     { image: images.logoWhatsapp, alt: "Logo do Whatsapp", text: "(21) 99999-9999", link: "#"},
@@ -11,25 +13,26 @@ const contactsList = [
 
 export default function About() {
     return(
-        <section id="about" className="container-about bg-dark-purple">
-            <div className="about-primary-div">
-                <div className="about-title-div">
-                    <h2 className="about-title title fs-medium2 txt-cream ">QUEM SOMOS</h2>
-                    <p className="text fs-small txt-white">
+        <Container id="about">
+            <DivLeft>
+                <div>
+                    <Title>QUEM SOMOS</Title>
+                    <Description>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Exercitationem vitae consectetur tenetur fugit nam necessitatibus 
                         ab velit nemo cupiditate quae magnam dolorum facere, nisi dignissimos, 
                         repudiandae porro praesentium alias qui.
-                    </p>
+                    </Description>
                 </div>            
-            </div>
+            </DivLeft>
 
-            <div className="contacts-div">
+            <DivRight>
                 {
                     contactsList.map(item => (
                         <Contacts
+                            key={item.text}
                             image={item.image}
                             alt={item.alt}
                             text={item.text}
@@ -37,8 +40,8 @@ export default function About() {
                         />
                     ))
                 }
-            </div>
+            </DivRight>
 
-        </section>
+        </Container>
     )
 }
