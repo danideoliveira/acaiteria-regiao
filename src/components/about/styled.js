@@ -10,6 +10,8 @@ export const Container = styled.div`
 
     @media (min-width: 320px) and (max-width: 900px) {
         flex-direction: column;
+        min-height: 100vh;
+        height: auto;
     }
 `;
 
@@ -27,7 +29,12 @@ export const DivLeft = styled.div`
         width: 50%;
 
         @media (min-width: 320px) and (max-width: 900px) {
-            
+            width: 70%;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            margin-top: 30px;
         }
     }
 `;
