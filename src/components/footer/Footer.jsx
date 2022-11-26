@@ -1,6 +1,5 @@
-import './Footer.scss';
-import images from '../images/Images';
-import { Container, Shape } from './styled';
+import images from '../Images/Images';
+import { Container, Shape } from './Footer.styled';
 
 export default function Footer() {
     return (

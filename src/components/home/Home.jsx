@@ -1,7 +1,8 @@
-import './Home.scss';
-import images from '../images/Images';
-import { Container, DivLeft, DivRight, Title, Description, ShapeBubble } from './styled';
+import images from '../Images/Images';
+import { Container, DivLeft, DivRight, Title, ShapeBubble } from './Home.styled';
 import {motion} from 'framer-motion';
+import { Description } from '../../helpers/globalTags';
+import { colors } from '../../helpers/variables';
 
 function Home() {
     const TitleAnimate = motion(Title);
@@ -10,8 +11,8 @@ function Home() {
         <Container>
             <DivLeft>
                 <div>
-                    <TitleAnimate >IceSpot</TitleAnimate>
-                    <Description>
+                    <TitleAnimate>IceSpot</TitleAnimate>
+                    <Description color={colors.white}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
                     </Description>

@@ -1,4 +1,3 @@
-import './Navbar.scss';
 import { Nav, Menu, MobileMenu } from './styled';
 
 function Navbar() {

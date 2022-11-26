@@ -1,6 +1,6 @@
-import "./Contacts.scss";
-import { Container } from "./styled";
-import { Description } from "../location/styled";
+import { Container } from "./Contacts.styled";
+import { Description } from "../../helpers/globalTags";
+import { colors } from "../../helpers/variables";
 
 export default function Contacts({image, alt, text, link}) {
     return (
@@ -9,7 +9,7 @@ export default function Contacts({image, alt, text, link}) {
                 <img src={image} alt={alt}/>
             </a>
             <div>
-                <Description>{text}</Description>
+                <Description color={ colors.cream }>{text}</Description>
             </div>
         </Container>
     );

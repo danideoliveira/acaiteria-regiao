@@ -1,5 +1,6 @@
-import "./Location.scss";
-import { Container, ContainerSecondary, DivLeft, Title, Description, DivMap } from "./styled";
+import { Container, ContainerSecondary, DivLeft, DivMap } from "./Location.styled";
+import { Title, Description } from "../../helpers/globalTags";
+import { colors } from "../../helpers/variables";
 
 export default function Location() {
   return (
@@ -7,10 +8,10 @@ export default function Location() {
       <ContainerSecondary>
         <DivLeft>
           <div>
-            <Title>
+            <Title color={ colors.white }>
               ONDE ESTAMOS?
             </Title>
-            <Description>
+            <Description color={ colors.white }>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla leo
               ex, accumsan eu dui vel, viverra aliquam metus.
             </Description>
