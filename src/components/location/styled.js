@@ -87,8 +87,7 @@ export const DivMap = styled.div`
 
         @media (min-width: 320px) and (max-width: 900px) {
             text-align: center;
-            width: 100%;
-            height: 70%;
+            width: 80%;
         }
 
         div {
