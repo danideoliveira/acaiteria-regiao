@@ -4,11 +4,13 @@ import Specialties from './components/specialties/Specialties';
 import Location from './components/location/Location';
 import About from './components/about/About';
 import Footer from './components/footer/Footer';
+import { GlobalStyle } from './globalStyles';
 import './App.scss';
 
 function App() {
   return (
     <>
+      <GlobalStyle/>
       <header>
         <Navbar/>
       </header>
