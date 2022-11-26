@@ -1,9 +1,9 @@
-import Navbar from './components/Navbar/Navbar';
-import Home from './components/Home/Home';
-import Specialties from './components/Specialties/Specialties';
-import Location from './components/Location/Location';
-import About from './components/About/About';
-import Footer from './components/Footer/Footer';
+import Navbar from './components/Navbar/Navbar.jsx';
+import Home from './components/Home/Home.jsx';
+import Specialties from './components/Specialties/Specialties.jsx';
+import Location from './components/Location/Location.jsx';
+import About from './components/About/About.jsx';
+import Footer from './components/Footer/Footer.jsx';
 import { GlobalStyle } from './globalStyles';
 
 function App() {
