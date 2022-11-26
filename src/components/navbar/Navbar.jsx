@@ -1,4 +1,4 @@
-import { Nav, Menu, MobileMenu } from './styled';
+import { Nav, Menu, MobileMenu } from './Navbar.styled';
 
 function Navbar() {
 
