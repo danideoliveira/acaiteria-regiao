@@ -2,14 +2,15 @@ import images from '../images/Images';
 import CardItem from '../card-item/CardItem';
 import { Container, Title, Grid, DivShape } from './Specialties.styled';
 
-const specialtiesList = [
-    { image: images.copos, alt: 'Copos', title: "Copos", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", value: "À partir de R$6,00", setButton: true },
-    { image: images.barca, alt: 'Barca', title: "Barca", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", value: "R$42,00", setButton: false },
-    { image: images.picole, alt: 'Picolé', title: "Picolé", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", value: "R$3,50", setButton: false },
-    { image: images.tijela, alt: 'Tijela', title: "Tijela", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", value: "R$12,00", setButton: false }
-];
-
 export default function Specialties() {
+
+    const specialtiesList = [
+        { image: images.copos, alt: 'Copos', title: "Copos", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", value: "À partir de R$6,00", setButton: true },
+        { image: images.barca, alt: 'Barca', title: "Barca", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", value: "R$42,00", setButton: false },
+        { image: images.picole, alt: 'Picolé', title: "Picolé", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", value: "R$3,50", setButton: false },
+        { image: images.tijela, alt: 'Tijela', title: "Tijela", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", value: "R$12,00", setButton: false }
+    ];
+
     return(
         <Container id="specialties">
             <Title>Nossas especialidades!</Title>
