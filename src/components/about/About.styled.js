@@ -47,5 +47,6 @@ export const DivRight = styled.div`
 
     @media (min-width: 320px) and (max-width: 900px) {
         width: 50%;
+        gap: 30px;
     }
 `;

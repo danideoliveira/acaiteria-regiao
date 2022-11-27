@@ -21,7 +21,7 @@ function Navbar() {
             <Menu className='menu'>
                 {
                     menuItems.map(item => (
-                        <li onClick={() => openMobileMenu()}><a href={item.href}>{item.text}</a></li>
+                        <li key={item.href} onClick={() => openMobileMenu()}><a href={item.href}>{item.text}</a></li>
                     ))
                 }
             </Menu>
