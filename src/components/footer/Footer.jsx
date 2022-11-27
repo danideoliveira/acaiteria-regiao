@@ -1,4 +1,4 @@
-import images from '../Images/Images';
+import images from '../images/Images';
 import { Container, Shape } from './Footer.styled';
 
 export default function Footer() {

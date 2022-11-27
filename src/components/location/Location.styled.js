@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { setFlexbox, setImageBackground } from "../../helpers/Mixins";
-import images from "../Images/Images";
+import images from "../images/Images";
 import { colors } from "../../helpers/variables";
 
 export const Container = styled.div`
@@ -90,7 +90,7 @@ export const DivMap = styled.div`
                 width: 500px;
                 height: 480px;
                 border-radius: 20px;
-                box-shadow: 1rem 1rem 0 0 ${ colors.cream };
+                box-shadow: 1rem 1rem 0 0 ${colors.cream};
 
                 @media (min-width: 320px) and (max-width: 900px) {
                     width: 100%;

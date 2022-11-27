@@ -1,4 +1,4 @@
-import images from '../Images/Images';
+import images from '../images/Images';
 import { Container, DivLeft, DivRight, Title, ShapeBubble } from './Home.styled';
 import {motion} from 'framer-motion';
 import { Description } from '../../helpers/globalTags';

@@ -1,5 +1,5 @@
-import images from '../Images/Images';
-import CardItem from '../CardItem/CardItem';
+import images from '../images/Images';
+import CardItem from '../cardItem/CardItem';
 import { Container, Title, Grid, DivShape } from './Specialties.styled';
 import { colors } from '../../helpers/variables';
 import {motion} from 'framer-motion';

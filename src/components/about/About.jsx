@@ -1,5 +1,5 @@
-import Contacts from '../Contacts/Contacts';
-import images from '../Images/Images';
+import Contacts from '../contacts/Contacts';
+import images from '../images/Images';
 import { Container, DivLeft, DivRight } from './About.styled';
 import { Title, Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';

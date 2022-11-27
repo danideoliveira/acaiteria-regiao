@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { setFlexbox, setImageBackground } from "../../helpers/Mixins";
-import images from "../Images/Images";
+import images from "../images/Images";
 import { floating, fadeInFromTop } from "../../helpers/CustomAnimations";
 import { colors } from "../../helpers/variables";
 
