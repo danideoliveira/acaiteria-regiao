@@ -11,7 +11,7 @@ export const Container = styled.div`
     width: 100%;
     margin: 0 auto;
     position: relative;
-    background-color: ${colors.purple};
+    /* background-color: ${colors.purple}; */
 
     @media (min-width: 320px) and (max-width: 900px) {
         flex-direction: column;
@@ -25,7 +25,7 @@ export const DivLeft = styled.div`
     height: 100%;
     width: 50%;
     gap: 15px;
-    background: ${setImageBackground(images.homeLeftDivider)};
+    /* background: ${setImageBackground(images.homeLeftDivider)}; */
     background-size: cover;
     background-position: right;
 

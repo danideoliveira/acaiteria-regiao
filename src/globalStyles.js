@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { colors } from "./helpers/variables";
 
 export const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap');
@@ -15,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         scroll-behavior: smooth;
         border: none;
+        outline: 1px solid rebeccapurple;
     }
 
     html {
@@ -23,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         overflow-x: hidden;
+        background-color: ${colors.cream};
     }
 
     @media (min-width: 320px) and (max-width: 768px) {

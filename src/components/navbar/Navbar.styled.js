@@ -3,14 +3,13 @@ import { setFlexbox } from "../../helpers/Mixins";
 import { colors } from "../../helpers/variables";
 
 export const Nav = styled.nav`
-    ${setFlexbox('center', 'center', 'row')}
-    width: 50%;
+    ${setFlexbox('center', 'flex-end', 'row')}
+    width: 100%;
     max-width: 980px;
     height: 8vh;
-    position: absolute;
     z-index: 999;
-    right: 0;
-    padding: 1rem 1rem 0 0;
+    margin: 0 auto;
+    padding: 5px 0;
 
     @media (min-width: 320px) and (max-width: 900px) {
         justify-content: flex-start;
@@ -23,11 +22,34 @@ export const Nav = styled.nav`
 export const Menu = styled.ul`
     ${setFlexbox('center', 'space-evenly', 'row')}
     height: 100%;
-    width: 100%;
-    margin: 0 auto;
+    width: 70%;
+    margin-right: 2%;
 
     &.active {
         left: 0;
+    }
+
+    li {
+        ${setFlexbox('center', 'center', 'row')}
+        width: 100%;
+        height: 100%;
+
+        a {
+            ${setFlexbox('center', 'center', 'row')}
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+            color: ${colors.purple};
+            font-size: 1.6rem;
+            transition: 0.2s;
+            border-radius: 50px;
+            margin-right: 10px;
+
+            &:hover {
+                color: ${colors.white};
+                background-color: ${colors.darkPurple};
+            }
+        }
     }
 
     @media (min-width: 320px) and (max-width: 900px) {
@@ -41,51 +63,25 @@ export const Menu = styled.ul`
         height: 100%;
         text-align: center;
         transition: 0.3s;
-        background-color: ${ colors.purple };
+        background-color: ${colors.purple};
         z-index: 1;
         justify-content: flex-start;
-    }
 
-    li {
-        ${setFlexbox('center', 'center', 'row')}
-        width: 100%;
-        height: 100%;
-
-        @media (min-width: 320px) and (max-width: 900px) {
+        li {
             height: 15%;
-        }
-
-        a {
-            ${setFlexbox('center', 'center', 'row')}
-            cursor: pointer;
-            height: 100%;
-            width: 100%;
-            color: ${ colors.purple };
-            font-size: 1.8rem;
-            transition: 0.2s;
-            background-color: ${ colors.white };
-            border-radius: 50px;
-            margin-right: 10px;
-
-            &:hover {
-                color: ${ colors.white };
-                background-color: ${ colors.purple };
-            }
             
-            @media (min-width: 320px) and (max-width: 900px) {
-                color: ${ colors.white };
-                background-color: ${ colors.purple };
+            a {
+                color: ${colors.white};
                 height: 100%;
                 border-radius: 0;
                 background-color: none;
                 margin-right: 0;
-
+    
                 &:hover {
-                    background-color: ${ colors.white };
-                    color: ${ colors.purple };
+                    background-color: ${colors.white};
+                    color: ${colors.purple};
                 }
             }
-
         }
     }
 `;
@@ -94,6 +90,17 @@ export const MobileMenu = styled.div`
     cursor: pointer;
     display: none;
     z-index: 999;
+
+    div {
+        display: block;
+        width: 4rem;
+        height: 5px;
+        margin: 5px auto;
+        background-color: ${colors.white};
+        transition: 0.3s ease;
+        border-radius: 10px;
+
+    }
 
     @media (min-width: 320px) and (max-width: 900px) {
         display: block;
@@ -109,21 +116,6 @@ export const MobileMenu = styled.div`
 
         &.active div:nth-child(3) {
             transform: translateY(-10px) rotate(-45deg);
-        }
-    }
-
-    div {
-        display: block;
-        width: 40px;
-        height: 5px;
-        margin: 5px auto;
-        background-color: ${ colors.white };
-        transition: 0.3s ease;
-        border-radius: 10px;
-
-        @media (min-width: 320px) and (max-width: 480px) {
-            width: 25px;
-            height: 3px;
         }
     }
 `;

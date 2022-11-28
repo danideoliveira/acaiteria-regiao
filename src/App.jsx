@@ -14,14 +14,14 @@ function App() {
         <Navbar/>
       </header>
 
-      <main>
+      {/* <main>
         <Home/>
         <Specialties/>
         <Location/>
         <About/>
-      </main>
+      </main> */}
 
-      <Footer/>
+      {/* <Footer/> */}
     </>
   )
 }
