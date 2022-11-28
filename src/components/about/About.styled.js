@@ -31,7 +31,7 @@ export const DivLeft = styled.div`
 
         @media (min-width: 320px) and (max-width: 900px) {
             width: 70%;
-            margin-bottom: 30px;
+            margin-bottom: 100px;
         }
 
         @media (min-width: 320px) and (max-width: 480px) {

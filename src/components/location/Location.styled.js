@@ -38,6 +38,7 @@ export const DivLeft = styled.div`
         width: 100%;
         height: 20%;
         background: none;
+        margin-bottom: 50px;
     }
 
     div {
@@ -67,6 +68,7 @@ export const DivMap = styled.div`
         height: 70%;
 
         @media (min-width: 320px) and (max-width: 900px) {
+            ${setFlexbox('center', 'center', 'row')}
             text-align: center;
             width: 80%;
         }
@@ -81,7 +83,7 @@ export const DivMap = styled.div`
             @media (min-width: 320px) and (max-width: 900px) {
                 overflow: hidden;
                 background: none !important;
-                width: 65%;
+                width: 85%;
                 height: 50%;
                 padding: 1rem;
             }   

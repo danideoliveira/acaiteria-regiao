@@ -8,6 +8,7 @@ export const Title = styled.h2`
 
     @media (min-width: 320px) and (max-width: 900px) {
         text-align: center;
+        font-size: 4rem;
     }
 `;
 

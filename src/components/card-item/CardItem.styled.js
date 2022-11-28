@@ -44,7 +44,7 @@ export const DivImage = styled.div`
 export const DivSpecialtiesInfo = styled.div`
     ${setFlexbox('flex-start', 'space-around', 'column')}
     padding: 2rem 0 0 1.5rem;
-    width: 50%;
+    width: auto;
 
     p:nth-child(2) {
         margin-bottom: 2rem;
@@ -52,6 +52,7 @@ export const DivSpecialtiesInfo = styled.div`
 
     @media (min-width: 320px) and (max-width: 480px) {
         padding-left: 0;
+        width: 100%;
     }
 `;
 
