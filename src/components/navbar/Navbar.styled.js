@@ -10,6 +10,8 @@ export const Nav = styled.nav`
     z-index: 999;
     margin: 0 auto;
     padding: 5px 0;
+    position: absolute;
+    right: 0;
 
     @media (min-width: 320px) and (max-width: 900px) {
         justify-content: flex-start;
@@ -23,7 +25,7 @@ export const Menu = styled.ul`
     ${setFlexbox('center', 'space-evenly', 'row')}
     height: 100%;
     width: 70%;
-    margin-right: 2%;
+    margin-right: 10%;
 
     &.active {
         left: 0;
