@@ -29,7 +29,7 @@ export const DivLeft = styled.div`
 
     div {
         z-index: 1;
-        width: 50%;
+        width: 70%;
     }
 
     @media (min-width: 320px) and (max-width: 900px) {

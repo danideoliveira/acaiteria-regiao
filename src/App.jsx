@@ -10,15 +10,15 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-      {/* <header>
+      <header>
         <Navbar/>
-      </header> */}
+      </header>
 
       <main>
         <Home/>
-        {/* <Specialties/>
-        <Location/>
-        <About/> */}
+        {/* <Specialties/> */}
+        {/* <Location/> */}
+        {/* <About/> */}
       </main>
 
       {/* <Footer/> */}
