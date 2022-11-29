@@ -8,9 +8,7 @@ export default function Location() {
       <ContainerSecondary>
         <DivLeft>
           <div>
-            <Title color={ colors.white }>
-              ONDE ESTAMOS?
-            </Title>
+            <Title color={ colors.white }>ONDE ESTAMOS?</Title>
             <Description color={ colors.white }>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla leo
               ex, accumsan eu dui vel, viverra aliquam metus.
@@ -19,7 +17,7 @@ export default function Location() {
         </DivLeft>
 
         <DivMap>
-          <div>
+          <div className="container-map">
             <div>
               <iframe
                 id="gmap_canvas"

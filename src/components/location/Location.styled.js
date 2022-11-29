@@ -7,16 +7,16 @@ export const Container = styled.div`
     ${setFlexbox('center', 'center', 'row')}
     width: 100%;
     height: 100vh;
-    background-color: ${colors.purple};
+    background-color: ${colors.cream};
 
     @media (min-width: 320px) and (max-width: 900px) {
-        flex-direction: column;
-        width: 100%;
+        height: auto;
     }
 `;
 
 export const ContainerSecondary = styled.div`
     ${setFlexbox('center', 'center', 'row')}
+    max-width: 1280px;
     width: 100%;  
     height: 100%;
 
@@ -34,20 +34,20 @@ export const DivLeft = styled.div`
     background-size: cover;
     background-position: right;
 
-    @media (min-width: 320px) and (max-width: 900px) {
-        width: 100%;
-        height: 20%;
-        background: none;
-        margin-bottom: 50px;
-    }
-
     div {
        ${setFlexbox('flex-start', 'center', 'column')}
-        width: 50%;
+        width: 70%;
+    }
 
-        @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 900px) {
+        width: 100%;
+        height: 30rem;
+        background: none;
+        /* margin-bottom: 50px; */
+
+        div {
             margin: 0 auto;
-            width: 65%;
+            width: 80%;
         }
     }
 `;
@@ -57,44 +57,49 @@ export const DivMap = styled.div`
     width: 50%;
     height: 100%;
 
-    @media (min-width: 320px) and (max-width: 900px) {
-        width: 80%;
-        height: 50%;
-    }
-
-    div {
+    .container-map {
+        ${setFlexbox('center', 'center', 'row')}
         text-align: center;
         width: 100%;
-        height: 70%;
+        height: 100%;
 
-        @media (min-width: 320px) and (max-width: 900px) {
+        div {
+            ${setFlexbox('center', 'center', 'row')}
+            overflow: hidden;
+            background: none !important;
+            width: 100%;
+            height: 100%;
+            /* position: absolute;  */
+
+            iframe {
+                width: 90%;
+                height: 70%;
+                border-radius: 20px;
+                box-shadow: 1rem 1rem 0 0 ${colors.darkPurple};
+
+            }
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 900px) {
+        width: 100%;
+        height: 50vh;
+        margin-bottom: 5rem;
+
+        .container-map {
             ${setFlexbox('center', 'center', 'row')}
             text-align: center;
             width: 80%;
-        }
-
-        div {
-            overflow: hidden;
-            background: none !important;
-            width: 45%;
             height: 100%;
-            position: absolute;
 
-            @media (min-width: 320px) and (max-width: 900px) {
+            div {
                 overflow: hidden;
                 background: none !important;
-                width: 85%;
-                height: 50%;
+                width: 100%;
+                height: 100%;
                 padding: 1rem;
-            }   
 
-            iframe {
-                width: 500px;
-                height: 480px;
-                border-radius: 20px;
-                box-shadow: 1rem 1rem 0 0 ${colors.cream};
-
-                @media (min-width: 320px) and (max-width: 900px) {
+                iframe {
                     width: 100%;
                     height: 100%;
                 }
