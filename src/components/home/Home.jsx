@@ -21,7 +21,7 @@ function Home() {
             
             <DivRight>
                 <div>
-                    {/* <motion.img src={ images.acai } alt="Açaí photo"/> */}
+                    <motion.img src={ images.acai } alt="Açaí photo"/>
                 </div>
                 <ShapeBubble className="home-bubble" src={ images.homeBubble } alt="bubble"/>
             </DivRight>        

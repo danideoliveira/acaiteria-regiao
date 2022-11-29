@@ -9,19 +9,21 @@ export const Container = styled.div`
     height: 100vh;
     min-height: 100vh;
     width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
     position: relative;
     /* background-color: ${colors.purple}; */
 
     @media (min-width: 320px) and (max-width: 900px) {
         flex-direction: column;
-        gap: 50px;
-        background-color: ${colors.pink};
+        height: auto;
+        /* gap: 50px; */
+        /* background-color: ${colors.pink}; */
     }
 `;
 
 export const DivLeft = styled.div`
-    ${setFlexbox('flex-start', 'center', 'column')}
+    ${setFlexbox('center', 'center', 'column')}
     height: 100%;
     width: 50%;
     gap: 15px;
@@ -29,24 +31,24 @@ export const DivLeft = styled.div`
     background-size: cover;
     background-position: right;
 
-    @media (min-width: 320px) and (max-width: 900px) {
-        width: 100%;
-        height: 50%;
-        background: none;
-        align-items: center;
-        border-radius: 50% 0 50% 0;
-    }
-
     div {
         z-index: 1;
-        margin-left: 15%;
+        /* margin-left: 15%; */
         width: 50%;
-
-        @media (min-width: 320px) and (max-width: 900px) {
-            margin-left: 0;
-            width: 65%; 
-        }
     }
+
+    @media (min-width: 320px) and (max-width: 900px) {
+        width: 90%;
+        height: 40vh;
+        background: none;
+        align-items: center;
+        /* border-radius: 50% 0 50% 0; */
+
+        div {
+            margin-left: 0;
+            width: 80%; 
+        }
+    } 
 `;
 
 export const DivRight = styled.div`
@@ -56,35 +58,35 @@ export const DivRight = styled.div`
     position: relative;
     z-index: 1;
 
-    @media (min-width: 320px) and (max-width: 900px) {
-        width: 100%;
-        height: 50%;
-        background-color: ${colors.purple};
-        border-radius: 50% 0 0 0;
-    }
-
     div {
         ${setFlexbox('center', 'center', 'row')}
         width: 80%;
         height: 100%;
         transition: 0.5s;
-        
-        @media (min-width: 320px) and (max-width: 900px) {
-            width: 90%;
-            height: 100%;
-        }
 
         img {
             height: 135%;
             transition: 0.3s;
             z-index: 1;
             /* animation: ${fadeInFromTop} .5s linear forwards, ${floating} ease 4s infinite; */
-
-            @media (min-width: 320px) and (max-width: 900px) {
-                height: 150%;
-            }
         }
     }  
+
+    @media (min-width: 320px) and (max-width: 900px) {
+        width: 100%;
+        height: 50%;
+        /* background-color: ${colors.purple}; */
+        /* border-radius: 50% 0 0 0; */
+
+        div {
+            width: 90%;
+            height: 100%;
+
+            img {
+                height: 70rem;
+            }
+        }
+    }
 `;
 
 export const ShapeBubble = styled.img`
@@ -109,7 +111,7 @@ export const Title = styled.h1`
     font-weight: 800;
 
     @media (min-width: 320px) and (max-width: 900px) {
-        padding-top: 10rem;
+        /* padding-top: 10rem; */
         text-align: center;
     }
 `;

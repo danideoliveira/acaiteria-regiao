@@ -10,9 +10,9 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-      <header>
+      {/* <header>
         <Navbar/>
-      </header>
+      </header> */}
 
       <main>
         <Home/>
