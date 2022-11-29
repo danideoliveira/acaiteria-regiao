@@ -13,27 +13,29 @@ export default function Specialties() {
 
     return(
         <Container id="specialties">
-            <Title>Nossas especialidades!</Title>
+            <div>
+                <Title>Nossas especialidades!</Title>
 
-            <Grid>
-                {
-                    specialtiesList.map(item => (
-                        <CardItem
-                            key={ item.title } 
-                            image={item.image}
-                            alt= { item.alt }
-                            title={item.title}
-                            description={item.description}
-                            value={item.value}
-                            setButton={ item.setButton }
-                        />
-                    ))
-                }
-            </Grid>
+                <Grid>
+                    {
+                        specialtiesList.map(item => (
+                            <CardItem
+                                key={ item.title } 
+                                image={item.image}
+                                alt= { item.alt }
+                                title={item.title}
+                                description={item.description}
+                                value={item.value}
+                                setButton={ item.setButton }
+                            />
+                        ))
+                    }
+                </Grid>
 
-            <DivShape className="specialties-shapes">
-                <img className="specialties-bottom-shape" src={ images.specialtiesShape } alt="shape"/>
-            </DivShape>
+                {/* <DivShape className="specialties-shapes">
+                    <img className="specialties-bottom-shape" src={ images.specialtiesShape } alt="shape"/>
+                </DivShape> */}
+            </div>
         </Container>
     )
 }

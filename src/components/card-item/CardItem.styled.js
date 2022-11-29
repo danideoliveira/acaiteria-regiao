@@ -16,18 +16,12 @@ export const Container = styled.div`
 `;
 
 export const DivImage = styled.div`
-    width: 50%;
+    width: auto;
     height: 100%;
     overflow: hidden;
     border-radius: 20px;
-
-    @media (min-width: 320px) and (max-width: 900px) {
-        width: 50%;
-    }
-
-    @media (min-width: 320px) and (max-width: 480px) {
-        width: 100%;
-    }
+    max-width: 250px;
+    min-width: 250px;
 
     img {
         height: 250px;
