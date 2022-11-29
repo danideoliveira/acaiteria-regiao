@@ -12,13 +12,10 @@ export const Container = styled.div`
     max-width: 1280px;
     margin: 0 auto;
     position: relative;
-    /* background-color: ${colors.purple}; */
 
     @media (min-width: 320px) and (max-width: 900px) {
         flex-direction: column;
         height: auto;
-        /* gap: 50px; */
-        /* background-color: ${colors.pink}; */
     }
 `;
 
@@ -27,13 +24,11 @@ export const DivLeft = styled.div`
     height: 100%;
     width: 50%;
     gap: 15px;
-    /* background: ${setImageBackground(images.homeLeftDivider)}; */
     background-size: cover;
     background-position: right;
 
     div {
         z-index: 1;
-        /* margin-left: 15%; */
         width: 50%;
     }
 
@@ -42,7 +37,6 @@ export const DivLeft = styled.div`
         height: 40vh;
         background: none;
         align-items: center;
-        /* border-radius: 50% 0 50% 0; */
 
         div {
             margin-left: 0;
@@ -75,8 +69,6 @@ export const DivRight = styled.div`
     @media (min-width: 320px) and (max-width: 900px) {
         width: 100%;
         height: 50%;
-        /* background-color: ${colors.purple}; */
-        /* border-radius: 50% 0 0 0; */
 
         div {
             width: 90%;
@@ -111,7 +103,6 @@ export const Title = styled.h1`
     font-weight: 800;
 
     @media (min-width: 320px) and (max-width: 900px) {
-        /* padding-top: 10rem; */
         text-align: center;
     }
 `;
