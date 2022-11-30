@@ -25,7 +25,7 @@ export const Menu = styled.ul`
     ${setFlexbox('center', 'space-evenly', 'row')}
     height: 100%;
     width: 70%;
-    margin-right: 10%;
+    margin: 2% 10% 0 0;
 
     &.active {
         left: 0;
@@ -49,7 +49,7 @@ export const Menu = styled.ul`
 
             &:hover {
                 color: ${colors.white};
-                background-color: ${colors.darkPurple};
+                background-color: ${colors.purple};
             }
         }
     }
@@ -68,6 +68,7 @@ export const Menu = styled.ul`
         background-color: ${colors.purple};
         z-index: 1;
         justify-content: flex-start;
+        margin-top: auto;
 
         li {
             height: 15%;
@@ -102,7 +103,7 @@ export const MobileMenu = styled.div`
         width: 4rem;
         height: 5px;
         margin: 5px auto;
-        background-color: ${colors.white};
+        background-color: ${colors.purple};
         transition: 0.3s ease;
         border-radius: 10px;
 
@@ -118,10 +119,12 @@ export const MobileMenu = styled.div`
 
         &.active div:nth-child(1) {
             transform: translateY(10px) rotate(45deg);
+            background-color: ${colors.white};
         }
 
         &.active div:nth-child(3) {
             transform: translateY(-10px) rotate(-45deg);
+            background-color: ${colors.white};
         }
     }
 `;
