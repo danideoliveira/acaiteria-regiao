@@ -17,7 +17,7 @@ export const Nav = styled.nav`
         justify-content: flex-start;
         align-items: flex-end;
         width: 95%;
-        height: 8vh;
+        height: 10vh;
     }
 `;
 
@@ -85,6 +85,10 @@ export const Menu = styled.ul`
                 }
             }
         }
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        width: 100%;
     }
 `;
 

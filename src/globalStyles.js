@@ -16,7 +16,6 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         scroll-behavior: smooth;
         border: none;
-        outline: 1px solid rebeccapurple;
     }
 
     html {
