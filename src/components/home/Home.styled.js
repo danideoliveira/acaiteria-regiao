@@ -33,7 +33,7 @@ export const DivLeft = styled.div`
         width: 70%;
 
         p {
-            width: 80%;
+            width: 70%;
             margin-bottom: 2rem;
         }
     }
@@ -50,8 +50,14 @@ export const DivLeft = styled.div`
             width: 80%;
 
             p {
-                width: 100%;
+                width: 70%;
             }
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        div p {
+            width: 95%;
         }
     }
 `;
