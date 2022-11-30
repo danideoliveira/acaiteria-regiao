@@ -28,6 +28,13 @@ export const Container = styled.footer`
     }
 `;
 
+export const ContainerSecondary = styled.div`
+    max-width: 1280px;
+    width: 100%;  
+    height: 100%;
+    margin: 0 auto;
+`;
+
 export const Shape = styled.div`
     ${setFlexbox('flex-end', 'flex-end', 'row')}
     height: 100%;
