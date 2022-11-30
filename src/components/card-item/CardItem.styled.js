@@ -42,11 +42,16 @@ export const DivSpecialtiesInfo = styled.div`
 
     p:nth-child(2) {
         margin-bottom: 2rem;
+        width: 100%;
     }
-
+    
     @media (min-width: 320px) and (max-width: 480px) {
         padding-left: 0;
         width: 100%;
+
+        p {
+            width: 100%;
+        }
     }
 `;
 
