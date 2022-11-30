@@ -3,6 +3,7 @@ import { colors } from "./helpers/variables";
 
 export const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
     @import url('http://fonts.cdnfonts.com/css/sunshine-festival');
     @import url('http://fonts.cdnfonts.com/css/healing-lighters');
     @import url('http://fonts.cdnfonts.com/css/beach-sound');

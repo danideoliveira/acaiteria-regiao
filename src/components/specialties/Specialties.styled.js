@@ -23,7 +23,7 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
     ${setFlexbox('center', 'center', 'row')}
-    font-family: "Beach Sound", Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     width: 100%;
     color: ${ colors.darkPurple };
     font-size: 4rem;

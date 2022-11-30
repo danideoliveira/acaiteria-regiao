@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Title = styled.h2`
-    font-family: "Beach Sound", Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     width: 100%;
     font-size: 5.4rem;
     color: ${(props) => props.color};
