@@ -43,7 +43,6 @@ export const DivLeft = styled.div`
         width: 100%;
         height: 30rem;
         background: none;
-        /* margin-bottom: 50px; */
 
         div {
             margin: 0 auto;
@@ -69,7 +68,6 @@ export const DivMap = styled.div`
             background: none !important;
             width: 100%;
             height: 100%;
-            /* position: absolute;  */
 
             iframe {
                 width: 90%;
