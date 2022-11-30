@@ -10,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         list-style: none;
-        font-family: 'League Spartan', Arial, Helvetica, sans-serif;
         text-decoration: none;
         scroll-behavior: smooth;
         border: none;
@@ -23,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         overflow-x: hidden;
         background-color: ${colors.cream};
+        font-family: "League Spartan", Arial, Helvetica, sans-serif;
     }
 
     @media (min-width: 320px) and (max-width: 768px) {
