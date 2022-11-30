@@ -126,6 +126,7 @@ export const Title = styled.h1`
     font-size: 6.4rem;
     color: ${colors.purple};
     font-weight: 800;
+    margin-bottom: 1rem;
 
     @media (min-width: 320px) and (max-width: 900px) {
         text-align: center;

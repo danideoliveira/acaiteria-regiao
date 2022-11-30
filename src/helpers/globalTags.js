@@ -5,6 +5,7 @@ export const Title = styled.h2`
     width: 100%;
     font-size: 5.4rem;
     color: ${(props) => props.color};
+    margin-bottom: 2rem;
 
     @media (min-width: 320px) and (max-width: 900px) {
         text-align: center;
