@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { setFlexbox } from "../../helpers/Mixins";
 import { floating, fadeInFromTop } from "../../helpers/CustomAnimations";
 import { colors } from "../../helpers/variables";
+import { darken } from "polished";
 
 export const Container = styled.div`
     ${setFlexbox('center', 'center', 'row')}
@@ -33,6 +34,7 @@ export const DivLeft = styled.div`
 
         p {
             width: 80%;
+            margin-bottom: 2rem;
         }
     }
 
@@ -121,5 +123,25 @@ export const Title = styled.h1`
 
     @media (min-width: 320px) and (max-width: 900px) {
         text-align: center;
+    }
+`;
+
+export const Button = styled.a`
+    background-color: ${ colors.green };
+    border-radius: 50px;
+    color: #fff;
+    font-size: 2.0rem;
+    padding: 1rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: ${darken(0.1, `${ colors.green }`)};
+    }
+
+    @media (min-width: 320px) and (max-width: 900px) {
+        display: none;
     }
 `;

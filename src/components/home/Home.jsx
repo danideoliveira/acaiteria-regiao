@@ -1,5 +1,5 @@
 import images from '../images/Images';
-import { Container, DivLeft, DivRight, Title, ShapeBubble } from './Home.styled';
+import { Container, DivLeft, DivRight, Title, ShapeBubble, Button } from './Home.styled';
 import {motion} from 'framer-motion';
 import { Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
@@ -16,6 +16,7 @@ function Home() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
                     </Description>
+                    <Button href="#specialties">Conheça-nos</Button>
                 </div>
             </DivLeft>
             
