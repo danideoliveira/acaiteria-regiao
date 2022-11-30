@@ -7,7 +7,7 @@ export const Container = styled.div`
     margin: 0 auto;
     width: 100%;
     height: 100vh;
-    background-color: ${ colors.darkPurple };
+    background-color: ${ colors.cream };
 
     @media (min-width: 320px) and (max-width: 900px) {
         height: auto;
@@ -39,7 +39,6 @@ export const DivLeft = styled.div`
         
         div {
             height: 40rem;
-            /* margin-bottom: 100px; */
             width: 80%;
         }
     } 
@@ -51,7 +50,6 @@ export const DivRight = styled.div`
     height: 50%;
 
     @media (min-width: 320px) and (max-width: 900px) {
-        width: 80%;
-        /* gap: 30px; */
+        width: 55%;
     }
 `;

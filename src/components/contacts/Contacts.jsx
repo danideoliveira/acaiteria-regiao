@@ -9,7 +9,7 @@ export default function Contacts({image, alt, text, link}) {
                 <img src={image} alt={alt}/>
             </a>
             <div>
-                <Description color={ colors.cream }>{text}</Description>
+                <Description color={ colors.purple }>{text}</Description>
             </div>
         </Container>
     );

@@ -18,8 +18,8 @@ export default function About() {
             <ContainerSecondary>
                 <DivLeft>
                     <div>
-                        <Title color={ colors.white }>QUEM SOMOS</Title>
-                        <Description color={ colors.white }>
+                        <Title color={ colors.purple }>QUEM SOMOS</Title>
+                        <Description color={ colors.purple }>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                             Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
