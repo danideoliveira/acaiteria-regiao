@@ -9,18 +9,18 @@ export const Container = styled.footer`
     width: 100%;
     font-size: 1.5rem;
     position: absolute;
-    background-color: ${colors.darkPurple};
+    background-color: ${colors.cream};
 
     p {
         padding: 1rem;
-        color: ${colors.cream};
+        color: ${colors.purple};
 
         a {
-            color: ${colors.cream};
+            color: ${colors.purple};
             transition: 0.3s;
             
             &:hover {
-                color: ${darken(0.5, `${colors.white}`)};
+                color: ${darken(0.5, `${colors.purple}`)};
                 transition: 0.3s;
             }
         }
