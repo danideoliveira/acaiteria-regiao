@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { setFlexbox, setImageBackground } from "../../helpers/Mixins";
-import images from "../images/Images";
 import { colors } from "../../helpers/variables";
 
 export const Container = styled.div`
