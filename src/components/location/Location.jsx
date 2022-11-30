@@ -8,8 +8,8 @@ export default function Location() {
       <ContainerSecondary>
         <DivLeft>
           <div>
-            <Title color={ colors.white }>ONDE ESTAMOS?</Title>
-            <Description color={ colors.white }>
+            <Title color={ colors.purple }>ONDE ESTAMOS?</Title>
+            <Description color={ colors.purple }>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla leo
               ex, accumsan eu dui vel, viverra aliquam metus.
             </Description>

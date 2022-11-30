@@ -30,7 +30,6 @@ export const DivLeft = styled.div`
     width: 50%;
     height: 100%;
     z-index: 1;
-    /* background: ${setImageBackground(images.locationLeftDivider)}; */
     background-size: cover;
     background-position: right;
 
@@ -73,7 +72,7 @@ export const DivMap = styled.div`
                 width: 90%;
                 height: 70%;
                 border-radius: 20px;
-                box-shadow: 1rem 1rem 0 0 ${colors.darkPurple};
+                box-shadow: 1rem 1rem 0 0 ${colors.purple};
 
             }
         }

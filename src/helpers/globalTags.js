@@ -9,6 +9,7 @@ export const Title = styled.h2`
     @media (min-width: 320px) and (max-width: 900px) {
         text-align: center;
         font-size: 4rem;
+        width: 100%;
     }
 `;
 
@@ -18,4 +19,13 @@ export const Description = styled.p`
     text-align: justify;
     font-size: 2rem;
     color: ${(props) => props.color};
+
+    @media (min-width: 320px) and (max-width: 900px) {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        width: 95%;
+    }
 `;
