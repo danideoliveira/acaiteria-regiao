@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { setFlexbox, setImageBackground } from "../../helpers/Mixins";
-import images from "../images/Images";
+import { setFlexbox } from "../../helpers/Mixins";
 import { floating, fadeInFromTop } from "../../helpers/CustomAnimations";
 import { colors } from "../../helpers/variables";
 
@@ -94,7 +93,6 @@ export const DivRight = styled.div`
 export const ShapeBubble = styled.img`
     position: absolute;
     z-index: 0;
-    // right: 0;
     bottom: 0;
     height: 100%;
     max-height: 52rem;
