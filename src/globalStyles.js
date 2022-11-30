@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         scroll-behavior: smooth;
         border: none;
+        font-family: 'League Spartan', Arial, Helvetica, sans-serif;
     }
     
     html {
@@ -17,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: 'League Spartan', Arial, Helvetica, sans-serif;
         overflow-x: hidden;
         background-color: ${colors.cream};
     }
