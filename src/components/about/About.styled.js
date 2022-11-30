@@ -32,7 +32,7 @@ export const DivLeft = styled.div`
 
     div {
         ${setFlexbox('flex-start', 'center', 'column')}
-        width: 80%;     
+        width: 70%;     
     }
 
     @media (min-width: 320px) and (max-width: 900px) {

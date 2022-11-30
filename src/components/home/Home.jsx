@@ -12,7 +12,7 @@ function Home() {
             <DivLeft>
                 <div>
                     <TitleAnimate>IceSpot</TitleAnimate>
-                    <Description color={colors.white}>
+                    <Description color={colors.purple}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
                     </Description>

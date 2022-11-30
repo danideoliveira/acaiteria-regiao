@@ -15,6 +15,7 @@ export const Container = styled.div`
 
     @media (min-width: 320px) and (max-width: 900px) {
         flex-direction: column;
+        min-height: auto;
         height: auto;
     }
 `;
@@ -30,19 +31,28 @@ export const DivLeft = styled.div`
     div {
         z-index: 1;
         width: 70%;
+
+        p {
+            width: 80%;
+        }
     }
 
     @media (min-width: 320px) and (max-width: 900px) {
         width: 90%;
-        height: 40vh;
+        height: 5vh;
         background: none;
         align-items: center;
+        margin-top: 15rem;
 
         div {
             margin-left: 0;
-            width: 80%; 
+            width: 80%;
+
+            p {
+                width: 100%;
+            }
         }
-    } 
+    }
 `;
 
 export const DivRight = styled.div`
@@ -75,7 +85,7 @@ export const DivRight = styled.div`
             height: 100%;
 
             img {
-                height: 70rem;
+                height: 60rem;
             }
         }
     }
@@ -84,13 +94,20 @@ export const DivRight = styled.div`
 export const ShapeBubble = styled.img`
     position: absolute;
     z-index: 0;
-    right: 0;
+    // right: 0;
     bottom: 0;
-    height: 450px;
-    max-height: 500px;
+    height: 100%;
+    max-height: 52rem;
+    margin-right: 7rem;
     
     @media (min-width: 320px) and (max-width: 900px) {
-        display: none;
+        max-height: 40rem;
+        bottom: auto;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        max-height: 30rem;
+        margin-right: auto;
     }
 `;
 
@@ -99,7 +116,7 @@ export const Title = styled.h1`
     width: 100%;
     text-align: justify;
     font-size: 6.4rem;
-    color: ${colors.white};
+    color: ${colors.purple};
     font-weight: 800;
 
     @media (min-width: 320px) and (max-width: 900px) {
