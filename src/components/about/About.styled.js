@@ -50,6 +50,6 @@ export const DivRight = styled.div`
     height: 50%;
 
     @media (min-width: 320px) and (max-width: 900px) {
-        width: 55%;
+        width: 56%;
     }
 `;
