@@ -71,6 +71,7 @@ export const DivRight = styled.div`
             height: 135%;
             transition: 0.3s;
             z-index: 1;
+            margin-top: 8rem;
             /* animation: ${fadeInFromTop} .5s linear forwards, ${floating} ease 4s infinite; */
         }
     }  
@@ -85,6 +86,7 @@ export const DivRight = styled.div`
 
             img {
                 height: 60rem;
+                margin-top: auto;
             }
         }
     }
