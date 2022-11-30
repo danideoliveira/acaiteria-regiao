@@ -43,7 +43,7 @@ export const DivLeft = styled.div`
         height: 5vh;
         background: none;
         align-items: center;
-        margin-top: 15rem;
+        margin-top: 20rem;
 
         div {
             margin-left: 0;
@@ -103,26 +103,23 @@ export const DivRight = styled.div`
 export const ShapeBubble = styled.img`
     position: absolute;
     z-index: 0;
-    bottom: 0;
     height: 100%;
     max-height: 52rem;
-    margin-right: 7rem;
+    margin: 3rem 7rem 0 0;
     
     @media (min-width: 320px) and (max-width: 900px) {
         max-height: 40rem;
-        bottom: auto;
+        margin-right: auto;
     }
 
     @media (min-width: 320px) and (max-width: 480px) {
         max-height: 30rem;
-        margin-right: auto;
     }
 `;
 
 export const Title = styled.h1`
-    font-family: "Beach Sound", Arial, Helvetica, sans-serif;
+    font-family: "Varela Round", Arial, Helvetica, sans-serif;
     width: 100%;
-    text-align: justify;
     font-size: 6.4rem;
     color: ${colors.purple};
     font-weight: 800;
@@ -130,6 +127,10 @@ export const Title = styled.h1`
 
     @media (min-width: 320px) and (max-width: 900px) {
         text-align: center;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        font-size: 5rem;
     }
 `;
 

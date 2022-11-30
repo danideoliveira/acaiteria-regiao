@@ -11,7 +11,7 @@ function Home() {
         <Container>
             <DivLeft>
                 <div>
-                    <TitleAnimate>IceSpot</TitleAnimate>
+                    <TitleAnimate>O dia pede açaí!</TitleAnimate>
                     <Description color={colors.purple}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
