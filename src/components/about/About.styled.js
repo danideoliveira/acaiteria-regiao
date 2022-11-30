@@ -10,9 +10,18 @@ export const Container = styled.div`
     background-color: ${ colors.darkPurple };
 
     @media (min-width: 320px) and (max-width: 900px) {
-        flex-direction: column;
-        min-height: 100vh;
         height: auto;
+    }
+`;
+
+export const ContainerSecondary = styled.div`
+    ${setFlexbox('center', 'center', 'row')}
+    max-width: 1280px;
+    width: 100%;  
+    height: 100%;
+
+    @media (min-width: 320px) and (max-width: 900px) {
+        flex-direction: column;
     }
 `;
 
@@ -21,23 +30,19 @@ export const DivLeft = styled.div`
     width: 100%;
     height: 100%;
 
-    @media (min-width: 320px) and (max-width: 900px) {
-        height: 60%;
-    }
-
     div {
         ${setFlexbox('flex-start', 'center', 'column')}
-        width: 50%;
-
-        @media (min-width: 320px) and (max-width: 900px) {
-            width: 70%;
-            margin-bottom: 100px;
-        }
-
-        @media (min-width: 320px) and (max-width: 480px) {
-            margin-top: 30px;
-        }
+        width: 80%;     
     }
+
+    @media (min-width: 320px) and (max-width: 900px) {
+        
+        div {
+            height: 40rem;
+            /* margin-bottom: 100px; */
+            width: 80%;
+        }
+    } 
 `;
 
 export const DivRight = styled.div`
@@ -46,7 +51,7 @@ export const DivRight = styled.div`
     height: 50%;
 
     @media (min-width: 320px) and (max-width: 900px) {
-        width: 50%;
-        gap: 30px;
+        width: 80%;
+        /* gap: 30px; */
     }
 `;

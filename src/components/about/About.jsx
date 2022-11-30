@@ -1,6 +1,6 @@
 import Contacts from '../contacts/Contacts';
 import images from '../images/Images';
-import { Container, DivLeft, DivRight } from './About.styled';
+import { Container, ContainerSecondary, DivLeft, DivRight } from './About.styled';
 import { Title, Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
 
@@ -15,34 +15,35 @@ export default function About() {
 
     return(
         <Container id="about">
-            <DivLeft>
-                <div>
-                    <Title color={ colors.white }>QUEM SOMOS</Title>
-                    <Description color={ colors.white }>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Exercitationem vitae consectetur tenetur fugit nam necessitatibus 
-                        ab velit nemo cupiditate quae magnam dolorum facere, nisi dignissimos, 
-                        repudiandae porro praesentium alias qui.
-                    </Description>
-                </div>            
-            </DivLeft>
+            <ContainerSecondary>
+                <DivLeft>
+                    <div>
+                        <Title color={ colors.white }>QUEM SOMOS</Title>
+                        <Description color={ colors.white }>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Exercitationem vitae consectetur tenetur fugit nam necessitatibus 
+                            ab velit nemo cupiditate quae magnam dolorum facere, nisi dignissimos, 
+                            repudiandae porro praesentium alias qui.
+                        </Description>
+                    </div>
+                </DivLeft>
 
-            <DivRight>
-                {
-                    contactsList.map(item => (
-                        <Contacts
-                            key={item.text}
-                            image={item.image}
-                            alt={item.alt}
-                            text={item.text}
-                            link={item.link}
-                        />
-                    ))
-                }
-            </DivRight>
-
+                <DivRight>
+                    {
+                        contactsList.map(item => (
+                            <Contacts
+                                key={item.text}
+                                image={item.image}
+                                alt={item.alt}
+                                text={item.text}
+                                link={item.link}
+                            />
+                        ))
+                    }
+                </DivRight>
+            </ContainerSecondary>
         </Container>
     )
 }

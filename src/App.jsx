@@ -18,7 +18,7 @@ function App() {
         <Home/>
         <Specialties/>
         <Location/>
-        {/* <About/> */}
+        <About/>
       </main>
 
       {/* <Footer/> */}
