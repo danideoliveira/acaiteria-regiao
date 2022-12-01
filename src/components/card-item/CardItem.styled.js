@@ -7,6 +7,10 @@ export const Container = styled.div`
     ${setFlexbox('flex-start', 'flex-start', 'row')}
     height: 250px;
     overflow: hidden;
+
+    @media (min-width: 320px) and (max-width: 900px) {
+        margin: 0 auto;
+    }
     
     @media (min-width: 320px) and (max-width: 480px) {
         flex-direction: column;

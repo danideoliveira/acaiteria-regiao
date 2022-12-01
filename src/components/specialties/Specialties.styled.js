@@ -10,15 +10,16 @@ export const Container = styled.div`
     position: relative;
     z-index: 998;
     width: 100%;
-    
-    & div {
-        max-width: 1280px;
-        margin: 0 auto;
-    }
 
     @media (min-width: 320px) and (max-width: 900px) {
         height: auto;
     }
+`;
+
+export const ContainerSecondary = styled.div`
+    max-width: 1280px;
+    margin: 0 auto;
+    z-index: 997;
 `;
 
 export const Title = styled.h2`
@@ -65,6 +66,6 @@ export const DivShape = styled.div`
         z-index: 0;
         right: 0;
         bottom: 0;
-        width: 100px;
+        width: 10rem;
     }
 `;

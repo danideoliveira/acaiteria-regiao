@@ -1,6 +1,6 @@
 import images from '../images/Images';
 import CardItem from '../card-item/CardItem';
-import { Container, Title, Grid, DivShape } from './Specialties.styled';
+import { Container, ContainerSecondary, Title, Grid, DivShape } from './Specialties.styled';
 
 export default function Specialties() {
 
@@ -13,7 +13,7 @@ export default function Specialties() {
 
     return(
         <Container id="specialties">
-            <div>
+            <ContainerSecondary>
                 <Title>Nossas especialidades!</Title>
 
                 <Grid>
@@ -31,11 +31,10 @@ export default function Specialties() {
                         ))
                     }
                 </Grid>
-
-                {/* <DivShape className="specialties-shapes">
-                    <img className="specialties-bottom-shape" src={ images.specialtiesShape } alt="shape"/>
-                </DivShape> */}
-            </div>
+            </ContainerSecondary>
+            <DivShape className="specialties-shapes">
+                <img className="specialties-bottom-shape" src={ images.specialtiesShape } alt="shape"/>
+            </DivShape>
         </Container>
     )
 }
