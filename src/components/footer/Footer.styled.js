@@ -10,6 +10,8 @@ export const Container = styled.footer`
     font-size: 1.5rem;
     position: absolute;
     background-color: ${colors.cream};
+    /* bottom: 0; */
+    z-index: 0;
 
     p {
         padding: 1rem;
@@ -26,6 +28,10 @@ export const Container = styled.footer`
         }
 
     }
+
+    /* @media (min-width: 320px) and (max-width: 900px) {
+        bottom: auto;
+    } */
 `;
 
 export const ContainerSecondary = styled.div`

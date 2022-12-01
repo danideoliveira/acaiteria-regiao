@@ -1,4 +1,5 @@
 import { Nav, Menu, MobileMenu } from './Navbar.styled';
+import { Link } from "react-router-dom";
 
 function Navbar() {
 
@@ -10,20 +11,22 @@ function Navbar() {
     }
 
     const menuItems = [
-        { href: '#', text: 'Início' },
-        { href: '#specialties', text: 'Especialidades' },
-        { href: '#location', text: 'Localização' },
-        { href: '#about', text: 'Sobre' },
+        { href: '/', text: 'Início' },
+        { href: '/especialidades', text: 'Especialidades' },
+        { href: '/localizacao', text: 'Localização' },
+        { href: '/sobre', text: 'Sobre' },
     ];
 
     return(
         <Nav>
-            <Menu className='menu'>
+            <Menu className='menu'>              
                 {
                     menuItems.map(item => (
-                        <li key={item.href} onClick={() => openMobileMenu()}><a href={item.href}>{item.text}</a></li>
+                        <li key={item.href} onClick={() => openMobileMenu()}>
+                            <Link to={item.href}>{item.text}</Link>
+                        </li>
                     ))
-                }
+                }           
             </Menu>
 
             <MobileMenu className='hamburguer' onClick={() => openMobileMenu()}>

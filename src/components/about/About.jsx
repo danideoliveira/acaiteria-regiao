@@ -1,6 +1,6 @@
 import Contacts from '../contacts/Contacts';
 import images from '../images/Images';
-import { Container, ContainerSecondary, DivLeft, DivRight } from './About.styled';
+import { Container, ContainerSecondary, DivLeft, DivRight, Shape } from './About.styled';
 import { Title, Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
 import { Slide, Fade } from 'react-awesome-reveal';
@@ -36,7 +36,7 @@ export default function About() {
                     {
                         contactsList.map(item => (
                             <Contacts
-                                key={item.text}
+                                key={item.alt}
                                 image={item.image}
                                 alt={item.alt}
                                 text={item.text}
@@ -45,6 +45,9 @@ export default function About() {
                             ))
                         }
                 </DivRight>
+                {/* <Shape>
+                    <img src={images.aboutBubble} alt="shape"/>
+                </Shape> */}
             </ContainerSecondary>
         </Container>
     )

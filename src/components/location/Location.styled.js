@@ -6,10 +6,12 @@ export const Container = styled.div`
     ${setFlexbox('center', 'center', 'row')}
     width: 100%;
     height: 100vh;
-    background-color: ${colors.purple};
+    background-color: ${colors.cream};
+    overflow: hidden;
 
     @media (min-width: 320px) and (max-width: 900px) {
         height: auto;
+        min-height: 100vh;
     }
 `;
 
@@ -71,7 +73,7 @@ export const DivMap = styled.div`
                 width: 90%;
                 height: 70%;
                 border-radius: 20px;
-                box-shadow: 1rem 1rem 0 0 ${colors.cream};
+                box-shadow: 1rem 1rem 0 0 ${colors.purple};
 
             }
         }

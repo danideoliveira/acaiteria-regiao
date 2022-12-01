@@ -8,9 +8,11 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     background-color: ${ colors.cream };
+    /* position: absolute; */
 
     @media (min-width: 320px) and (max-width: 900px) {
         height: auto;
+        min-height: 100vh;
     }
 `;
 
@@ -52,4 +54,22 @@ export const DivRight = styled.div`
     @media (min-width: 320px) and (max-width: 900px) {
         width: 56%;
     }
+`;
+
+export const Shape = styled.div`
+    ${setFlexbox('flex-end', 'flex-end', 'row')}
+    height: 100%;
+    width: 100%;
+
+    img {
+        position: absolute;
+        z-index: 0;
+        right: 0;
+        bottom: 0;
+        width: 20rem;
+        
+        @media (min-width: 320px) and (max-width: 480px) {
+            width: 10rem;
+        }
+    }  
 `;

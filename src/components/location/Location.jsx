@@ -9,8 +9,8 @@ export default function Location() {
       <ContainerSecondary>
         <DivLeft>
           <div>
-            <Title color={colors.cream}>ONDE ESTAMOS?</Title>
-            <Description color={colors.cream}>
+            <Title color={colors.purple}>ONDE ESTAMOS?</Title>
+            <Description color={colors.purple}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla leo
               ex, accumsan eu dui vel, viverra aliquam metus.
             </Description>

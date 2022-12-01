@@ -12,10 +12,10 @@ export const Container = styled.div`
     max-width: 1280px;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
 
     @media (min-width: 320px) and (max-width: 900px) {
         flex-direction: column;
-        min-height: auto;
         height: auto;
     }
 `;

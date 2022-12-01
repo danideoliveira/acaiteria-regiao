@@ -28,12 +28,11 @@ export const Title = styled.h2`
     width: 100%;
     color: ${ colors.darkPurple };
     font-size: 4rem;
-    margin-bottom: 5rem;
+    margin: 5rem 0;
 
     @media (min-width: 320px) and (max-width: 480px) {
         width: 50%;
         margin: 0 auto;
-        margin-bottom: 5rem;
         text-align: center;
     }
 `;

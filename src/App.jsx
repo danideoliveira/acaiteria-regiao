@@ -7,22 +7,29 @@ import About from './components/about/About';
 import Footer from './components/footer/Footer';
 import { GlobalStyle } from './globalStyles';
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+
 function App() {
   return (
     <>
       <GlobalStyle/>
-      <header>
-        <Navbar/>
-      </header>
 
-      <main>
-        <Home/>
-        <Specialties/>
-        <Location/>
-        <About/>
-      </main>
+        <Router>
+          <Navbar/>
 
-      <Footer/>
+          <Routes>
+            <Route path='/' element={<Home />}/>
+            <Route path='/especialidades' element={<Specialties />}/>
+            <Route path='/localizacao' element={<Location />}/>
+            <Route path='/sobre' element={<About />}/>
+          </Routes>
+
+          <Footer/>
+        </Router>
     </>
   )
 }
