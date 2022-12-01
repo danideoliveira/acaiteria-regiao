@@ -3,13 +3,14 @@ import { Title, Description } from "../../helpers/globalTags";
 import { colors } from "../../helpers/variables";
 import { Slide } from 'react-awesome-reveal';
 import { motion } from "framer-motion";
+import Footer from "../footer/Footer";
 
 export default function Location() {
   return (
     <motion.div
-      initial={{width: 0}}
-      animate={{width: "100%"}}
-      exit={{x: window.innerWidth, transition: {duration: 0.5}}}
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}
     >
       <Container id="location">
         <ContainerSecondary>
@@ -42,6 +43,7 @@ export default function Location() {
           </DivMap>
         </ContainerSecondary>
       </Container>
+      <Footer needsShape={false}/>
     </motion.div>
   );
 }
