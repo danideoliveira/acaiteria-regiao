@@ -36,6 +36,22 @@ export const DivLeft = styled.div`
             width: 70%;
             margin-bottom: 2rem;
         }
+
+        a {
+            background-color: ${ colors.green };
+            border-radius: 50px;
+            color: #fff;
+            font-size: 2.0rem;
+            padding: 1rem;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: ${darken(0.1, `${ colors.green }`)};
+            }
+        }
     }
 
     @media (min-width: 320px) and (max-width: 900px) {
@@ -51,6 +67,10 @@ export const DivLeft = styled.div`
 
             p {
                 width: 70%;
+            }
+
+            a {
+                display: none;
             }
         }
     }
@@ -131,25 +151,5 @@ export const Title = styled.h1`
 
     @media (min-width: 320px) and (max-width: 480px) {
         font-size: 5rem;
-    }
-`;
-
-export const Button = styled.a`
-    background-color: ${ colors.green };
-    border-radius: 50px;
-    color: #fff;
-    font-size: 2.0rem;
-    padding: 1rem;
-    font-weight: 500;
-    margin-top: 1.5rem;
-    cursor: pointer;
-    transition: 0.2s;
-
-    &:hover {
-        background-color: ${darken(0.1, `${ colors.green }`)};
-    }
-
-    @media (min-width: 320px) and (max-width: 900px) {
-        display: none;
     }
 `;

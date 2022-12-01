@@ -4,6 +4,7 @@ import { Container, ContainerSecondary, DivLeft, DivRight, Shape } from './About
 import { Title, Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
 import Footer from '../footer/Footer';
+import { motion } from 'framer-motion';
 
 export default function About() {
 
@@ -15,7 +16,11 @@ export default function About() {
     ];
 
     return(
-        <>
+        <motion.div
+            initial={{width: 0}}
+            animate={{width: "100%"}}
+            exit={{x: window.innerWidth, transition: {duration: 0.5}}}
+        >
             <Container id="about">
                 <ContainerSecondary>
                     <DivLeft>
@@ -49,6 +54,6 @@ export default function About() {
                 </ContainerSecondary>
             </Container>
             <Footer needsShape={true} image={images.aboutBubble}/>
-        </>
+        </motion.div>
     )
 }

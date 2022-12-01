@@ -1,24 +1,27 @@
 import images from '../images/Images';
-import { Container, DivLeft, DivRight, Title, ShapeBubble, Button } from './Home.styled';
-import {motion} from 'framer-motion';
+import { Container, DivLeft, DivRight, Title, ShapeBubble } from './Home.styled';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
 import Footer from '../footer/Footer';
 
 function Home() {
-    const TitleAnimate = motion(Title);
-
     return (
-        <>
+        <motion.div
+            initial={{width: 0}}
+            animate={{width: "100%"}}
+            exit={{x: window.innerWidth, transition: {duration: 0.5}}}
+        >
             <Container>
                 <DivLeft>
                     <div>
-                    <Title>O dia pede açaí!</Title>
+                        <Title>O dia pede açaí!</Title>
                         <Description color={colors.purple}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                             Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
                         </Description>
-                        <Button href="#specialties">Conheça-nos</Button>
+                        <Link to="/especialidades">Conheça-nos</Link>
                     </div>
                 </DivLeft>
                 
@@ -30,7 +33,7 @@ function Home() {
                 </DivRight>        
             </Container>
             <Footer needsShape={false}/>
-        </>
+        </motion.div>
     )
 };
 
