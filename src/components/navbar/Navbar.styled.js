@@ -106,7 +106,7 @@ export const MobileMenu = styled.div`
         background-color: ${colors.purple};
         transition: 0.3s ease;
         border-radius: 10px;
-
+        outline: 0.01px solid ${ colors.cream };
     }
 
     @media (min-width: 320px) and (max-width: 900px) {
@@ -120,11 +120,13 @@ export const MobileMenu = styled.div`
         &.active div:nth-child(1) {
             transform: translateY(10px) rotate(45deg);
             background-color: ${colors.white};
+            outline: none;
         }
 
         &.active div:nth-child(3) {
             transform: translateY(-10px) rotate(-45deg);
             background-color: ${colors.white};
+            outline: none;
         }
     }
 `;
