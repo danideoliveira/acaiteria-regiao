@@ -4,6 +4,7 @@ import { Container, ContainerSecondary, DivLeft, DivRight, Shape } from './About
 import { Title, Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
 import { Slide, Fade } from 'react-awesome-reveal';
+import Footer from '../footer/Footer';
 
 export default function About() {
 
@@ -15,40 +16,40 @@ export default function About() {
     ];
 
     return(
-        <Container id="about">
-            <ContainerSecondary>
-                <DivLeft>
-                        <div>
-                            <Title color={ colors.purple }>QUEM SOMOS</Title>
-                            <Description color={ colors.purple }>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Exercitationem vitae consectetur tenetur fugit nam necessitatibus 
-                                ab velit nemo cupiditate quae magnam dolorum facere, nisi dignissimos, 
-                                repudiandae porro praesentium alias qui.
-                            </Description>
-                        </div>
-                    
-                </DivLeft>
+        <>
+            <Container id="about">
+                <ContainerSecondary>
+                    <DivLeft>
+                            <div>
+                                <Title color={ colors.purple }>QUEM SOMOS</Title>
+                                <Description color={ colors.purple }>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Exercitationem vitae consectetur tenetur fugit nam necessitatibus 
+                                    ab velit nemo cupiditate quae magnam dolorum facere, nisi dignissimos, 
+                                    repudiandae porro praesentium alias qui.
+                                </Description>
+                            </div>
+                        
+                    </DivLeft>
 
-                <DivRight>
-                    {
-                        contactsList.map(item => (
-                            <Contacts
-                                key={item.alt}
-                                image={item.image}
-                                alt={item.alt}
-                                text={item.text}
-                                link={item.link}
-                            />
-                            ))
-                        }
-                </DivRight>
-                {/* <Shape>
-                    <img src={images.aboutBubble} alt="shape"/>
-                </Shape> */}
-            </ContainerSecondary>
-        </Container>
+                    <DivRight>
+                        {
+                            contactsList.map(item => (
+                                <Contacts
+                                    key={item.alt}
+                                    image={item.image}
+                                    alt={item.alt}
+                                    text={item.text}
+                                    link={item.link}
+                                />
+                                ))
+                            }
+                    </DivRight>
+                </ContainerSecondary>
+            </Container>
+            <Footer needsShape={true} image={images.aboutBubble}/>
+        </>
     )
 }

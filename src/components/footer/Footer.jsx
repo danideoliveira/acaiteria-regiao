@@ -1,11 +1,11 @@
 import images from '../images/Images';
 import { Container, ContainerSecondary, Shape } from './Footer.styled';
 
-export default function Footer() {
+export default function Footer({needsShape, image}) {
 
-    function setShape(path) {
-        if(path === '/sobre') {
-            return <Shape><img src={images.aboutBubble} alt="shape"/></Shape>
+    function setShape(needsShape) {
+        if(needsShape) {
+            return <Shape><img src={image} alt="shape"/></Shape> 
         }
     }
 
@@ -13,8 +13,7 @@ export default function Footer() {
         <Container>
             <ContainerSecondary>
                 <p><a target="_blank" href="https://github.com/danideoliveira">Daniel de Oliveira Santos</a> &copy; 2022</p>
-                {/* <Shape><img src={images.aboutBubble} alt="shape"/></Shape> */}
-                {setShape(window.location.pathname)}
+                {setShape(needsShape)}
             </ContainerSecondary>
         </Container>
     )

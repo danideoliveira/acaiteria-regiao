@@ -2,6 +2,7 @@ import images from '../images/Images';
 import CardItem from '../card-item/CardItem';
 import { Container, ContainerSecondary, Title, Grid, DivShape } from './Specialties.styled';
 import { Fade } from 'react-awesome-reveal';
+import Footer from '../footer/Footer';
 
 export default function Specialties() {
 
@@ -13,31 +14,31 @@ export default function Specialties() {
     ];
 
     return (
-        <Container id="specialties">
-            <ContainerSecondary>
-                <Title>Nossas especialidades!</Title>
+        <>
+            <Container id="specialties">
+                <ContainerSecondary>
+                    <Title>Nossas especialidades!</Title>
 
-                <Grid>
-                    <Fade cascade damping={0.1}>
-                        {
-                            specialtiesList.map(item => (
-                                <CardItem
-                                    key={item.title}
-                                    image={item.image}
-                                    alt={item.alt}
-                                    title={item.title}
-                                    description={item.description}
-                                    value={item.value}
-                                    setButton={item.setButton}
-                                />
-                            ))
-                        }
-                    </Fade>
-                </Grid>
-            </ContainerSecondary>
-            <DivShape className="specialties-shapes">
-                <img className="specialties-bottom-shape" src={images.specialtiesShape} alt="shape" />
-            </DivShape>
-        </Container>
+                    <Grid>
+                        <Fade cascade damping={0.1}>
+                            {
+                                specialtiesList.map(item => (
+                                    <CardItem
+                                        key={item.title}
+                                        image={item.image}
+                                        alt={item.alt}
+                                        title={item.title}
+                                        description={item.description}
+                                        value={item.value}
+                                        setButton={item.setButton}
+                                    />
+                                ))
+                            }
+                        </Fade>
+                    </Grid>
+                </ContainerSecondary>
+            </Container>
+            <Footer needsShape={true} image={images.specialtiesShape}/>
+        </>
     )
 }
