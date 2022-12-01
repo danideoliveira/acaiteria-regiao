@@ -3,6 +3,7 @@ import images from '../images/Images';
 import { Container, ContainerSecondary, DivLeft, DivRight } from './About.styled';
 import { Title, Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
+import { Slide, Fade } from 'react-awesome-reveal';
 
 export default function About() {
 
@@ -17,17 +18,18 @@ export default function About() {
         <Container id="about">
             <ContainerSecondary>
                 <DivLeft>
-                    <div>
-                        <Title color={ colors.purple }>QUEM SOMOS</Title>
-                        <Description color={ colors.purple }>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Exercitationem vitae consectetur tenetur fugit nam necessitatibus 
-                            ab velit nemo cupiditate quae magnam dolorum facere, nisi dignissimos, 
-                            repudiandae porro praesentium alias qui.
-                        </Description>
-                    </div>
+                        <div>
+                            <Title color={ colors.purple }>QUEM SOMOS</Title>
+                            <Description color={ colors.purple }>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Exercitationem vitae consectetur tenetur fugit nam necessitatibus 
+                                ab velit nemo cupiditate quae magnam dolorum facere, nisi dignissimos, 
+                                repudiandae porro praesentium alias qui.
+                            </Description>
+                        </div>
+                    
                 </DivLeft>
 
                 <DivRight>
@@ -40,8 +42,8 @@ export default function About() {
                                 text={item.text}
                                 link={item.link}
                             />
-                        ))
-                    }
+                            ))
+                        }
                 </DivRight>
             </ContainerSecondary>
         </Container>

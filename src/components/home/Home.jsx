@@ -3,6 +3,7 @@ import { Container, DivLeft, DivRight, Title, ShapeBubble, Button } from './Home
 import {motion} from 'framer-motion';
 import { Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
+import { Fade } from 'react-awesome-reveal';
 
 function Home() {
     const TitleAnimate = motion(Title);
@@ -11,7 +12,7 @@ function Home() {
         <Container>
             <DivLeft>
                 <div>
-                    <TitleAnimate>O dia pede açaí!</TitleAnimate>
+                <Title>O dia pede açaí!</Title>
                     <Description color={colors.purple}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.

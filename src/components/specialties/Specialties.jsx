@@ -1,6 +1,7 @@
 import images from '../images/Images';
 import CardItem from '../card-item/CardItem';
 import { Container, ContainerSecondary, Title, Grid, DivShape } from './Specialties.styled';
+import { Fade } from 'react-awesome-reveal';
 
 export default function Specialties() {
 
@@ -11,29 +12,31 @@ export default function Specialties() {
         { image: images.tijela, alt: 'Tijela', title: "Tijela", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", value: "R$12,00", setButton: false }
     ];
 
-    return(
+    return (
         <Container id="specialties">
             <ContainerSecondary>
                 <Title>Nossas especialidades!</Title>
 
                 <Grid>
-                    {
-                        specialtiesList.map(item => (
-                            <CardItem
-                                key={ item.title } 
-                                image={item.image}
-                                alt= { item.alt }
-                                title={item.title}
-                                description={item.description}
-                                value={item.value}
-                                setButton={ item.setButton }
-                            />
-                        ))
-                    }
+                    <Fade cascade damping={0.1}>
+                        {
+                            specialtiesList.map(item => (
+                                <CardItem
+                                    key={item.title}
+                                    image={item.image}
+                                    alt={item.alt}
+                                    title={item.title}
+                                    description={item.description}
+                                    value={item.value}
+                                    setButton={item.setButton}
+                                />
+                            ))
+                        }
+                    </Fade>
                 </Grid>
             </ContainerSecondary>
             <DivShape className="specialties-shapes">
-                <img className="specialties-bottom-shape" src={ images.specialtiesShape } alt="shape"/>
+                <img className="specialties-bottom-shape" src={images.specialtiesShape} alt="shape" />
             </DivShape>
         </Container>
     )

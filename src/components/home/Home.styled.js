@@ -80,7 +80,7 @@ export const DivRight = styled.div`
             transition: 0.3s;
             z-index: 1;
             margin-top: 8rem;
-            /* animation: ${fadeInFromTop} .5s linear forwards, ${floating} ease 4s infinite; */
+            animation: ${fadeInFromTop} .5s linear forwards, ${floating} ease 4s infinite;
         }
     }  
 
