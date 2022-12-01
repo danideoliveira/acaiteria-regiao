@@ -3,7 +3,6 @@ import images from '../images/Images';
 import { Container, ContainerSecondary, DivLeft, DivRight, Shape } from './About.styled';
 import { Title, Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
-import { Slide, Fade } from 'react-awesome-reveal';
 import Footer from '../footer/Footer';
 
 export default function About() {

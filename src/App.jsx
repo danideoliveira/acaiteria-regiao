@@ -16,18 +16,15 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-
-        <Router>
-          <Navbar/>
-
-          <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/especialidades' element={<Specialties />}/>
-            <Route path='/localizacao' element={<Location />}/>
-            <Route path='/sobre' element={<About />}/>
-          </Routes>
-
-        </Router>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/especialidades' element={<Specialties />}/>
+          <Route path='/localizacao' element={<Location />}/>
+          <Route path='/sobre' element={<About />}/>
+        </Routes>
+      </Router>
     </>
   )
 }

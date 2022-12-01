@@ -3,7 +3,6 @@ import { Container, DivLeft, DivRight, Title, ShapeBubble, Button } from './Home
 import {motion} from 'framer-motion';
 import { Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
-import { Fade } from 'react-awesome-reveal';
 import Footer from '../footer/Footer';
 
 function Home() {

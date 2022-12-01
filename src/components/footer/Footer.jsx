@@ -1,4 +1,3 @@
-import images from '../images/Images';
 import { Container, ContainerSecondary, Shape } from './Footer.styled';
 
 export default function Footer({needsShape, image}) {

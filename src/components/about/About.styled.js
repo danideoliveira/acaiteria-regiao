@@ -8,7 +8,6 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     background-color: ${ colors.cream };
-    /* position: absolute; */
 
     @media (min-width: 320px) and (max-width: 900px) {
         height: auto;
