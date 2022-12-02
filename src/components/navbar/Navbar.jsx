@@ -1,5 +1,6 @@
 import { Nav, Menu, MobileMenu } from './Navbar.styled';
 import { Link } from "react-router-dom";
+import images from '../images/Images';
 
 function Navbar() {
 
@@ -19,7 +20,8 @@ function Navbar() {
 
     return(
         <Nav>
-            <Menu className='menu'>              
+            <img src={images.logo}/>
+            <Menu className='menu'>      
                 {
                     menuItems.map(item => (
                         <li key={item.href} onClick={() => openMobileMenu()}>

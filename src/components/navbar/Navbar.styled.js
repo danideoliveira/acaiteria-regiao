@@ -3,9 +3,9 @@ import { setFlexbox } from "../../helpers/Mixins";
 import { colors } from "../../helpers/variables";
 
 export const Nav = styled.nav`
-    ${setFlexbox('center', 'flex-end', 'row')}
+    ${setFlexbox('center', 'space-between', 'row')}
     width: 100%;
-    max-width: 980px;
+    max-width: 1280px;
     height: 8vh;
     z-index: 999;
     margin: 0 auto;
@@ -13,19 +13,38 @@ export const Nav = styled.nav`
     position: absolute;
     right: 0;
 
+    img {
+        margin-top: 5rem;
+        width: 100px;
+    }
+
     @media (min-width: 320px) and (max-width: 900px) {
         justify-content: flex-start;
         align-items: flex-end;
         width: 95%;
         height: 10vh;
+
+        img {
+            right: 0;
+            top: 0;
+            position: absolute;
+            margin: 5rem 5rem 0 0;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        img {
+            width: 10rem;
+            margin: 0.1rem 0.1rem 0 0;
+        }
     }
 `;
 
 export const Menu = styled.ul`
     ${setFlexbox('center', 'space-evenly', 'row')}
     height: 100%;
-    width: 70%;
-    margin: 2% 10% 0 0;
+    width: 60%;
+    margin: 2% 5% 0 0;
 
     &.active {
         left: 0;

@@ -12,6 +12,7 @@ import logoInstagram from '../../assets/img/logo-instagram.png';
 import logoFacebook from '../../assets/img/logo-facebook.png';
 import logoTwitter from '../../assets/img/logo-twitter.png';
 import aboutBubble from '../../assets/img/about-bubble.svg';
+import logo from '../../assets/img/acaiteria-logo1.png';
 
 const images = {
     acai,
@@ -27,7 +28,8 @@ const images = {
     logoInstagram,
     logoFacebook,
     logoTwitter,
-    aboutBubble
+    aboutBubble,
+    logo
 };
 
 export default images;
