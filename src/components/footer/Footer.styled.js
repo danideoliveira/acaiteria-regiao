@@ -48,7 +48,7 @@ export const Shape = styled.div`
         bottom: 0;
         width: 20rem;
 
-        @media (min-width: 320px) and (max-width: 900px) {
+        @media (min-width: 320px) and (max-width: 999px) {
             width: 15rem;
         }
         

@@ -14,7 +14,7 @@ export const Container = styled.div`
     position: relative;
     overflow: hidden;
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         flex-direction: column;
         height: auto;
     }
@@ -54,7 +54,7 @@ export const DivLeft = styled.div`
         }
     }
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         width: 90%;
         height: 5vh;
         background: none;
@@ -104,7 +104,7 @@ export const DivRight = styled.div`
         }
     }  
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         width: 100%;
         height: 50%;
 
@@ -127,7 +127,7 @@ export const ShapeBubble = styled.img`
     max-height: 52rem;
     margin: 3rem 7rem 0 0;
     
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         max-height: 40rem;
         margin-right: auto;
     }
@@ -145,7 +145,7 @@ export const Title = styled.h1`
     font-weight: 800;
     margin-bottom: 1rem;
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         text-align: center;
     }
 

@@ -18,7 +18,7 @@ export const Nav = styled.nav`
         width: 100px;
     }
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         justify-content: flex-start;
         align-items: flex-end;
         width: 95%;
@@ -73,7 +73,7 @@ export const Menu = styled.ul`
         }
     }
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         position: fixed;
         left: -100%;
         top: 0;
@@ -136,7 +136,7 @@ export const MobileMenu = styled.div`
         outline: 0.01px solid ${ colors.cream };
     }
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         display: block;
         position: fixed;
 
@@ -157,7 +157,7 @@ export const MobileMenu = styled.div`
         }
     }
 
-    @media (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+    @media (min-width: 320px) and (max-width: 999px) and (orientation: landscape) {
         top: 2rem;
     }
 `;

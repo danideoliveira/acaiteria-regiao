@@ -9,7 +9,7 @@ export const Container = styled.div`
     height: 100vh;
     background-color: ${ colors.cream };
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         height: auto;
         min-height: 100vh;
     }
@@ -21,7 +21,7 @@ export const ContainerSecondary = styled.div`
     width: 100%;  
     height: 100%;
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         flex-direction: column;
     }
 `;
@@ -36,7 +36,7 @@ export const DivLeft = styled.div`
         width: 70%;     
     }
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         
         div {
             height: 40rem;
@@ -50,7 +50,7 @@ export const DivRight = styled.div`
     width: 100%;
     height: 50%;
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         width: 56%;
     }
 `;

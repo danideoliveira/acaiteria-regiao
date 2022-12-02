@@ -9,7 +9,7 @@ export const Container = styled.div`
     background-color: ${colors.cream};
     overflow: hidden;
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         height: auto;
         min-height: 100vh;
     }
@@ -21,7 +21,7 @@ export const ContainerSecondary = styled.div`
     width: 100%;  
     height: 100%;
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         flex-direction: column;
     }
 `;
@@ -39,7 +39,7 @@ export const DivLeft = styled.div`
         width: 70%;
     }
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         width: 100%;
         height: 30rem;
         background: none;
@@ -79,9 +79,9 @@ export const DivMap = styled.div`
         }
     }
 
-    @media (min-width: 320px) and (max-width: 900px) {
+    @media (min-width: 320px) and (max-width: 999px) {
         width: 100%;
-        height: 50vh;
+        height: auto;
         margin-bottom: 5rem;
 
         .container-map {
@@ -99,7 +99,7 @@ export const DivMap = styled.div`
 
                 iframe {
                     width: 100%;
-                    height: 100%;
+                    height: 50rem;
                 }
             }
         }
