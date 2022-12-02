@@ -29,7 +29,11 @@ export const Container = styled.div`
 
         div {
             width: 90%;
-            margin-left: 10%;
+            margin-left: 5%;
+
+            p {
+                margin: initial;
+            }
         }
     }
 `;

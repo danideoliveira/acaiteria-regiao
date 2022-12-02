@@ -27,7 +27,7 @@ export const Nav = styled.nav`
         img {
             right: 0;
             top: 0;
-            position: absolute;
+            position: fixed;
             margin: 2rem 2rem 0 0;
         }
     }

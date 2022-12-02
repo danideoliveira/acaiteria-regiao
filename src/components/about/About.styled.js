@@ -30,19 +30,23 @@ export const DivLeft = styled.div`
     ${setFlexbox('center', 'center', 'column')}
     width: 100%;
     height: 100%;
-
+    
     div {
         ${setFlexbox('flex-start', 'center', 'column')}
         width: 70%;     
     }
-
+    
     @media (min-width: 320px) and (max-width: 999px) {
         
         div {
             height: 40rem;
             width: 80%;
         }
-    } 
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        margin-top: 8rem;
+    }
 `;
 
 export const DivRight = styled.div`
