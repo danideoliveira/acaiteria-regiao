@@ -43,6 +43,7 @@ export const DivLeft = styled.div`
         width: 100%;
         height: 30rem;
         background: none;
+        margin-top: 3rem;
 
         div {
             margin: 0 auto;

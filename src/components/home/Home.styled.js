@@ -3,6 +3,7 @@ import { setFlexbox } from "../../helpers/Mixins";
 import { floating, fadeInFromTop } from "../../helpers/CustomAnimations";
 import { colors } from "../../helpers/variables";
 import { darken } from "polished";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     ${setFlexbox('center', 'center', 'row')}
@@ -31,26 +32,15 @@ export const DivLeft = styled.div`
     div {
         z-index: 1;
         width: 70%;
+        
+        a {
+            display: initial;
+        }
+
 
         p {
             width: 70%;
             margin-bottom: 2rem;
-        }
-
-        a {
-            background-color: ${ colors.green };
-            border-radius: 50px;
-            color: #fff;
-            font-size: 2.0rem;
-            padding: 1rem;
-            font-weight: 500;
-            margin-top: 1.5rem;
-            cursor: pointer;
-            transition: 0.2s;
-
-            &:hover {
-                background-color: ${darken(0.1, `${ colors.green }`)};
-            }
         }
     }
 
@@ -107,6 +97,7 @@ export const DivRight = styled.div`
     @media (min-width: 320px) and (max-width: 999px) {
         width: 100%;
         height: 50%;
+        z-index: 0;
 
         div {
             width: 90%;
@@ -151,5 +142,28 @@ export const Title = styled.h1`
 
     @media (min-width: 320px) and (max-width: 480px) {
         font-size: 5rem;
+    }
+`;
+
+export const StyledLink = styled(Link)`
+    background-color: ${colors.green};
+    border-radius: 50px;
+    color: #fff;
+    font-size: 2.0rem;
+    padding: 1rem 5rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+    display: none;
+
+    &:hover {
+        background-color: ${darken(0.1, `${colors.green}`)};
+    }
+
+    @media (min-width: 320px) and (max-width: 999px) {
+        display: initial;
+        padding: 2rem 7rem;
+        margin-bottom: 5rem;
     }
 `;

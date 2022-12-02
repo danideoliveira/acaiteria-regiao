@@ -1,5 +1,5 @@
 import images from '../images/Images';
-import { Container, DivLeft, DivRight, Title, ShapeBubble } from './Home.styled';
+import { Container, DivLeft, DivRight, Title, ShapeBubble, StyledLink } from './Home.styled';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Description } from '../../helpers/globalTags';
@@ -21,7 +21,7 @@ function Home() {
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                             Nulla leo ex, accumsan eu dui vel, viverra aliquam metus.
                         </Description>
-                        <Link to="/especialidades">Conheça-nos</Link>
+                        <StyledLink to="/especialidades">Peça o seu!</StyledLink>
                     </div>
                 </DivLeft>
                 
@@ -30,7 +30,8 @@ function Home() {
                         <motion.img src={ images.acai } alt="Açaí photo"/>
                     </div>
                     <ShapeBubble className="home-bubble" src={ images.homeBubble } alt="bubble"/>
-                </DivRight>        
+                </DivRight>
+                <StyledLink to="/especialidades">Peça o seu!</StyledLink>
             </Container>
             <Footer needsShape={false}/>
         </motion.div>
