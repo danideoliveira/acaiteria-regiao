@@ -28,7 +28,7 @@ export const Nav = styled.nav`
             right: 0;
             top: 0;
             position: absolute;
-            margin: 5rem 5rem 0 0;
+            margin: 2rem 2rem 0 0;
         }
     }
 
@@ -61,7 +61,7 @@ export const Menu = styled.ul`
             height: 100%;
             width: 100%;
             color: ${colors.purple};
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             transition: 0.2s;
             border-radius: 50px;
             margin-right: 10px;
@@ -98,6 +98,7 @@ export const Menu = styled.ul`
                 border-radius: 0;
                 background-color: none;
                 margin-right: 0;
+                font-size: 2rem;
     
                 &:hover {
                     background-color: ${colors.white};
@@ -110,6 +111,13 @@ export const Menu = styled.ul`
     @media (min-width: 320px) and (max-width: 480px) {
         width: 100%;
     }
+
+    @media (min-width: 320px) and (max-width: 899px) and (orientation: landscape) {
+        li {
+            height: 100%;
+        }
+    }
+
 `;
 
 export const MobileMenu = styled.div`
@@ -147,5 +155,9 @@ export const MobileMenu = styled.div`
             background-color: ${colors.white};
             outline: none;
         }
+    }
+
+    @media (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+        top: 2rem;
     }
 `;
