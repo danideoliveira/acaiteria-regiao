@@ -86,6 +86,8 @@ export const Grid = styled.div`
 
 export const Item = styled.label`
     font-size: 2rem;
+    color: ${colors.darkPurple};
+    font-weight: 500;
     
     input {
         margin-right: 0.5rem;
@@ -96,7 +98,7 @@ export const Label = styled.p`
     font-size: 2.5rem;
     color: ${colors.darkPurple};
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 `;
 
 export const Button = styled.button`

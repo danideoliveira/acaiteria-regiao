@@ -46,8 +46,8 @@ export default function MakeOrder() {
                             <div>
                                 <Label>Caldas</Label>
                                 <Grid>
-                                    <Item><input type='checkbox' value='chocolate'/>Chocolate</Item>
-                                    <Item><input type='checkbox' value='morango'/>Morango</Item>
+                                    <Item><input type='radio' name='calda' value='chocolate'/>Chocolate</Item>
+                                    <Item><input type='radio' name='calda' value='morango'/>Morango</Item>
                                 </Grid>
                             </div>
 
