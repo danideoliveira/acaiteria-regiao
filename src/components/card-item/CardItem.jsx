@@ -1,4 +1,4 @@
-import { Container, DivSpecialtiesInfo, Title, Price, Button, DivImage } from './CardItem.styled';
+import { Container, DivSpecialtiesInfo, Title, Price, StyledLink, DivImage } from './CardItem.styled';
 import { Description } from '../../helpers/globalTags';
 import { motion } from 'framer-motion';
 import { colors } from '../../helpers/variables';
@@ -7,7 +7,7 @@ export default function CardItem({ title, description, image, value, setButton, 
 
     function setButtonValidate(result) {
         if (result) {
-            return <Button>Monte seu copo!</Button>
+            return <StyledLink to='/make-order'>Monte seu copo!</StyledLink>
         }
     }
 

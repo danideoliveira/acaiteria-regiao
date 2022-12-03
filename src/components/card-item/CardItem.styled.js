@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { setFlexbox } from "../../helpers/Mixins";
 import { darken } from 'polished';
 import { colors } from "../../helpers/variables";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     ${setFlexbox('flex-start', 'flex-start', 'row')}
@@ -77,7 +78,7 @@ export const Price = styled.p`
     font-weight: 700;
 `;
 
-export const Button = styled.button`
+export const StyledLink = styled(Link)`
     background-color: ${ colors.green };
     border-radius: 50px;
     color: #fff;
