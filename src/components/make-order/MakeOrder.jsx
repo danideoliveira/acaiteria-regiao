@@ -1,5 +1,5 @@
 import images from '../images/Images';
-import { Container, ContainerSecondary, DivLeft, DivRight, Shape } from './MakeOrder.styled.js';
+import { Container, ContainerSecondary, DivLeft, DivRight, Grid, Item, Label, Button } from './MakeOrder.styled.js';
 import { Title, Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
 import Footer from '../footer/Footer';
@@ -14,10 +14,47 @@ export default function MakeOrder() {
         >
             <Container id="make-order">
                 <ContainerSecondary>
-                    <DivRight>
+                    <DivLeft>
                         <div>
-                            <Title color={ colors.darkPurple }>Faça seu copo!</Title>
+                            <p>***Foto***</p>
+                            <p>R$999,00</p>
                         </div>
+                    </DivLeft>
+                    <DivRight>
+                        <section>
+                            <div>
+                                <Title color={ colors.darkPurple }>Faça seu copo!</Title>
+                                <Grid>
+                                    <Item><input type='radio' name='tamanho' value='200' defaultChecked/>200ml</Item>
+                                    <Item><input type='radio' name='tamanho' value='400'/>400ml</Item>
+                                    <Item><input type='radio' name='tamanho' value='700'/>700ml</Item>
+                                </Grid>
+                            </div>
+
+                            <div>
+                                <Label>Acompanhamentos</Label>
+                                <Grid>
+                                    <Item><input type='checkbox' value='pacoca'/>Paçoca</Item>
+                                    <Item><input type='checkbox' value='leite-em-pó'/>Leite em pó</Item>
+                                    <Item><input type='checkbox' value='jujuba'/>Jujuba</Item>
+                                    <Item><input type='checkbox' value='morango'/>Morango</Item>
+                                    <Item><input type='checkbox' value='biscoito'/>Biscoito</Item>
+                                    <Item><input type='checkbox' value='banana'/>Banana</Item>
+                                </Grid>
+                            </div>
+
+                            <div>
+                                <Label>Caldas</Label>
+                                <Grid>
+                                    <Item><input type='checkbox' value='chocolate'/>Chocolate</Item>
+                                    <Item><input type='checkbox' value='morango'/>Morango</Item>
+                                </Grid>
+                            </div>
+
+                            <div>
+                                <Button>Prosseguir</Button>
+                            </div>
+                        </section>
                     </DivRight>
                 </ContainerSecondary>
             </Container>
