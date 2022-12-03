@@ -1,5 +1,5 @@
 import images from '../images/Images';
-import { Container, ContainerSecondary, DivLeft, DivRight, Shape } from './MakeOrder.styled';
+import { Container, ContainerSecondary, DivLeft, DivRight, Shape } from './MakeOrder.styled.js';
 import { Title, Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
 import Footer from '../footer/Footer';

@@ -7,7 +7,7 @@ export default function CardItem({ title, description, image, value, setButton, 
 
     function setButtonValidate(result) {
         if (result) {
-            return <StyledLink to='/make-order'>Monte seu copo!</StyledLink>
+            return <StyledLink to='/pedido'>Monte seu copo!</StyledLink>
         }
     }
 

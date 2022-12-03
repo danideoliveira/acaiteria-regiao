@@ -2,7 +2,7 @@ import Home from "../components/home/Home"
 import Specialties from '../components/specialties/Specialties';
 import Location from '../components/location/Location';
 import About from '../components/about/About';
-import MakeOrder from "../components/make-order/makeOrder";
+import MakeOrder from "../components/make-order/MakeOrder";
 import {
     Route,
     Routes,
@@ -20,7 +20,7 @@ export default function AnimatedRoutes() {
                 <Route path='/especialidades' element={<Specialties />}/>
                 <Route path='/localizacao' element={<Location />}/>
                 <Route path='/sobre' element={<About />}/>
-                <Route path='/make-order' element={<MakeOrder />}/>
+                <Route path='/pedido' element={<MakeOrder />}/>
             </Routes>
         </AnimatePresence>
     )
