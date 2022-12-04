@@ -12,7 +12,6 @@ export const Container = styled.div`
 
     @media (min-width: 320px) and (max-width: 999px) {
         height: auto;
-        /* min-height: 100vh; */
     }
 `;
 
@@ -150,6 +149,5 @@ export const Button = styled.button`
 
     @media (min-width: 320px) and (max-width: 999px) {
         padding: 2rem 7rem;
-        /* margin-bottom: 5rem; */
     }
 `;
