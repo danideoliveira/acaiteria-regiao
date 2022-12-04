@@ -10,3 +10,8 @@ export const setFlexbox = (alignItems, justifyContent, flexDirection) => css`
 export const setImageBackground = (url) => {
     return `url(${url}) no-repeat`;
 };
+
+export function showModal() {
+    const modal = document.querySelector(".modal");
+    modal.classList.toggle("active");
+}

@@ -122,7 +122,6 @@ export const Grid = styled.div`
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 1.5rem;
-    /* text-align: ${(props) => props.textAlign}; */
 
     @media (min-width: 320px) and (max-width: 999px) {
         grid-template-columns: repeat(2, 1fr);

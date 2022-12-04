@@ -1,9 +1,11 @@
 import { acaiMaker } from '../images/Images';
 import { Container, ContainerSecondary, DivLeft, DivRight, Grid, Item, Label, Button } from './MakeOrder.styled.js';
-import { Title, Description } from '../../helpers/globalTags';
+import { Title } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
 import Footer from '../footer/Footer';
 import { motion } from 'framer-motion';
+import ModalInfo from '../modal-info/ModalInfo';
+import { showModal } from '../../helpers/Mixins';
 
 export default function MakeOrder() {
     function handleChange(event) {
@@ -78,10 +80,12 @@ export default function MakeOrder() {
                             </div>
 
                             <div>
-                                <Button>Prosseguir</Button>
+                                <Button className='continue-button' onClick={showModal}>Prosseguir</Button>
                             </div>
                         </section>
                     </DivRight>
+
+                    <ModalInfo/>
                 </ContainerSecondary>
             </Container>
             <Footer needsShape={false}/>
