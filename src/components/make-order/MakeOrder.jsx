@@ -36,9 +36,9 @@ export default function MakeOrder() {
                         <div>
                             <img src={ acaiMaker.copo } alt="acai-maker"/>
                             <img className='maker-item' id='jujuba' src={ acaiMaker.jujuba } alt="acai-maker"/>
-                            <img className='maker-item' id='leite' src={ acaiMaker.leite } alt="acai-maker"/>
                             <img className='maker-item' id='morango' src={ acaiMaker.morango } alt="acai-maker"/>
                             <img className='maker-item' id='pacoca' src={ acaiMaker.pacoca } alt="acai-maker"/>
+                            <img className='maker-item' id='leite' src={ acaiMaker.leite } alt="acai-maker"/>
                             <img className='maker-item' id='banana' src={ acaiMaker.banana } alt="acai-maker"/>
                             <img className='maker-item' id='biscoito' src={ acaiMaker.biscoito } alt="acai-maker"/>
                             <img className='maker-item' id='caldaMorango' src={ acaiMaker.caldaMorango } style={{ opacity: 90 + '%' }} alt="acai-maker"/>
