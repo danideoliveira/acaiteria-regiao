@@ -43,6 +43,10 @@ export const DivLeft = styled.div`
             width: 100%;
             position: absolute;
         }
+
+        .maker-item {
+            display: none;
+        }
         
         p {
             font-size: 2rem;

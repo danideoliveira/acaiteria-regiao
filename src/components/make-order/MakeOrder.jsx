@@ -4,8 +4,40 @@ import { Title, Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
 import Footer from '../footer/Footer';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function MakeOrder() {
+    const [firstName, setFirstName] = useState('');
+
+    function handleChange(event) {
+        const items = document.querySelectorAll('.maker-item');
+
+        if(event.target.checked) {
+            items.forEach(item => {
+                if(item.id === event.target.value) {
+                    item.style.display = 'initial';
+                }
+            })
+        } else {
+            items.forEach(item => {
+                if(item.id === event.target.value) {
+                    item.style.display = 'none';
+                }
+            })
+        }
+    }
+    // function startAcaiMaker() {
+    //     const options = document.querySelectorAll('.maker-option');
+        
+    //     options.forEach(option => {
+    //         if(option.checked) {
+    //             console.log(option.value)
+    //         } else {
+    //             console.log(false)
+    //         }
+    //     });
+    // }
+
     return(
         <motion.div
             initial={{opacity: 0}}
@@ -16,15 +48,16 @@ export default function MakeOrder() {
                 <ContainerSecondary>
                     <DivLeft>
                         <div>
+                            {/* {startAcaiMaker()} */}
                             <img src={ acaiMaker.copo } alt="acai-maker"/>
-                            <img src={ acaiMaker.jujuba } alt="acai-maker"/>
-                            <img src={ acaiMaker.leite } alt="acai-maker"/>
-                            <img src={ acaiMaker.morango } alt="acai-maker"/>
-                            <img src={ acaiMaker.pacoca } alt="acai-maker"/>
-                            <img src={ acaiMaker.banana } alt="acai-maker"/>
-                            <img src={ acaiMaker.biscoito } alt="acai-maker"/>
-                            <img src={ acaiMaker.caldaMorango } alt="acai-maker"/>
-                            <img src={ acaiMaker.caldaChocolate } alt="acai-maker"/>
+                            <img className='maker-item' id='jujuba' src={ acaiMaker.jujuba } alt="acai-maker"/>
+                            <img className='maker-item' id='leite' src={ acaiMaker.leite } alt="acai-maker"/>
+                            <img className='maker-item' id='morango' src={ acaiMaker.morango } alt="acai-maker"/>
+                            <img className='maker-item' id='pacoca' src={ acaiMaker.pacoca } alt="acai-maker"/>
+                            <img className='maker-item' id='banana' src={ acaiMaker.banana } alt="acai-maker"/>
+                            <img className='maker-item' id='biscoito' src={ acaiMaker.biscoito } alt="acai-maker"/>
+                            <img className='maker-item' id='caldaMorango' src={ acaiMaker.caldaMorango } style={{ opacity: 90 + '%' }} alt="acai-maker"/>
+                            <img className='maker-item' id='caldaChocolate' src={ acaiMaker.caldaChocolate } style={{ opacity: 90 + '%' }} alt="acai-maker"/>
                             <img src={ acaiMaker.copoFront } alt="acai-maker"/>
                             <p>R$999,00</p>
                         </div>
@@ -43,20 +76,20 @@ export default function MakeOrder() {
                             <div>
                                 <Label>Acompanhamentos</Label>
                                 <Grid>
-                                    <Item><input type='checkbox' value='pacoca'/>Paçoca</Item>
-                                    <Item><input type='checkbox' value='leite-em-pó'/>Leite em pó</Item>
-                                    <Item><input type='checkbox' value='jujuba'/>Jujuba</Item>
-                                    <Item><input type='checkbox' value='morango'/>Morango</Item>
-                                    <Item><input type='checkbox' value='biscoito'/>Biscoito</Item>
-                                    <Item><input type='checkbox' value='banana'/>Banana</Item>
+                                    <Item><input className='maker-option' onChange={handleChange} type='checkbox' value='pacoca'/>Paçoca</Item>
+                                    <Item><input className='maker-option' onChange={handleChange} type='checkbox' value='leite'/>Leite em pó</Item>
+                                    <Item><input className='maker-option' onChange={handleChange} type='checkbox' value='jujuba'/>Jujuba</Item>
+                                    <Item><input className='maker-option' onChange={handleChange} type='checkbox' value='morango'/>Morango</Item>
+                                    <Item><input className='maker-option' onChange={handleChange} type='checkbox' value='biscoito'/>Biscoito</Item>
+                                    <Item><input className='maker-option' onChange={handleChange} type='checkbox' value='banana'/>Banana</Item>
                                 </Grid>
                             </div>
 
                             <div>
                                 <Label>Caldas</Label>
                                 <Grid>
-                                    <Item><input type='radio' name='calda' value='chocolate'/>Chocolate</Item>
-                                    <Item><input type='radio' name='calda' value='morango'/>Morango</Item>
+                                    <Item><input className='maker-option' onChange={handleChange} type='radio' name='calda' value='caldaChocolate'/>Chocolate</Item>
+                                    <Item><input className='maker-option' onChange={handleChange} type='radio' name='calda' value='caldaMorango'/>Morango</Item>
                                 </Grid>
                             </div>
 
