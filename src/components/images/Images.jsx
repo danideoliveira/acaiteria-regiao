@@ -13,6 +13,16 @@ import logoFacebook from '../../assets/img/logo-facebook.png';
 import logoTwitter from '../../assets/img/logo-twitter.png';
 import aboutBubble from '../../assets/img/about-bubble.svg';
 import logo from '../../assets/img/acaiteria-logo1.png';
+import copo from '../../assets/img/acai-maker/copo.png';
+import copoFront from '../../assets/img/acai-maker/copo-front.png';
+import pacoca from '../../assets/img/acai-maker/pacoca.png';
+import banana from '../../assets/img/acai-maker/banana.png';
+import jujuba from '../../assets/img/acai-maker/jujuba.png';
+import leite from '../../assets/img/acai-maker/leite.png';
+import morango from '../../assets/img/acai-maker/morango.png';
+import biscoito from '../../assets/img/acai-maker/biscoito.png';
+import caldaChocolate from '../../assets/img/acai-maker/calda-chocolate.png';
+import caldaMorango from '../../assets/img/acai-maker/calda-morango.png';
 
 const images = {
     acai,
@@ -30,6 +40,19 @@ const images = {
     logoTwitter,
     aboutBubble,
     logo
+};
+
+export const acaiMaker = {
+    copo,
+    copoFront,
+    pacoca,
+    banana,
+    jujuba,
+    leite,
+    morango,
+    biscoito,
+    caldaChocolate,
+    caldaMorango
 };
 
 export default images;

@@ -35,6 +35,14 @@ export const DivLeft = styled.div`
     div {
         ${setFlexbox('center', 'center', 'column')}
         width: 70%;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+
+        img {
+            width: 100%;
+            position: absolute;
+        }
         
         p {
             font-size: 2rem;

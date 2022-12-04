@@ -1,4 +1,4 @@
-import images from '../images/Images';
+import { acaiMaker } from '../images/Images';
 import { Container, ContainerSecondary, DivLeft, DivRight, Grid, Item, Label, Button } from './MakeOrder.styled.js';
 import { Title, Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
@@ -16,7 +16,16 @@ export default function MakeOrder() {
                 <ContainerSecondary>
                     <DivLeft>
                         <div>
-                            <p>***Foto***</p>
+                            <img src={ acaiMaker.copo } alt="acai-maker"/>
+                            <img src={ acaiMaker.jujuba } alt="acai-maker"/>
+                            <img src={ acaiMaker.leite } alt="acai-maker"/>
+                            <img src={ acaiMaker.morango } alt="acai-maker"/>
+                            <img src={ acaiMaker.pacoca } alt="acai-maker"/>
+                            <img src={ acaiMaker.banana } alt="acai-maker"/>
+                            <img src={ acaiMaker.biscoito } alt="acai-maker"/>
+                            <img src={ acaiMaker.caldaMorango } alt="acai-maker"/>
+                            <img src={ acaiMaker.caldaChocolate } alt="acai-maker"/>
+                            <img src={ acaiMaker.copoFront } alt="acai-maker"/>
                             <p>R$999,00</p>
                         </div>
                     </DivLeft>
