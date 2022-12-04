@@ -88,8 +88,8 @@ export default function MakeOrder() {
                             <div>
                                 <Label>Caldas</Label>
                                 <Grid>
-                                    <Item><input className='maker-option' onChange={handleChange} type='radio' name='calda' value='caldaChocolate'/>Chocolate</Item>
-                                    <Item><input className='maker-option' onChange={handleChange} type='radio' name='calda' value='caldaMorango'/>Morango</Item>
+                                    <Item><input className='maker-option' onChange={handleChange} type='checkbox' name='calda' value='caldaChocolate'/>Chocolate</Item>
+                                    <Item><input className='maker-option' onChange={handleChange} type='checkbox' name='calda' value='caldaMorango'/>Morango</Item>
                                 </Grid>
                             </div>
 

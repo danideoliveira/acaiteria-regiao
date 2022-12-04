@@ -12,7 +12,7 @@ export const Container = styled.div`
 
     @media (min-width: 320px) and (max-width: 999px) {
         height: auto;
-        min-height: 100vh;
+        /* min-height: 100vh; */
     }
 `;
 
@@ -23,7 +23,7 @@ export const ContainerSecondary = styled.div`
     height: 100%;
 
     @media (min-width: 320px) and (max-width: 999px) {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 `;
 
@@ -42,6 +42,7 @@ export const DivLeft = styled.div`
         img {
             width: 100%;
             position: absolute;
+            transition: 0.5s;
         }
 
         .maker-item {
@@ -54,15 +55,22 @@ export const DivLeft = styled.div`
     }
     
     @media (min-width: 320px) and (max-width: 999px) {
-        
+        height: 70rem;
+
         div {
-            height: 40rem;
+            height: 100%;
             width: 80%;
+
+            img {
+                width: 50rem;
+            }
         }
     }
 
     @media (min-width: 320px) and (max-width: 480px) {
-        margin-top: 8rem;
+        div img {
+            width: 45rem;
+        }
     }
 `;
 
@@ -83,17 +91,29 @@ export const DivRight = styled.div`
     }
 
     @media (min-width: 320px) and (max-width: 999px) {
-        width: 56%;
+        width: 100%;
+
+        section {
+            margin-top: 15rem;
+
+            div {
+                margin-bottom: 2rem;
+            }
+        }
     }
 `;
 
 export const Grid = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 1.5rem;
     /* text-align: ${(props) => props.textAlign}; */
+
+    @media (min-width: 320px) and (max-width: 999px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 `;
 
 export const Item = styled.label`
@@ -130,6 +150,6 @@ export const Button = styled.button`
 
     @media (min-width: 320px) and (max-width: 999px) {
         padding: 2rem 7rem;
-        margin-bottom: 5rem;
+        /* margin-bottom: 5rem; */
     }
 `;
