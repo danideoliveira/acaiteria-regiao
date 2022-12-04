@@ -4,11 +4,8 @@ import { Title, Description } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
 import Footer from '../footer/Footer';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 
 export default function MakeOrder() {
-    const [firstName, setFirstName] = useState('');
-
     function handleChange(event) {
         const items = document.querySelectorAll('.maker-item');
 
@@ -26,17 +23,6 @@ export default function MakeOrder() {
             })
         }
     }
-    // function startAcaiMaker() {
-    //     const options = document.querySelectorAll('.maker-option');
-        
-    //     options.forEach(option => {
-    //         if(option.checked) {
-    //             console.log(option.value)
-    //         } else {
-    //             console.log(false)
-    //         }
-    //     });
-    // }
 
     return(
         <motion.div
@@ -48,7 +34,6 @@ export default function MakeOrder() {
                 <ContainerSecondary>
                     <DivLeft>
                         <div>
-                            {/* {startAcaiMaker()} */}
                             <img src={ acaiMaker.copo } alt="acai-maker"/>
                             <img className='maker-item' id='jujuba' src={ acaiMaker.jujuba } alt="acai-maker"/>
                             <img className='maker-item' id='leite' src={ acaiMaker.leite } alt="acai-maker"/>
@@ -59,7 +44,6 @@ export default function MakeOrder() {
                             <img className='maker-item' id='caldaMorango' src={ acaiMaker.caldaMorango } style={{ opacity: 90 + '%' }} alt="acai-maker"/>
                             <img className='maker-item' id='caldaChocolate' src={ acaiMaker.caldaChocolate } style={{ opacity: 90 + '%' }} alt="acai-maker"/>
                             <img src={ acaiMaker.copoFront } alt="acai-maker"/>
-                            <p>R$999,00</p>
                         </div>
                     </DivLeft>
                     <DivRight>
