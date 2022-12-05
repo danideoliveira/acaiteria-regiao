@@ -1,8 +1,8 @@
 import { Title } from '../../helpers/globalTags';
 import { colors } from '../../helpers/variables';
 import { motion } from 'framer-motion';
-import { Modal, Container, ContainerSecondary, CloseButton, FormInfo, Button } from './ModalInfo.styled';
-import { showModal } from '../../helpers/Mixins';
+import { Modal, Container, ContainerSecondary, CloseButton, FormInfo, Button, ModalSoon } from './ModalInfo.styled';
+import { showModal, showModalSoon } from '../../helpers/Mixins';
 import getAddress from '../../modules/getAddress';
 
 export default function ModalInfo() {
@@ -43,7 +43,7 @@ export default function ModalInfo() {
                                         <legend>Dados pessoais</legend>
                                         <div>
                                             <label>Nome</label>
-                                            <input type='text'></input>
+                                            <input type='text' required></input>
                                         </div>
                                         <div>
                                             <label>Sobrenome</label>
@@ -79,11 +79,23 @@ export default function ModalInfo() {
                                         </div>
                                     </fieldset>
 
-                                    <Button onClick={(e) => e.preventDefault()}>Ir para pagamento</Button>
+                                    <Button onClick={(e) => {
+                                        e.preventDefault();
+                                        showModalSoon();
+                                    }
+                                    }>Ir para pagamento</Button>
                                 </FormInfo>
                             </div>
                         </div>
                     </Modal>
+                    <ModalSoon className='modal-soon'>
+                        <div className="modal-content">
+                            <CloseButton className="close-button" onClick={showModalSoon}>×</CloseButton>
+                            <div>
+                                <p>Em breve! ✔️</p>
+                            </div>
+                        </div>
+                    </ModalSoon>
                 </ContainerSecondary>
             </Container>
         </motion.div>
