@@ -174,7 +174,7 @@ export const Item = styled.label`
     }
 
     @media (min-width: 320px) and (max-width: 999px) {
-        font-size: 3rem;
+        font-size: 2.5rem;
 
         input {
             margin-bottom: 1rem;
