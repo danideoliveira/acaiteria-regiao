@@ -1,16 +1,21 @@
-import { Container, ContainerSecondary, DivLeft, DivMap } from "./Location.styled";
+import {
+  Container,
+  ContainerSecondary,
+  DivLeft,
+  DivMap,
+} from "./Location.styled";
 import { Title, Description } from "../../helpers/globalTags";
 import { colors } from "../../helpers/variables";
-import { Slide } from 'react-awesome-reveal';
+import { Slide } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import Footer from "../footer/Footer";
 
 export default function Location() {
   return (
     <motion.div
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
       <Container id="location">
         <ContainerSecondary>
@@ -18,8 +23,8 @@ export default function Location() {
             <div>
               <Title color={colors.purple}>ONDE ESTAMOS?</Title>
               <Description color={colors.purple}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla leo
-                ex, accumsan eu dui vel, viverra aliquam metus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                leo ex, accumsan eu dui vel, viverra aliquam metus.
               </Description>
             </div>
           </DivLeft>
@@ -43,7 +48,7 @@ export default function Location() {
           </DivMap>
         </ContainerSecondary>
       </Container>
-      <Footer needsShape={false}/>
+      <Footer needsShape={false} />
     </motion.div>
   );
 }

@@ -4,26 +4,26 @@ import { darken } from "polished";
 import { colors } from "../../helpers/variables";
 
 export const Container = styled.div`
-    ${setFlexbox('center', 'center', 'row')}
-    margin: 0 auto;
-    width: 100%;
-    height: 100vh;
-    background-color: ${ colors.cream };
+  ${setFlexbox("center", "center", "row")}
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  background-color: ${colors.cream};
 
-    @media (min-width: 320px) and (max-width: 999px) {
-        height: auto;
-    }
+  @media (min-width: 320px) and (max-width: 999px) {
+    height: auto;
+  }
 `;
 
 export const ContainerSecondary = styled.div`
-    ${setFlexbox('center', 'center', 'row')}
-    max-width: 1280px;
-    width: 100%;  
-    height: 100%;
+  ${setFlexbox("center", "center", "row")}
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
 
-    @media (min-width: 320px) and (max-width: 999px) {
-        flex-direction: column-reverse;
-    }
+  @media (min-width: 320px) and (max-width: 999px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const Modal = styled.div`
@@ -42,7 +42,7 @@ export const Modal = styled.div`
   &.active {
     opacity: 1;
     visibility: visible;
-    transform: scale(1.0);
+    transform: scale(1);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
   }
 
@@ -76,7 +76,7 @@ export const ModalSoon = styled.div`
   &.active {
     opacity: 1;
     visibility: visible;
-    transform: scale(1.0);
+    transform: scale(1);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
   }
 
@@ -93,101 +93,101 @@ export const ModalSoon = styled.div`
     overflow: auto;
 
     div {
-        ${ setFlexbox('center', 'center', 'row') };
-        width: 100%;
-        height: 90%;
-        p {
-            font-size: 3rem;
-        }
+      ${setFlexbox("center", "center", "row")};
+      width: 100%;
+      height: 90%;
+      p {
+        font-size: 3rem;
+      }
     }
   }
 `;
 
 export const CloseButton = styled.button`
-    ${ setFlexbox('center', 'center', 'column') };
-    float: right;
-    width: 3rem;
-    height: 3rem;
-    font-size: 2.5rem;
-    font-weight: 500;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 0.25rem;
-    background-color: lightgray;
+  ${setFlexbox("center", "center", "column")};
+  float: right;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
 
-    &:hover {
-        background-color: darkgray;
-    }
+  &:hover {
+    background-color: darkgray;
+  }
 `;
 
-export const FormInfo = styled.form`   
+export const FormInfo = styled.form`
+  fieldset {
+    border: 1px solid #e8eeef;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 1rem;
+
+    legend {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  div {
+    ${setFlexbox("center", "center", "column")};
+  }
+
+  label {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  input {
+    font-size: 2rem;
+    height: 5rem;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #e8eeef;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
     fieldset {
-        border: 1px solid #e8eeef;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 2rem;
-        grid-row-gap: 2rem;
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5rem;
-        padding: 1rem;
-
-        legend {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
+      grid-template-columns: repeat(1, 1fr);
     }
-
-    div {
-        ${ setFlexbox('center', 'center', 'column') };
-    }
-
-    label {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-        width: 100%;
-    }
-
-    input {
-        font-size: 2rem;
-        height: 5rem;
-        padding: 1rem;
-        width: 100%;
-        border-radius: 5px;
-        background-color: #e8eeef;
-        box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-        margin-bottom: 1.5rem;
-    }
-
-    @media (min-width: 320px) and (max-width: 480px) {
-        fieldset {
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
+  }
 `;
 
 export const Button = styled.button`
-    ${ setFlexbox('center', 'center', 'row') };
-    background-color: ${ colors.green };
-    border-radius: 50px;
-    color: ${ colors.white };
-    font-size: 2.0rem;
-    padding: 1rem 5rem;
-    font-weight: 500;
-    margin-top: 1.5rem;
-    cursor: pointer;
-    transition: 0.2s;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+  ${setFlexbox("center", "center", "row")};
+  background-color: ${colors.green};
+  border-radius: 50px;
+  color: ${colors.white};
+  font-size: 2rem;
+  padding: 1rem 5rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 
-    &:hover {
-        background-color: ${darken(0.1, `${ colors.green }`)};
-    }
+  &:hover {
+    background-color: ${darken(0.1, `${colors.green}`)};
+  }
 
-    @media (min-width: 320px) and (max-width: 999px) {
-        margin-top: 2.5rem;
-        padding: 1.5rem 7rem;
-        font-size: 2rem;
-    }
+  @media (min-width: 320px) and (max-width: 999px) {
+    margin-top: 2.5rem;
+    padding: 1.5rem 7rem;
+    font-size: 2rem;
+  }
 `;
