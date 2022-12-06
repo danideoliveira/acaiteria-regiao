@@ -83,7 +83,7 @@ export const StyledLink = styled(Link)`
   border-radius: 50px;
   color: #fff;
   font-size: 2rem;
-  padding: 0.7rem;
+  padding: 1rem;
   font-weight: 500;
   margin-top: 1.5rem;
   cursor: pointer;
