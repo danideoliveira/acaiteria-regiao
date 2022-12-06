@@ -5,6 +5,8 @@ import {
   ContainerSecondary,
   DivLeft,
   DivRight,
+  FormInfo,
+  Button,
 } from "./About.styled";
 import { Title, Description } from "../../helpers/globalTags";
 import { colors } from "../../helpers/variables";
@@ -22,19 +24,19 @@ export default function About() {
     {
       image: images.logoInstagram,
       alt: "Logo do Instagram",
-      text: "@icespot",
+      text: "@acaiteriaregiao",
       link: "#",
     },
     {
       image: images.logoFacebook,
       alt: "Logo do Facebook",
-      text: "/icespot",
+      text: "/acaiteriaregiao",
       link: "#",
     },
     {
       image: images.logoTwitter,
       alt: "Logo do Twitter",
-      text: "@icespot",
+      text: "@acaiteriaregiao",
       link: "#",
     },
   ];
@@ -49,7 +51,8 @@ export default function About() {
         <ContainerSecondary>
           <DivLeft>
             <div>
-              <Title color={colors.purple}>QUEM SOMOS</Title>
+              <img src={images.logo} alt="logo-acaiteria" />
+              {/* <Title color={colors.purple}>QUEM SOMOS</Title> */}
               <Description color={colors.purple}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 leo ex, accumsan eu dui vel, viverra aliquam metus. Lorem ipsum
@@ -60,6 +63,32 @@ export default function About() {
               </Description>
             </div>
           </DivLeft>
+
+          <div className="form-container">
+            <FormInfo>
+              <fieldset>
+                <legend>Fale conosco!</legend>
+                <div className="nome">
+                  <label>Nome</label>
+                  <input type="text" required></input>
+                </div>
+                <div className="email">
+                  <label>Email</label>
+                  <input type="email" required></input>
+                </div>
+                <div className="telefone">
+                  <label>Telefone</label>
+                  <input type="text"></input>
+                </div>
+                <div className="mensagem">
+                  <label>Mensagem</label>
+                  <textarea required></textarea>
+                </div>
+              </fieldset>
+
+              <Button>Enviar</Button>
+            </FormInfo>
+          </div>
 
           <DivRight>
             {contactsList.map((item) => (
