@@ -9,11 +9,7 @@ export const Container = styled.div`
   width: 100%;
   height: auto;
   min-height: 100vh;
-  /* height: 100vh; */
   background-color: ${colors.cream};
-
-  /* @media (min-width: 320px) and (max-width: 999px) {
-  } */
 `;
 
 export const ContainerSecondary = styled.div`
@@ -49,7 +45,6 @@ export const DivLeft = styled.div`
 
   @media (min-width: 320px) and (max-width: 999px) {
     div {
-      /* height: 40rem; */
       width: 80%;
     }
   }
@@ -60,7 +55,6 @@ export const DivLeft = styled.div`
 `;
 
 export const DivRight = styled.div`
-  /* ${setFlexbox("center", "center", "column")} */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -82,6 +76,7 @@ export const DivRight = styled.div`
 
 export const FormContainer = styled.div`
   width: 60%;
+  margin-bottom: 6rem;
 
   @media (min-width: 320px) and (max-width: 999px) {
     width: 80%;
@@ -91,9 +86,7 @@ export const FormContainer = styled.div`
 export const FormInfo = styled.form`
   width: 100%;
   fieldset {
-    /* border: 1px solid #e8eeef; */
     display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     grid-template-areas: "nome nome" "email telefone" "mensagem mensagem";
@@ -128,8 +121,6 @@ export const FormInfo = styled.form`
     padding: 1rem;
     width: 100%;
     border-radius: 5px;
-    /* background-color: #e8eeef;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset; */
     background-color: #ffffff;
     box-shadow: 0 1px 3px rgb(0 0 0 / 23%) inset;
     margin-bottom: 1.5rem;
@@ -155,12 +146,6 @@ export const FormInfo = styled.form`
     width: 100%;
     height: 25rem;
     resize: none;
-  }
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    fieldset {
-      /* grid-template-columns: repeat(1, 1fr); */
-    }
   }
 `;
 
