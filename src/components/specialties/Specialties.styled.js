@@ -30,6 +30,10 @@ export const Title = styled.h2`
   font-size: 4rem;
   margin: 5rem 0;
 
+  @media (min-width: 320px) and (max-width: 999px) {
+    margin-top: 15rem;
+  }
+
   @media (min-width: 320px) and (max-width: 480px) {
     width: 50%;
     margin: 0 auto;

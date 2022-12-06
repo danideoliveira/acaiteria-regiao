@@ -15,7 +15,7 @@ export const Nav = styled.nav`
 
   img {
     margin-top: 5rem;
-    width: 100px;
+    width: 15rem;
   }
 
   @media (min-width: 320px) and (max-width: 999px) {
@@ -35,7 +35,7 @@ export const Nav = styled.nav`
   @media (min-width: 320px) and (max-width: 480px) {
     img {
       width: 10rem;
-      margin: 0.1rem 0.1rem 0 0;
+      margin: 0.2rem 1rem 0 0;
     }
   }
 `;

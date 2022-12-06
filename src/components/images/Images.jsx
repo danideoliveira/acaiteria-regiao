@@ -12,7 +12,7 @@ import logoInstagram from "../../assets/img/logo-instagram.png";
 import logoFacebook from "../../assets/img/logo-facebook.png";
 import logoTwitter from "../../assets/img/logo-twitter.png";
 import aboutBubble from "../../assets/img/about-bubble.svg";
-import logo from "../../assets/img/acaiteria-logo1.png";
+import logo from "../../assets/img/logo.png";
 import copo from "../../assets/img/acai-maker/copo.png";
 import copoFront from "../../assets/img/acai-maker/copo-front.png";
 import pacoca from "../../assets/img/acai-maker/pacoca.png";
