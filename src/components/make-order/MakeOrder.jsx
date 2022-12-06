@@ -48,8 +48,8 @@ export default function MakeOrder() {
               <img src={acaiMaker.copo} alt="acai-maker" />
               <img
                 className="maker-item"
-                id="jujuba"
-                src={acaiMaker.jujuba}
+                id="leite"
+                src={acaiMaker.leite}
                 alt="acai-maker"
               />
               <img
@@ -60,20 +60,20 @@ export default function MakeOrder() {
               />
               <img
                 className="maker-item"
-                id="pacoca"
-                src={acaiMaker.pacoca}
-                alt="acai-maker"
-              />
-              <img
-                className="maker-item"
-                id="leite"
-                src={acaiMaker.leite}
-                alt="acai-maker"
-              />
-              <img
-                className="maker-item"
                 id="banana"
                 src={acaiMaker.banana}
+                alt="acai-maker"
+              />
+              <img
+                className="maker-item"
+                id="jujuba"
+                src={acaiMaker.jujuba}
+                alt="acai-maker"
+              />
+              <img
+                className="maker-item"
+                id="pacoca"
+                src={acaiMaker.pacoca}
                 alt="acai-maker"
               />
               <img
@@ -84,15 +84,15 @@ export default function MakeOrder() {
               />
               <img
                 className="maker-item"
-                id="caldaMorango"
-                src={acaiMaker.caldaMorango}
+                id="caldaChocolate"
+                src={acaiMaker.caldaChocolate}
                 style={{ opacity: 90 + "%" }}
                 alt="acai-maker"
               />
               <img
                 className="maker-item"
-                id="caldaChocolate"
-                src={acaiMaker.caldaChocolate}
+                id="caldaMorango"
+                src={acaiMaker.caldaMorango}
                 style={{ opacity: 90 + "%" }}
                 alt="acai-maker"
               />

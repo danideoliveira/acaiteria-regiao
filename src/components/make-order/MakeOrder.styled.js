@@ -61,7 +61,7 @@ export const DivLeft = styled.div`
       width: 80%;
 
       img {
-        width: 50rem;
+        width: 47rem;
       }
     }
   }
