@@ -80,7 +80,16 @@ export const DivRight = styled.div`
   }
 `;
 
+export const FormContainer = styled.div`
+  width: 60%;
+
+  @media (min-width: 320px) and (max-width: 999px) {
+    width: 80%;
+  }
+`;
+
 export const FormInfo = styled.form`
+  width: 100%;
   fieldset {
     /* border: 1px solid #e8eeef; */
     display: grid;
@@ -98,7 +107,7 @@ export const FormInfo = styled.form`
       margin-bottom: 2rem;
       text-align: center;
       font-weight: 500;
-      color: ${ colors.darkPurple };
+      color: ${colors.darkPurple};
     }
   }
 
@@ -112,7 +121,8 @@ export const FormInfo = styled.form`
     width: 100%;
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-size: 2rem;
     height: 5rem;
     padding: 1rem;
@@ -143,7 +153,6 @@ export const FormInfo = styled.form`
 
   textarea {
     width: 100%;
-    max-width: 45rem;
     height: 25rem;
     resize: none;
   }
@@ -180,7 +189,6 @@ export const Button = styled.button`
     font-size: 2rem;
   }
 `;
-
 
 export const Shape = styled.div`
   ${setFlexbox("flex-end", "flex-end", "row")}

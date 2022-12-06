@@ -5,6 +5,7 @@ import {
   ContainerSecondary,
   DivLeft,
   DivRight,
+  FormContainer,
   FormInfo,
   Button,
 } from "./About.styled";
@@ -64,16 +65,16 @@ export default function About() {
             </div>
           </DivLeft>
 
-          <div className="form-container">
+          <FormContainer>
             <FormInfo>
               <fieldset>
                 <legend>Fale conosco!</legend>
                 <div className="nome">
-                  <label>Nome</label>
+                  <label>Nome*</label>
                   <input type="text" required></input>
                 </div>
                 <div className="email">
-                  <label>Email</label>
+                  <label>Email*</label>
                   <input type="email" required></input>
                 </div>
                 <div className="telefone">
@@ -81,14 +82,14 @@ export default function About() {
                   <input type="text"></input>
                 </div>
                 <div className="mensagem">
-                  <label>Mensagem</label>
+                  <label>Mensagem*</label>
                   <textarea required></textarea>
                 </div>
               </fieldset>
 
               <Button>Enviar</Button>
             </FormInfo>
-          </div>
+          </FormContainer>
 
           <DivRight>
             {contactsList.map((item) => (
