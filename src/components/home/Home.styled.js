@@ -14,6 +14,7 @@ export const Container = styled.div`
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  margin-bottom: 3rem;
 
   @media (min-width: 320px) and (max-width: 999px) {
     flex-direction: column;
