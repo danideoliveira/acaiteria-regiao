@@ -18,19 +18,46 @@ import ModalInfo from "../modal-info/ModalInfo";
 import { showModal } from "../../helpers/Mixins";
 
 export default function MakeOrder() {
+  const order = {
+    copo: "200ml",
+    morango: "",
+    leite: "",
+    jujuba: "",
+    banana: "",
+    pacoca: "",
+    biscoito: "",
+    caldaMorango: "",
+    caldaChocolate: "",
+  };
+
   function handleChange(event) {
     const items = document.querySelectorAll(".maker-item");
+    const cupSize = ["200ml", "400ml", "700ml"];
+    const sauces = ["caldaChocolate", "caldaMorango"];
+
+    if (cupSize.includes(event.target.value)) {
+      order.copo = event.target.value;
+    }
 
     if (event.target.checked) {
+      if (sauces[0] === event.target.value) {
+        order.calda1 = event.target.name;
+      }
+      if (sauces[1] === event.target.value) {
+        order.calda2 = event.target.name;
+      }
+
       items.forEach((item) => {
         if (item.id === event.target.value) {
           item.style.display = "initial";
+          order[item.id] = event.target.name;
         }
       });
     } else {
       items.forEach((item) => {
         if (item.id === event.target.value) {
           item.style.display = "none";
+          order[event.target.value] = ""
         }
       });
     }
@@ -109,17 +136,28 @@ export default function MakeOrder() {
                     <input
                       type="radio"
                       name="tamanho"
-                      value="200"
+                      value="200ml"
                       defaultChecked
+                      onChange={handleChange}
                     />
                     200ml
                   </Item>
                   <Item>
-                    <input type="radio" name="tamanho" value="400" />
+                    <input
+                      type="radio"
+                      name="tamanho"
+                      value="400ml"
+                      onChange={handleChange}
+                    />
                     400ml
                   </Item>
                   <Item>
-                    <input type="radio" name="tamanho" value="700" />
+                    <input
+                      type="radio"
+                      name="tamanho"
+                      value="700ml"
+                      onChange={handleChange}
+                    />
                     700ml
                   </Item>
                 </Grid>
@@ -134,6 +172,7 @@ export default function MakeOrder() {
                       onChange={handleChange}
                       type="checkbox"
                       value="pacoca"
+                      name="Paçoca"
                     />
                     Paçoca
                   </Item>
@@ -143,6 +182,7 @@ export default function MakeOrder() {
                       onChange={handleChange}
                       type="checkbox"
                       value="leite"
+                      name="Leite em pó"
                     />
                     Leite em pó
                   </Item>
@@ -152,6 +192,7 @@ export default function MakeOrder() {
                       onChange={handleChange}
                       type="checkbox"
                       value="jujuba"
+                      name="Jujuba"
                     />
                     Jujuba
                   </Item>
@@ -161,6 +202,7 @@ export default function MakeOrder() {
                       onChange={handleChange}
                       type="checkbox"
                       value="morango"
+                      name="Morango"
                     />
                     Morango
                   </Item>
@@ -170,6 +212,7 @@ export default function MakeOrder() {
                       onChange={handleChange}
                       type="checkbox"
                       value="biscoito"
+                      name="Biscoito"
                     />
                     Biscoito
                   </Item>
@@ -179,6 +222,7 @@ export default function MakeOrder() {
                       onChange={handleChange}
                       type="checkbox"
                       value="banana"
+                      name="Banana"
                     />
                     Banana
                   </Item>
@@ -193,7 +237,7 @@ export default function MakeOrder() {
                       className="maker-option"
                       onChange={handleChange}
                       type="checkbox"
-                      name="calda"
+                      name="Calda de chocolate"
                       value="caldaChocolate"
                     />
                     Chocolate
@@ -203,7 +247,7 @@ export default function MakeOrder() {
                       className="maker-option"
                       onChange={handleChange}
                       type="checkbox"
-                      name="calda"
+                      name="Calda de morango"
                       value="caldaMorango"
                     />
                     Morango
@@ -212,7 +256,9 @@ export default function MakeOrder() {
               </div>
 
               <div>
-                <Button className="continue-button" onClick={showModal}>
+                <Button className="continue-button" onClick={() => {
+                  showModal(order)
+                  }}>
                   Prosseguir
                 </Button>
               </div>

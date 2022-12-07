@@ -141,7 +141,6 @@ export const Item = styled.label`
   input[type="checkbox"],
   input[type="radio"] {
     appearance: none;
-    /* margin: 0; */
     margin-right: 1rem;
     font: inherit;
     color: ${colors.darkPurple};

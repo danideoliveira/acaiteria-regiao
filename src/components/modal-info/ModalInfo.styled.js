@@ -53,10 +53,15 @@ export const Modal = styled.div`
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 1rem 1.5rem;
-    width: 90%;
+    width: 80%;
     height: 70%;
     border-radius: 0.5rem;
     overflow: auto;
+
+    .form-container {
+      width: 70%;
+      margin: 0 auto;
+    }
   }
 `;
 
@@ -138,6 +143,23 @@ export const FormInfo = styled.form`
     }
   }
 
+  .field-pedido {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "copo calda" "acomp acomp";
+
+    div:nth-child(2) {
+      grid-area: copo;
+    }
+
+    div:nth-child(3) {
+      grid-area: acomp;
+    }
+
+    div:nth-child(1) {
+      grid-area: calda;
+    }
+  }
+
   div {
     ${setFlexbox("center", "center", "column")};
   }
@@ -148,7 +170,7 @@ export const FormInfo = styled.form`
     width: 100%;
   }
 
-  input {
+  input, textarea {
     font-size: 2rem;
     height: 5rem;
     padding: 1rem;
@@ -157,6 +179,11 @@ export const FormInfo = styled.form`
     background-color: #e8eeef;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
     margin-bottom: 1.5rem;
+  }
+
+  textarea {
+    resize: none;
+    height: 100%;
   }
 
   @media (min-width: 320px) and (max-width: 480px) {
