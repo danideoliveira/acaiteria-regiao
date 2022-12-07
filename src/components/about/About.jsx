@@ -4,12 +4,11 @@ import {
   Container,
   ContainerSecondary,
   DivLeft,
-  DivRight,
   FormContainer,
   FormInfo,
   Button,
 } from "./About.styled";
-import { Title, Description } from "../../helpers/globalTags";
+import { Description } from "../../helpers/globalTags";
 import { colors } from "../../helpers/variables";
 import Footer from "../footer/Footer";
 import { motion } from "framer-motion";
@@ -26,7 +25,6 @@ export default function About() {
           <DivLeft>
             <div>
               <img src={images.logo} alt="logo-acaiteria" />
-              {/* <Title color={colors.purple}>QUEM SOMOS</Title> */}
               <Description color={colors.purple}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 leo ex, accumsan eu dui vel, viverra aliquam metus. Lorem ipsum

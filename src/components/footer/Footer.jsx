@@ -7,7 +7,13 @@ import {
 import images from "../images/Images";
 import Contacts from "../contacts/Contacts";
 
-export default function Footer({ needsShape, image, contacts, bgColor, txtColor }) {
+export default function Footer({
+  needsShape,
+  image,
+  contacts,
+  bgColor,
+  txtColor,
+}) {
   const contactsList = [
     {
       image: images.logoWhatsapp,
@@ -38,10 +44,10 @@ export default function Footer({ needsShape, image, contacts, bgColor, txtColor 
   function setShape(needsShape) {
     if (needsShape) {
       return (
-      <Shape>
-        {" "}
-        <img src={image} alt="shape" />
-      </Shape>
+        <Shape>
+          {" "}
+          <img src={image} alt="shape" />
+        </Shape>
       );
     }
   }
@@ -49,7 +55,7 @@ export default function Footer({ needsShape, image, contacts, bgColor, txtColor 
   function showContacts(needsContacts) {
     if (needsContacts) {
       return (
-        <ContactContainer backgroundColor={ bgColor }>
+        <ContactContainer backgroundColor={bgColor}>
           <div className="box">
             {contactsList.map((item) => (
               <Contacts
@@ -67,11 +73,14 @@ export default function Footer({ needsShape, image, contacts, bgColor, txtColor 
   }
 
   return (
-    <Container backgroundColor={ bgColor } textColor={ txtColor }>
+    <Container backgroundColor={bgColor} textColor={txtColor}>
       <ContainerSecondary>
         {showContacts(contacts)}
         <p>
-          <a target="_blank" href="https://github.com/danideoliveira">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/daniel-de-oliveira-santos/"
+          >
             Daniel de Oliveira Santos
           </a>{" "}
           &copy; 2022

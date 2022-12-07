@@ -218,7 +218,6 @@ export default function MakeOrder() {
               </div>
             </section>
           </DivRight>
-
           <ModalInfo />
         </ContainerSecondary>
       </Container>

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { setFlexbox } from "../../helpers/Mixins";
-import { colors } from "../../helpers/variables";
 
 export const Container = styled.div`
   ${setFlexbox("center", "space-between", "row")}
@@ -29,10 +28,6 @@ export const Container = styled.div`
   }
 
   @media (min-width: 320px) and (max-width: 900px) {
-    /* a img {
-      width: 5rem;
-    } */
-
     div {
       width: 90%;
 
