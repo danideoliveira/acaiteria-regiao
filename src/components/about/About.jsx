@@ -15,33 +15,6 @@ import Footer from "../footer/Footer";
 import { motion } from "framer-motion";
 
 export default function About() {
-  const contactsList = [
-    {
-      image: images.logoWhatsapp,
-      alt: "Logo do Whatsapp",
-      text: "(21) 99999-9999",
-      link: "#",
-    },
-    {
-      image: images.logoInstagram,
-      alt: "Logo do Instagram",
-      text: "@acaiteriaregiao",
-      link: "#",
-    },
-    {
-      image: images.logoFacebook,
-      alt: "Logo do Facebook",
-      text: "/acaiteriaregiao",
-      link: "#",
-    },
-    {
-      image: images.logoTwitter,
-      alt: "Logo do Twitter",
-      text: "@acaiteriaregiao",
-      link: "#",
-    },
-  ];
-
   return (
     <motion.div
       initial={{ width: 0 }}
@@ -90,21 +63,15 @@ export default function About() {
               <Button>Enviar</Button>
             </FormInfo>
           </FormContainer>
-
-          <DivRight>
-            {contactsList.map((item) => (
-              <Contacts
-                key={item.alt}
-                image={item.image}
-                alt={item.alt}
-                text={item.text}
-                link={item.link}
-              />
-            ))}
-          </DivRight>
         </ContainerSecondary>
       </Container>
-      <Footer needsShape={true} image={images.aboutBubble} />
+      <Footer
+        needsShape={true}
+        image={images.aboutBubble}
+        contacts={true}
+        bgColor={colors.darkPurple}
+        txtColor={colors.cream}
+      ></Footer>
     </motion.div>
   );
 }

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { setFlexbox } from "../../helpers/Mixins";
+import { colors } from "../../helpers/variables";
 
 export const Container = styled.div`
   ${setFlexbox("center", "space-between", "row")}
@@ -13,12 +14,13 @@ export const Container = styled.div`
     margin-right: 1rem;
 
     &:hover {
-      filter: brightness(0.2);
+      filter: invert(1);
     }
   }
 
   p {
     width: 100%;
+    color: ${ colors.cream };
   }
 
   div {

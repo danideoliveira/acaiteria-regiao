@@ -55,22 +55,28 @@ export const DivLeft = styled.div`
 `;
 
 export const DivRight = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  width: 50%;
-  height: 50%;
-  justify-items: center;
-  margin-top: 3rem;
+  width: 100%;
+  ${setFlexbox("center", "center", "row")};
+  background-color: ${ colors.darkPurple };
 
-  @media (min-width: 320px) and (max-width: 999px) {
-    width: 70%;
-  }
+  .contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 50%;
+    height: 50%;
+    justify-items: center;
+    margin-top: 3rem;
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    grid-template-columns: repeat(1, 1fr);
+    @media (min-width: 320px) and (max-width: 999px) {
+      width: 70%;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 `;
 

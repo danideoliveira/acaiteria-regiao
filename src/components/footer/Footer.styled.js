@@ -9,19 +9,19 @@ export const Container = styled.footer`
   width: 100%;
   font-size: 1.5rem;
   position: absolute;
-  background-color: ${colors.cream};
+  background-color: ${(props) => props.backgroundColor || `${ colors.cream }`};
   z-index: 0;
 
   p {
     padding: 1rem;
-    color: ${colors.purple};
+    color: ${(props) => props.textColor || `${ colors.cream }`};
 
     a {
-      color: ${colors.purple};
+      color: ${(props) => props.textColor || `${ colors.cream }`};
       transition: 0.3s;
 
       &:hover {
-        color: ${darken(0.5, `${colors.purple}`)};
+        color: ${darken(0.5, `${colors.darkPurple}`)};
         transition: 0.3s;
       }
     }
@@ -53,6 +53,32 @@ export const Shape = styled.div`
 
     @media (min-width: 320px) and (max-width: 480px) {
       width: 10rem;
+    }
+  }
+`;
+
+export const ContactContainer = styled.div`
+  width: 100%;
+  ${setFlexbox("center", "center", "row")};
+  background-color: ${(props) => props.backgroundColor};
+
+  .box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 50%;
+    height: 50%;
+    justify-items: center;
+    margin-top: 3rem;
+
+    @media (min-width: 320px) and (max-width: 999px) {
+      width: 70%;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 `;
