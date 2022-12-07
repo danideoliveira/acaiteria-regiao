@@ -57,7 +57,7 @@ export const DivLeft = styled.div`
 export const DivRight = styled.div`
   width: 100%;
   ${setFlexbox("center", "center", "row")};
-  background-color: ${ colors.darkPurple };
+  background-color: ${colors.darkPurple};
 
   .contact-container {
     display: grid;
@@ -91,6 +91,7 @@ export const FormContainer = styled.div`
 
 export const FormInfo = styled.form`
   width: 100%;
+
   fieldset {
     display: grid;
     grid-column-gap: 2rem;

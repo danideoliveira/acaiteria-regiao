@@ -8,7 +8,7 @@ export const Container = styled.div`
   margin-bottom: 3rem;
 
   a img {
-    width: 50px;
+    width: 3rem;
     transition: 0.3s;
     cursor: pointer;
     margin-right: 1rem;
@@ -20,7 +20,7 @@ export const Container = styled.div`
 
   p {
     width: 100%;
-    color: ${ colors.cream };
+    font-size: 1.8rem;
   }
 
   div {
@@ -29,9 +29,9 @@ export const Container = styled.div`
   }
 
   @media (min-width: 320px) and (max-width: 900px) {
-    a img {
+    /* a img {
       width: 5rem;
-    }
+    } */
 
     div {
       width: 90%;
