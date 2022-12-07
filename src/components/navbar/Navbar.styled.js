@@ -60,7 +60,7 @@ export const Menu = styled.ul`
       cursor: pointer;
       height: 100%;
       width: 100%;
-      color: ${colors.purple};
+      color: ${colors.darkPurple};
       font-size: 1.8rem;
       transition: 0.2s;
       border-radius: 50px;
@@ -68,7 +68,7 @@ export const Menu = styled.ul`
 
       &:hover {
         color: ${colors.white};
-        background-color: ${colors.purple};
+        background-color: ${colors.darkPurple};
       }
     }
   }
@@ -84,7 +84,7 @@ export const Menu = styled.ul`
     height: 100%;
     text-align: center;
     transition: 0.3s;
-    background-color: ${colors.purple};
+    background-color: ${colors.darkPurple};
     z-index: 1;
     justify-content: flex-start;
     margin-top: auto;
@@ -102,7 +102,7 @@ export const Menu = styled.ul`
 
         &:hover {
           background-color: ${colors.white};
-          color: ${colors.purple};
+          color: ${colors.darkPurple};
         }
       }
     }
@@ -129,7 +129,7 @@ export const MobileMenu = styled.div`
     width: 4rem;
     height: 5px;
     margin: 5px auto;
-    background-color: ${colors.purple};
+    background-color: ${colors.darkPurple};
     transition: 0.3s ease;
     border-radius: 10px;
     outline: 0.01px solid ${colors.cream};
