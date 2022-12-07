@@ -37,10 +37,12 @@ export default function Footer({ needsShape, image, contacts, bgColor, txtColor 
 
   function setShape(needsShape) {
     if (needsShape) {
+      return (
       <Shape>
         {" "}
         <img src={image} alt="shape" />
-      </Shape>;
+      </Shape>
+      );
     }
   }
 

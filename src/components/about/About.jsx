@@ -66,8 +66,6 @@ export default function About() {
         </ContainerSecondary>
       </Container>
       <Footer
-        needsShape={true}
-        image={images.aboutBubble}
         contacts={true}
         bgColor={colors.darkPurple}
         txtColor={colors.cream}

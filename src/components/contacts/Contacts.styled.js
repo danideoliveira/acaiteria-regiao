@@ -41,4 +41,10 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    div p {
+      font-size: 1.6rem;
+    }
+  }
 `;

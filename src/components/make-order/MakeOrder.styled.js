@@ -30,6 +30,7 @@ export const DivLeft = styled.div`
   ${setFlexbox("center", "center", "column")}
   width: 100%;
   height: 100%;
+  margin-bottom: 5rem;
 
   div {
     ${setFlexbox("center", "center", "column")}

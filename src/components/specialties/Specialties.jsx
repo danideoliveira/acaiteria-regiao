@@ -1,4 +1,5 @@
 import images from "../images/Images";
+import { colors } from "../../helpers/variables";
 import CardItem from "../card-item/CardItem";
 import {
   Container,
@@ -68,7 +69,11 @@ export default function Specialties() {
           </Grid>
         </ContainerSecondary>
       </Container>
-      <Footer needsShape={true} image={images.specialtiesShape} />
+      <Footer
+        contacts={true}
+        bgColor={colors.darkPurple}
+        txtColor={colors.cream}
+      />
     </>
   );
 }

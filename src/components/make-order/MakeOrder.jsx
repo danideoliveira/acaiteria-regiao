@@ -11,6 +11,7 @@ import {
 } from "./MakeOrder.styled.js";
 import { Title } from "../../helpers/globalTags";
 import { colors } from "../../helpers/variables";
+import images from "../images/Images";
 import Footer from "../footer/Footer";
 import { motion } from "framer-motion";
 import ModalInfo from "../modal-info/ModalInfo";
@@ -221,7 +222,7 @@ export default function MakeOrder() {
           <ModalInfo />
         </ContainerSecondary>
       </Container>
-      <Footer needsShape={false} />
+      <Footer contacts={true} />
     </motion.div>
   );
 }

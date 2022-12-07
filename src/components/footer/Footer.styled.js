@@ -72,9 +72,19 @@ export const ContactContainer = styled.div`
     height: 50%;
     justify-items: center;
     margin-top: 3rem;
+  }
 
-    @media (min-width: 320px) and (max-width: 999px) {
+  @media (min-width: 320px) and (max-width: 999px) {
+    .box {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 90%;
+
+    .box {
+      width: 100%;
     }
   }
 `;

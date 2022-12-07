@@ -43,7 +43,7 @@ function Home() {
         </DivRight>
         <StyledLink to="/especialidades">Peça o seu!</StyledLink>
       </Container>
-      <Footer needsShape={false} />
+      <Footer contacts={true} />
     </motion.div>
   );
 }

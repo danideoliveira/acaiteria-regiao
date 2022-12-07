@@ -48,7 +48,11 @@ export default function Location() {
           </DivMap>
         </ContainerSecondary>
       </Container>
-      <Footer needsShape={false} />
+      <Footer
+        contacts={true}
+        bgColor={colors.darkPurple}
+        txtColor={colors.cream}
+      />
     </motion.div>
   );
 }
