@@ -145,18 +145,22 @@ export const FormInfo = styled.form`
 
   .field-pedido {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "copo calda" "acomp acomp";
+    grid-template-areas: "copo preco" "acomp acomp" "calda calda";
 
-    div:nth-child(2) {
+    .copo-div {
       grid-area: copo;
     }
 
-    div:nth-child(3) {
+    .acomp-div {
       grid-area: acomp;
     }
 
-    div:nth-child(1) {
+    .calda-div {
       grid-area: calda;
+    }
+
+    .preco-div {
+      grid-area: preco;
     }
   }
 
@@ -189,6 +193,7 @@ export const FormInfo = styled.form`
   @media (min-width: 320px) and (max-width: 480px) {
     fieldset {
       grid-template-columns: repeat(1, 1fr);
+      width: 100%;
     }
   }
 `;
@@ -216,5 +221,9 @@ export const Button = styled.button`
     margin-top: 2.5rem;
     padding: 1.5rem 7rem;
     font-size: 2rem;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    padding: 1.5rem 2rem;
   }
 `;

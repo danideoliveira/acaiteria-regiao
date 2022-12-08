@@ -8,6 +8,7 @@ import {
   Item,
   Label,
   Button,
+  Price,
 } from "./MakeOrder.styled.js";
 import { Title } from "../../helpers/globalTags";
 import { colors } from "../../helpers/variables";
@@ -28,15 +29,19 @@ export default function MakeOrder() {
     biscoito: "",
     caldaMorango: "",
     caldaChocolate: "",
+    preco: "",
   };
 
   function handleChange(event) {
     const items = document.querySelectorAll(".maker-item");
-    const cupSize = ["200ml", "400ml", "700ml"];
+    const orderPrice = document.querySelector(".order-price");
+    const cupSize = { "200ml": "R$6,00", "400ml": "R$7,00", "700ml": "R$8,50" };
     const sauces = ["caldaChocolate", "caldaMorango"];
 
-    if (cupSize.includes(event.target.value)) {
+    if (cupSize[event.target.value]) {
       order.copo = event.target.value;
+      order.preco = cupSize[event.target.value];
+      orderPrice.innerText = cupSize[event.target.value];
     }
 
     if (event.target.checked) {
@@ -57,7 +62,7 @@ export default function MakeOrder() {
       items.forEach((item) => {
         if (item.id === event.target.value) {
           item.style.display = "none";
-          order[event.target.value] = ""
+          order[event.target.value] = "";
         }
       });
     }
@@ -255,10 +260,14 @@ export default function MakeOrder() {
                 </Grid>
               </div>
 
-              <div>
-                <Button className="continue-button" onClick={() => {
-                  showModal(order)
-                  }}>
+              <div className="order-total">
+                <Price className="order-price">R$6,00</Price>
+                <Button
+                  className="continue-button"
+                  onClick={() => {
+                    showModal(order);
+                  }}
+                >
                   Prosseguir
                 </Button>
               </div>

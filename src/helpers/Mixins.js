@@ -22,6 +22,7 @@ export function showModal(order) {
   const copo = document.querySelector(".copo-pedido");
   const acompanhamentos = document.querySelector(".acompanhamento-pedido");
   const calda = document.querySelector(".calda-pedido");
+  const preco = document.querySelector(".preco-pedido");
 
   const { morango, banana, biscoito, leite, jujuba, pacoca } = order;
   const { caldaChocolate, caldaMorango } = order;
@@ -40,6 +41,7 @@ export function showModal(order) {
   copo.value = order.copo;
   calda.value = newArrCaldas.join(", ");
   acompanhamentos.value = newArrAcomp.join(", ");
+  preco.value = order.preco;
 }
 
 export function showModalSoon() {

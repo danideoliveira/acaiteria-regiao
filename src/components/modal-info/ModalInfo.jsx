@@ -49,7 +49,7 @@ export default function ModalInfo({ order }) {
                 <FormInfo>
                   <fieldset className="field-pedido">
                     <legend>Pedido</legend>
-                    <div>
+                    <div className="copo-div">
                       <label>Copo</label>
                       <input
                         type="text"
@@ -59,7 +59,17 @@ export default function ModalInfo({ order }) {
                         disabled
                       />
                     </div>
-                    <div>
+                    <div className="valor-div">
+                      <label>Valor</label>
+                      <input
+                        type="text"
+                        className="preco-pedido"
+                        defaultValue="R$6,00"
+                        required
+                        disabled
+                      />
+                    </div>
+                    <div className="acomp-div">
                       <label>Acompanhamentos</label>
                       <textarea
                         className="acompanhamento-pedido"
@@ -67,7 +77,7 @@ export default function ModalInfo({ order }) {
                         disabled
                       />
                     </div>
-                    <div>
+                    <div className="calda-div">
                       <label>Calda</label>
                       <textarea className="calda-pedido" required disabled />
                     </div>

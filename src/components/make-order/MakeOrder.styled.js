@@ -88,6 +88,12 @@ export const DivRight = styled.div`
     h2 {
       margin-bottom: 3rem;
     }
+
+    .order-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   @media (min-width: 320px) and (max-width: 999px) {
@@ -102,6 +108,10 @@ export const DivRight = styled.div`
         h2 {
           font-size: 5.4rem;
         }
+      }
+
+      .order-total {
+        flex-direction: column;
       }
 
       .continue-button {
@@ -212,5 +222,17 @@ export const Button = styled.button`
     padding: 1.5rem 7rem;
     font-size: 3rem;
     width: 100%;
+  }
+`;
+
+export const Price = styled.p`
+  font-size: 3.2rem;
+  color: ${colors.purple};
+  font-weight: 800;
+  margin-top: 1.5rem;
+
+  @media (min-width: 320px) and (max-width: 999px) {
+    font-size: 4rem;
+    margin-bottom: 2rem;
   }
 `;
