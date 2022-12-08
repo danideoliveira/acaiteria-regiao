@@ -29,7 +29,7 @@ export default function MakeOrder() {
     biscoito: "",
     caldaMorango: "",
     caldaChocolate: "",
-    preco: "",
+    preco: "R$6,00",
   };
 
   function handleChange(event) {

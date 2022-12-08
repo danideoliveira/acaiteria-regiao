@@ -183,6 +183,15 @@ export const FormInfo = styled.form`
     background-color: #e8eeef;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
     margin-bottom: 1.5rem;
+
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  input:invalid {
+    background-color: #ffdddd;
   }
 
   textarea {

@@ -32,6 +32,33 @@ export default function ModalInfo({ order }) {
     inputCidade.value = localidade;
   }
 
+  function handleChange(e) {
+    validatePhone();
+    validateHouseNumber();
+  }
+
+  function validatePhone() {
+    const telefone = document.querySelector(".telefone-validate");
+    const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    const arrTelefone = Array.from(telefone.value);
+
+    if (!numbers.includes(arrTelefone[arrTelefone.length - 1])) {
+      arrTelefone.pop();
+      telefone.value = arrTelefone.join("");
+    }
+  }
+
+  function validateHouseNumber() {
+    const houseNumber = document.querySelector(".numero-validate");
+    const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    const arrHouseNumber = Array.from(houseNumber.value);
+
+    if (!numbers.includes(arrHouseNumber[arrHouseNumber.length - 1])) {
+      arrHouseNumber.pop();
+      houseNumber.value = arrHouseNumber.join("");
+    }
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -95,7 +122,13 @@ export default function ModalInfo({ order }) {
                     </div>
                     <div>
                       <label>Telefone*</label>
-                      <input type="text" required />
+                      <input
+                        type="text"
+                        className="telefone-validate"
+                        maxLength={11}
+                        onChange={handleChange}
+                        required
+                      />
                     </div>
                   </fieldset>
 
@@ -115,7 +148,12 @@ export default function ModalInfo({ order }) {
                     </div>
                     <div>
                       <label>Número*</label>
-                      <input type="text" required />
+                      <input
+                        type="text"
+                        className="numero-validate"
+                        onChange={handleChange}
+                        required
+                      />
                     </div>
                     <div>
                       <label>Bairro*</label>
@@ -127,14 +165,7 @@ export default function ModalInfo({ order }) {
                     </div>
                   </fieldset>
 
-                  <Button
-                  // onClick={(e) => {
-                  //   e.preventDefault();
-                  //   showModalSoon();
-                  // }}
-                  >
-                    Ir para pagamento
-                  </Button>
+                  <Button>Ir para pagamento</Button>
                 </FormInfo>
               </div>
             </div>
@@ -145,7 +176,7 @@ export default function ModalInfo({ order }) {
                 ×
               </CloseButton>
               <div>
-                <p>Em breve! ✔️</p>
+                <p>Em breve! ⚙️</p>
               </div>
             </div>
           </ModalSoon>
