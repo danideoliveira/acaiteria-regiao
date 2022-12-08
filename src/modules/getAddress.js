@@ -3,7 +3,7 @@ import axios from "axios";
 export default async function getAddress(cep) {
   try {
     const cepReplaced = cep.replace(/[^0-9]/, "");
-    if (cepReplaced.length !== 8) return;
+    if (cepReplaced.length !== 8 || !cepReplaced.bairro) return;
 
     const address = await axios(`https://viacep.com.br/ws/${cep}/json/`)
       .then(json => json)
