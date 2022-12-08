@@ -46,10 +46,10 @@ export default function MakeOrder() {
 
     if (event.target.checked) {
       if (sauces[0] === event.target.value) {
-        order.calda1 = event.target.name;
+        order.caldaChocolate = event.target.name;
       }
       if (sauces[1] === event.target.value) {
-        order.calda2 = event.target.name;
+        order.caldaMorango = event.target.name;
       }
 
       items.forEach((item) => {

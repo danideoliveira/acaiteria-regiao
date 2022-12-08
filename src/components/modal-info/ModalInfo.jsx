@@ -11,7 +11,7 @@ import {
 import { showModal, showModalSoon } from "../../helpers/Mixins";
 import getAddress from "../../modules/getAddress";
 
-export default function ModalInfo({ order }) {
+export default function ModalInfo() {
   async function showAddress(cep) {
     const inputEndereco = document.querySelector(".endereco");
     const inputBairro = document.querySelector(".bairro");

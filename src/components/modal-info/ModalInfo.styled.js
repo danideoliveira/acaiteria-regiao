@@ -196,7 +196,7 @@ export const FormInfo = styled.form`
 
   textarea {
     resize: none;
-    height: 100%;
+    height: 8rem;
   }
 
   @media (min-width: 320px) and (max-width: 480px) {
