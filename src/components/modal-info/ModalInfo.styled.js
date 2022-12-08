@@ -226,6 +226,15 @@ export const Button = styled.button`
     background-color: ${darken(0.1, `${colors.green}`)};
   }
 
+  &:disabled {
+    filter: grayscale(1);
+    cursor: default;
+
+    &:hover {
+    background-color: ${darken(0, `${colors.green}`)};
+  }
+  }
+
   @media (min-width: 320px) and (max-width: 999px) {
     margin-top: 2.5rem;
     padding: 1.5rem 7rem;

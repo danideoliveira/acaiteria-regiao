@@ -6,13 +6,14 @@ import {
   CloseButton,
   FormInfo,
   Button,
-  ModalSoon,
 } from "./ModalInfo.styled";
-import { showModal, showModalSoon } from "../../helpers/Mixins";
+import { showModal } from "../../helpers/Mixins";
 import getAddress from "../../modules/getAddress";
 
 export default function ModalInfo() {
-  async function showAddress(cep) {
+  async function showAddress(e) {
+    validateInputValue(e);
+    const cep = e.target.value;
     const inputEndereco = document.querySelector(".endereco");
     const inputBairro = document.querySelector(".bairro");
     const inputCidade = document.querySelector(".cidade");
@@ -22,40 +23,58 @@ export default function ModalInfo() {
       inputEndereco.value = "";
       inputBairro.value = "";
       inputCidade.value = "";
+      allValidated();
       return;
     }
 
     const { logradouro, bairro, localidade } = dados;
-
     inputEndereco.value = logradouro;
     inputBairro.value = bairro;
     inputCidade.value = localidade;
+    allValidated();
   }
 
   function handleChange(e) {
-    validatePhone();
-    validateHouseNumber();
+    validateInputValue(e);
+    allValidated();
   }
 
-  function validatePhone() {
-    const telefone = document.querySelector(".telefone-validate");
-    const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-    const arrTelefone = Array.from(telefone.value);
+  function allValidated() {
+    const submitButton = document.querySelector(".submit-button");
+    const inputs = document.querySelectorAll("input");
+    const inputValues = [];
 
-    if (!numbers.includes(arrTelefone[arrTelefone.length - 1])) {
-      arrTelefone.pop();
-      telefone.value = arrTelefone.join("");
-    }
+    inputs.forEach((input) => {
+      if (input.getAttribute("required") !== null) {
+        if (
+          !input.classList.contains("acompanhamento-pedido") ||
+          !input.classList.contains("calda-pedido")
+        ) {
+          inputValues.push(input.value);
+        }
+      }
+    });
+
+    !inputValues.includes("")
+      ? submitButton.removeAttribute("disabled")
+      : submitButton.setAttribute("disabled", true);
   }
 
-  function validateHouseNumber() {
-    const houseNumber = document.querySelector(".numero-validate");
+  function validateInputValue(e) {
+    const el = e.target;
     const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-    const arrHouseNumber = Array.from(houseNumber.value);
+    const arrTarget = Array.from(el.value);
 
-    if (!numbers.includes(arrHouseNumber[arrHouseNumber.length - 1])) {
-      arrHouseNumber.pop();
-      houseNumber.value = arrHouseNumber.join("");
+    if (el.classList.value === "number-validate") {
+      if (!numbers.includes(arrTarget[arrTarget.length - 1])) {
+        arrTarget.pop();
+        el.value = arrTarget.join("");
+      }
+    } else if (el.classList.value === "text-validate") {
+      if (numbers.includes(arrTarget[arrTarget.length - 1])) {
+        arrTarget.pop();
+        el.value = arrTarget.join("");
+      }
     }
   }
 
@@ -98,15 +117,11 @@ export default function ModalInfo() {
                     </div>
                     <div className="acomp-div">
                       <label>Acompanhamentos</label>
-                      <textarea
-                        className="acompanhamento-pedido"
-                        required
-                        disabled
-                      />
+                      <textarea className="acompanhamento-pedido" disabled />
                     </div>
                     <div className="calda-div">
                       <label>Calda</label>
-                      <textarea className="calda-pedido" required disabled />
+                      <textarea className="calda-pedido" disabled />
                     </div>
                   </fieldset>
 
@@ -114,17 +129,27 @@ export default function ModalInfo() {
                     <legend>Dados pessoais</legend>
                     <div>
                       <label>Nome*</label>
-                      <input type="text" required />
+                      <input
+                        type="text"
+                        className="text-validate"
+                        onChange={handleChange}
+                        required
+                      />
                     </div>
                     <div>
                       <label>Sobrenome*</label>
-                      <input type="text" required />
+                      <input
+                        type="text"
+                        className="text-validate"
+                        onChange={handleChange}
+                        required
+                      />
                     </div>
                     <div>
                       <label>Telefone*</label>
                       <input
                         type="text"
-                        className="telefone-validate"
+                        className="number-validate"
                         maxLength={11}
                         onChange={handleChange}
                         required
@@ -139,47 +164,57 @@ export default function ModalInfo() {
                       <input
                         type="text"
                         placeholder="Digite seu CEP..."
-                        onChange={(e) => showAddress(e.target.value)}
+                        className="number-validate"
+                        onChange={(e) => {
+                          showAddress(e);
+                          handleChange(e);
+                        }}
                       />
                     </div>
                     <div>
                       <label>Endereço*</label>
-                      <input type="text" className="endereco" required />
+                      <input
+                        type="text"
+                        className="endereco"
+                        onChange={handleChange}
+                        required
+                      />
                     </div>
                     <div>
                       <label>Número*</label>
                       <input
                         type="text"
-                        className="numero-validate"
+                        className="number-validate"
                         onChange={handleChange}
                         required
                       />
                     </div>
                     <div>
                       <label>Bairro*</label>
-                      <input type="text" className="bairro" required />
+                      <input
+                        type="text"
+                        className="bairro"
+                        onChange={handleChange}
+                        required
+                      />
                     </div>
                     <div>
                       <label>Cidade</label>
-                      <input type="text" className="cidade" />
+                      <input
+                        type="text"
+                        onChange={handleChange}
+                        className="cidade"
+                      />
                     </div>
                   </fieldset>
 
-                  <Button>Ir para pagamento</Button>
+                  <Button className="submit-button" disabled>
+                    Ir para pagamento
+                  </Button>
                 </FormInfo>
               </div>
             </div>
           </Modal>
-          <ModalSoon className="modal-soon">
-            <div className="modal-content">
-              <CloseButton className="close-button" onClick={showModalSoon}>
-                ×
-              </CloseButton>
-              <div>
-                <p>Em breve! ⚙️</p>
-              </div>
-            </div>
-          </ModalSoon>
         </ContainerSecondary>
       </Container>
     </motion.div>
