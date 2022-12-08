@@ -61,6 +61,10 @@ export const Modal = styled.div`
     .form-container {
       width: 70%;
       margin: 0 auto;
+
+      @media (min-width: 320px) and (max-width: 999px) {
+        width: 100%;
+      }
     }
   }
 `;
