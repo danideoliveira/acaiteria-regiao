@@ -17,6 +17,9 @@ Website de açaiteria fictícia.
 <img src="./public/screenshots/screen03.png"></br>
 <img src="./public/screenshots/screen04.png"></br>
 <img src="./public/screenshots/screen05.png"></br>
+
+### 📱 Mobile
+
 <img src="./public/screenshots/screen06.png"></br>
 <img src="./public/screenshots/screen07.png"></br>
 <img src="./public/screenshots/screen08.png"></br>
