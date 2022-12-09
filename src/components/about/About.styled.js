@@ -133,6 +133,10 @@ export const FormInfo = styled.form`
     margin-bottom: 1.5rem;
   }
 
+  input:focus, textarea:focus {
+    outline: none;
+  }
+
   .nome {
     grid-area: nome;
   }
