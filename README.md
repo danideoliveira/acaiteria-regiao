@@ -20,8 +20,8 @@ Website de açaiteria fictícia.
 
 ### 📱 Mobile
 
-<img width="720px" src="./public/screenshots/screen06.png"></br>
-<img width="720px" src="./public/screenshots/screen07.png"></br>
+<img width="200px" src="./public/screenshots/screen06.png"></br>
+<img width="200px" src="./public/screenshots/screen07.png"></br>
 
 ## 🔗Deploy
 
