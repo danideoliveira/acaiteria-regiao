@@ -1,4 +1,4 @@
-# Projeto - 🍧 Açaiteria Região
+# 🍧 Açaiteria Região
 Website de açaiteria fictícia.
 
 ## ⚙️Tecnologias
@@ -20,9 +20,8 @@ Website de açaiteria fictícia.
 
 ### 📱 Mobile
 
-<img src="./public/screenshots/screen06.png"></br>
-<img src="./public/screenshots/screen07.png"></br>
-<img src="./public/screenshots/screen08.png"></br>
+<img width="720px" src="./public/screenshots/screen06.png"></br>
+<img width="720px" src="./public/screenshots/screen07.png"></br>
 
 ## 🔗Deploy
 
