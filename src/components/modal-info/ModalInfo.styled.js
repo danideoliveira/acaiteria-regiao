@@ -178,7 +178,8 @@ export const FormInfo = styled.form`
     width: 100%;
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-size: 2rem;
     height: 5rem;
     padding: 1rem;
@@ -187,7 +188,6 @@ export const FormInfo = styled.form`
     background-color: #e8eeef;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
     margin-bottom: 1.5rem;
-
   }
 
   input:focus {
@@ -235,8 +235,8 @@ export const Button = styled.button`
     cursor: default;
 
     &:hover {
-    background-color: ${darken(0, `${colors.green}`)};
-  }
+      background-color: ${darken(0, `${colors.green}`)};
+    }
   }
 
   @media (min-width: 320px) and (max-width: 999px) {

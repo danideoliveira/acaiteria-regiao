@@ -6,10 +6,10 @@ export default async function getAddress(cep) {
     if (cepReplaced.length !== 8) return;
 
     const address = await axios(`https://viacep.com.br/ws/${cep}/json/`)
-    .then(json => json)
-    .then(response => response.data);
+      .then((json) => json)
+      .then((response) => response.data);
 
-    if(!address.bairro) {
+    if (!address.bairro) {
       return;
     } else {
       return address;

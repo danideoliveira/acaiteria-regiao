@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import {
   Modal,
+  ModalSoon,
   Container,
   ContainerSecondary,
   CloseButton,
   FormInfo,
   Button,
 } from "./ModalInfo.styled";
-import { showModal } from "../../helpers/Mixins";
+import { showModal, showModalSoon } from "../../helpers/Mixins";
 import getAddress from "../../modules/getAddress";
 
 export default function ModalInfo() {
@@ -43,6 +44,7 @@ export default function ModalInfo() {
     const submitButton = document.querySelector(".submit-button");
     const inputs = document.querySelectorAll("input");
     const inputValues = [];
+    submitButton.addEventListener("click", showModalSoon);
 
     inputs.forEach((input) => {
       if (input.getAttribute("required") !== null) {
@@ -208,13 +210,23 @@ export default function ModalInfo() {
                     </div>
                   </fieldset>
 
-                  <Button className="submit-button" disabled>
+                  <Button type="button" className="submit-button" disabled>
                     Ir para pagamento
                   </Button>
                 </FormInfo>
               </div>
             </div>
           </Modal>
+          <ModalSoon className="modal-soon">
+            <div className="modal-content">
+              <CloseButton className="close-button" onClick={showModalSoon}>
+                ×
+              </CloseButton>
+              <div>
+                <p>Em breve! ⚙️</p>
+              </div>
+            </div>
+          </ModalSoon>
         </ContainerSecondary>
       </Container>
     </motion.div>

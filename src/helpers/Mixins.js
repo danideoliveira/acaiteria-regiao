@@ -46,5 +46,6 @@ export function showModal(order) {
 
 export function showModalSoon() {
   const modal = document.querySelector(".modal-soon");
+  console.log('sim');
   modal.classList.toggle("active");
 }
