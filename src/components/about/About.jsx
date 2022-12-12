@@ -1,4 +1,3 @@
-import Contacts from "../contacts/Contacts";
 import images from "../images/Images";
 import {
   Container,

@@ -133,7 +133,8 @@ export const FormInfo = styled.form`
     margin-bottom: 1.5rem;
   }
 
-  input:focus, textarea:focus {
+  input:focus,
+  textarea:focus {
     outline: none;
   }
 
